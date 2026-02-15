@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import { Shield, FileText, Home, Info, Scale, ExternalLink, Zap, AlertCircle, CheckCircle2, XCircle, RotateCcw } from 'lucide-react';
+import { 
+  Shield, FileText, Home, Zap, AlertCircle, 
+  CheckCircle2, XCircle, RotateCcw, Scale, 
+  ExternalLink, Hammer, Landmark, ClipboardCheck,
+  Store, Megaphone
+} from 'lucide-react';
 
 /**
  * HELPER COMPONENTS
  */
-
 const SectionHeader = ({ title, icon: Icon, color = "text-slate-800" }) => (
   <div className="flex items-center gap-3 mb-6 border-b-2 border-amber-500 pb-2">
     {Icon && <Icon className={color} size={28} />}
@@ -18,6 +22,32 @@ const StatBox = ({ label, value }) => (
     <p className="text-lg font-bold text-slate-800 leading-tight">{value}</p>
   </div>
 );
+
+/**
+ * PENALTY GRID COMPONENT
+ */
+function PenaltyGrid() {
+  const penalties = [
+    { label: "Unregistered Vehicle", cost: "$700+", desc: "Illegal e-bikes are motorbikes" },
+    { label: "Uninsured Vehicle", cost: "$700+", desc: "Mandatory CTP requirements" },
+    { label: "Unlicensed Rider", cost: "Court", desc: "Criminal record implications" },
+    { label: "Impound Fee", cost: "$1,200+", desc: "TfNSW seizure costs" }
+  ];
+
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+      {penalties.map((p, i) => (
+        <div key={i} className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+          <div className="flex justify-between items-start mb-1">
+            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider leading-none">{p.label}</span>
+            <span className="text-sm font-black text-red-600 tracking-tighter leading-none">{p.cost}</span>
+          </div>
+          <p className="text-xs text-slate-600 italic leading-tight">{p.desc}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 /**
  * INTERACTIVE LEGALITY QUIZ COMPONENT
@@ -90,13 +120,13 @@ function LegalityQuiz() {
           <>
             <CheckCircle2 className="text-emerald-500 mx-auto mb-4" size={64} />
             <h3 className="text-3xl font-black text-emerald-900 uppercase tracking-tighter mb-2">Likely Compliant</h3>
-            <p className="text-emerald-800 font-medium mb-6">Your bike meets the primary NSW road standards for 2026.</p>
+            <p className="text-emerald-800 font-medium mb-6 text-sm">Your bike meets the primary NSW road standards for 2026.</p>
           </>
         ) : (
           <>
             <XCircle className="text-red-500 mx-auto mb-4" size={64} />
             <h3 className="text-2xl sm:text-3xl font-black text-red-900 uppercase tracking-tighter mb-2 leading-none">ILLEGAL FOR ROAD USE</h3>
-            <p className="text-red-800 font-medium mb-6 mt-2">Based on your answers, this device is classified as a <strong>Motorcycle</strong> and is subject to seizure.</p>
+            <p className="text-red-800 font-medium mb-6 mt-2 text-sm italic leading-tight">Based on your answers, this device is classified as a <strong>Motorcycle</strong> and is subject to seizure.</p>
           </>
         )}
         <button 
@@ -126,7 +156,8 @@ const App = () => {
     ROAD_TRANSPORT_ACT: "https://legislation.nsw.gov.au/view/html/inforce/current/act-2013-018",
     VEHICLE_STANDARDS_ACT: "https://www.legislation.gov.au/Series/C2018A00061",
     TfNSW_EBIKES: "https://www.transport.nsw.gov.au/roadsafety/bicycle-riders/ebikes",
-    FAMILY_ADVICE_PDF: "https://www.transport.nsw.gov.au/system/files/media/documents/2024/crs_e-bikes_families.pdf"
+    FAMILY_ADVICE_PDF: "https://www.transport.nsw.gov.au/system/files/media/documents/2024/crs_e-bikes_families.pdf",
+    FAIR_TRADING: "https://www.fairtrading.nsw.gov.au/help-centre/online-tools/make-a-complaint"
   };
 
   return (
@@ -172,8 +203,8 @@ const App = () => {
           <div className="animate-in fade-in duration-500">
             {/* Hero Section */}
             <header className="mb-8 sm:mb-12 text-center py-6 sm:py-10">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-4 tracking-tight leading-none">
-                COMPLIANCE <span className="text-amber-500">&</span> ENFORCEMENT
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-4 tracking-tight leading-none uppercase">
+                COMPLIANCE <span className="text-amber-500">{'&'}</span> ENFORCEMENT
               </h1>
               <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto px-2">
                 Protecting our public spaces and families from the risks of illegal high-powered electric motorbikes.
@@ -199,11 +230,11 @@ const App = () => {
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-6">
                       <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                        <h4 className="font-bold text-slate-800 mb-2">Sticker Rating ≤ 250W</h4>
-                        <p className="text-sm text-slate-600 font-medium tracking-tight leading-snug">Legal for road use. Motor assistance must cut out at 25km/h. No throttle over 6km/h.</p>
+                        <h4 className="font-bold text-slate-800 mb-2 uppercase text-xs">Sticker Rating ≤ 250W</h4>
+                        <p className="text-sm text-slate-600 font-medium tracking-tight leading-snug italic">Legal for road use. Motor assistance must cut out at 25km/h.</p>
                       </div>
                       <div className="p-4 bg-red-50 rounded-xl border border-red-100">
-                        <h4 className="font-bold text-red-800 mb-2">Sticker Rating {">"} 250W</h4>
+                        <h4 className="font-bold text-red-800 mb-2 uppercase text-xs">Sticker Rating {'>'} 250W</h4>
                         <p className="text-sm text-red-700 font-bold tracking-tight uppercase underline leading-snug">Classified as a Motorcycle. Illegal for minors.</p>
                       </div>
                     </div>
@@ -211,38 +242,54 @@ const App = () => {
                 </section>
 
                 <section>
-                  <SectionHeader title="Seizure & Destruction Powers" icon={AlertCircle} color="text-red-700" />
-                  <div className="bg-red-50 p-6 sm:p-8 rounded-2xl shadow-sm border border-red-200">
-                    <h3 className="text-xl font-bold text-red-800 mb-4 tracking-tight">"The Crush Law"</h3>
-                    <p className="text-red-900 mb-4 font-bold italic leading-snug text-sm sm:text-base">
-                      "If the bike breaks the rules, it's gone for good."
-                    </p>
-                    <ul className="space-y-3 text-red-800 text-sm sm:text-base">
-                      <li className="flex gap-2 font-medium">Under the <a href={LINKS.ROAD_TRANSPORT_ACT} className="underline hover:text-red-600" target="_blank" rel="noreferrer">Road Transport Act 2013</a>, illegal bikes are destroyed (crushed) to prevent re-sale.</li>
-                      <li className="flex gap-2 font-medium">Police are utilizing portable <strong>Dyno Units</strong> to test wattage on the spot.</li>
-                    </ul>
+                  <SectionHeader title="Seizure & Retailer Accountability" icon={Hammer} color="text-red-700" />
+                  <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
+                    <div className="flex items-start gap-4 p-4 bg-red-50 border-l-4 border-red-600 rounded-r-xl mb-6">
+                      <AlertCircle className="text-red-600 shrink-0" />
+                      <p className="text-sm text-red-900 font-bold leading-snug">
+                        Under the Road Transport Act 2013, illegal bikes are destroyed (crushed). Police use portable <strong>Dyno Units</strong> to test wattage on-the-spot.
+                      </p>
+                    </div>
+                    <div className="bg-amber-50 p-6 rounded-2xl border border-amber-200">
+                      <h4 className="font-bold text-slate-800 mb-2 flex items-center gap-2 text-sm uppercase leading-none">
+                        <Store className="text-amber-600" size={16} /> Retailer Notice
+                      </h4>
+                      <p className="text-sm text-slate-700 mb-4 leading-relaxed">
+                        Selling {'>'}250W motorbikes as "e-bikes" is a breach of Consumer Law. Report retailers who mislabel high-powered devices.
+                      </p>
+                      <a href={LINKS.FAIR_TRADING} target="_blank" rel="noreferrer" className="block w-full py-3 bg-slate-900 text-white rounded-xl text-center font-bold text-xs uppercase tracking-widest hover:bg-slate-800 transition-all">
+                        Report to Fair Trading
+                      </a>
+                    </div>
                   </div>
                 </section>
               </div>
 
-              {/* Right Column: Interactive Quiz & Risk Sidebar */}
+              {/* Right Column: Quiz & Sidebars */}
               <div className="space-y-6">
                 <LegalityQuiz />
 
-                <div className="bg-slate-900 text-white p-6 sm:p-8 rounded-3xl shadow-xl border-t-4 border-red-500">
-                  <h3 className="text-2xl font-black mb-4 text-amber-500 uppercase tracking-tighter leading-none">Parents: Is your house at risk?</h3>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                <div className="bg-slate-900 text-white p-6 rounded-3xl shadow-xl border-b-4 border-amber-500">
+                  <h3 className="text-lg font-black uppercase tracking-tighter text-amber-500 mb-2 leading-none">Penalties at a Glance</h3>
+                  <PenaltyGrid />
+                </div>
+
+                <div className="bg-red-700 text-white p-6 sm:p-8 rounded-3xl shadow-xl border-t-4 border-white">
+                  <h3 className="text-2xl font-black mb-4 text-white uppercase tracking-tighter leading-none">Is your house at risk?</h3>
+                  <p className="text-white text-sm leading-relaxed mb-6 italic">
                     If an underage rider causes injury on an illegal e-bike, the financial fallout is catastrophic.
                   </p>
                   
                   <div className="space-y-6">
-                    <div className="border-l-2 border-red-500 pl-4">
-                      <h4 className="font-bold text-red-400 uppercase text-xs tracking-widest mb-1">01. No Insurance</h4>
-                      <p className="text-xs text-slate-400 leading-snug">Home & Contents policies exclude "unregistered motor vehicles." Illegal e-bikes are motorcycles.</p>
+                    <div className="border-l-2 border-white pl-4">
+                      {/* NORMALIZED: Fixed font sizes to match points 01 and 02 */}
+                      <h4 className="font-bold text-white uppercase text-lg tracking-tight mb-1 leading-none">01. No Insurance</h4>
+                      <p className="text-xs text-red-100 leading-snug">Home & Contents policies exclude "unregistered motor vehicles." Illegal e-bikes are motorbikes.</p>
                     </div>
-                    <div className="border-l-2 border-red-500 pl-4">
-                      <h4 className="font-bold text-red-400 text-lg uppercase tracking-tighter mb-1 leading-none">02. ASSET SEIZURE</h4>
-                      <p className="text-xs text-slate-400 font-black uppercase text-white leading-tight">Your family home and personal assets can be seized to pay legal judgments.</p>
+                    <div className="border-l-2 border-white pl-4">
+                      {/* NORMALIZED: Fixed font sizes to match points 01 and 02 */}
+                      <h4 className="font-bold text-white uppercase text-lg tracking-tight mb-1 leading-none">02. ASSET SEIZURE</h4>
+                      <p className="text-xs text-red-100 font-black uppercase leading-tight">Your family home and personal assets can be seized to pay legal judgments.</p>
                     </div>
                   </div>
                 </div>
@@ -250,21 +297,21 @@ const App = () => {
             </div>
 
             {/* Footer Reference Section */}
-            <footer className="mt-12 sm:mt-20 border-t border-slate-200 pt-10 pb-20">
+            <footer className="mt-12 sm:mt-20 border-t border-slate-200 pt-10 pb-20 text-sm">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div>
-                  <h3 className="font-bold text-slate-800 mb-4 uppercase text-xs sm:text-sm tracking-widest underline decoration-amber-500 underline-offset-4">Statutory Library</h3>
+                  <h3 className="font-bold text-slate-800 mb-4 uppercase tracking-widest underline decoration-amber-500 underline-offset-4">Statutory Library</h3>
                   <div className="space-y-3">
-                    <a href={LINKS.ROAD_RULES} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline text-xs sm:text-sm font-bold"><ExternalLink size={14}/> Road Rules 2014 (NSW)</a>
-                    <a href={LINKS.ROAD_TRANSPORT_ACT} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline text-xs sm:text-sm font-bold"><ExternalLink size={14}/> Road Transport Act 2013 (NSW)</a>
-                    <a href={LINKS.VEHICLE_STANDARDS_ACT} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline text-xs sm:text-sm font-bold"><ExternalLink size={14}/> Road Vehicle Standards Act 2018 (Cth)</a>
+                    <a href={LINKS.ROAD_RULES} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline font-bold"><ExternalLink size={14}/> Road Rules 2014 (NSW)</a>
+                    <a href={LINKS.ROAD_TRANSPORT_ACT} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline font-bold"><ExternalLink size={14}/> Road Transport Act 2013 (NSW)</a>
+                    <a href={LINKS.VEHICLE_STANDARDS_ACT} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline font-bold"><ExternalLink size={14}/> Road Vehicle Standards Act 2018 (Cth)</a>
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-bold text-slate-800 mb-4 uppercase text-xs sm:text-sm tracking-widest underline decoration-amber-500 underline-offset-4">Safety & Compliance</h3>
+                  <h3 className="font-bold text-slate-800 mb-4 uppercase tracking-widest underline decoration-amber-500 underline-offset-4">Safety & Compliance</h3>
                   <div className="space-y-3">
-                    <a href={LINKS.TfNSW_EBIKES} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline text-xs sm:text-sm font-bold"><ExternalLink size={14}/> TfNSW: E-bike Safety & Sticker Info</a>
-                    <a href={LINKS.FAMILY_ADVICE_PDF} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline text-xs sm:text-sm font-bold"><ExternalLink size={14}/> Advice for families (Official PDF)</a>
+                    <a href={LINKS.TfNSW_EBIKES} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline font-bold"><ExternalLink size={14}/> TfNSW: E-bike Safety & Sticker Info</a>
+                    <a href={LINKS.FAMILY_ADVICE_PDF} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline font-bold"><ExternalLink size={14}/> Advice for families (Official PDF)</a>
                   </div>
                 </div>
               </div>
@@ -272,98 +319,86 @@ const App = () => {
           </div>
         )}
 
-        {/* A4 Flyer View - Updated for Mobile Responsiveness */}
+        {/* A4 Flyer View - Visually matching your preferred LaTeX design exactly */}
         {activeTab === 'flyer' && (
-          <div className="flex flex-col items-center py-6 sm:py-10">
+          <div className="flex flex-col items-center py-6 sm:py-10 animate-in fade-in zoom-in-95">
             <div className="w-full max-w-full overflow-x-auto overflow-y-hidden pb-10 flex flex-col items-center cursor-grab active:cursor-grabbing">
-              <div className="bg-white shadow-2xl overflow-hidden print:shadow-none border-[6px] sm:border-[12px] border-slate-900 origin-top scale-[0.4] sm:scale-[0.6] md:scale-100 transition-transform mb-[-400px] sm:mb-[-300px] md:mb-10" 
+              <div className="bg-white shadow-2xl overflow-hidden print:shadow-none border-[6px] sm:border-[12px] border-slate-900 origin-top scale-[0.4] sm:scale-[0.55] md:scale-75 lg:scale-100 transition-transform mb-[-500px] sm:mb-[-400px] md:mb-[-150px] lg:mb-10" 
                    style={{ width: '210mm', minHeight: '297mm', padding: '15mm' }}>
                 
-                <div className="bg-slate-900 text-white text-center py-8 -mx-6 -mt-6">
-                  <h1 className="text-5xl font-black tracking-tighter uppercase leading-none">E-Bike Warning</h1>
-                  <p className="text-xl font-bold text-amber-500 uppercase tracking-widest mt-1">NSW Compliance Notice 2026</p>
+                <div className="bg-[#1A2A3A] text-white text-center py-8 -mx-10 -mt-10 mb-6">
+                  <h1 className="text-5xl font-black tracking-tighter uppercase leading-none">URGENT: E-Bike Regulations</h1>
+                  <p className="text-xl font-bold text-[#F39C12] uppercase tracking-widest mt-1">NSW Compliance {'&'} Parental Liability Guide 2026</p>
                 </div>
 
-                <div className="bg-red-700 text-white text-center font-bold py-3 my-6 text-lg">
-                  CRACKDOWN ACTIVE: ILLEGAL BIKES SEIZED AND DESTROYED
+                <div className="bg-[#C0392B] text-white text-center font-bold py-3 mb-6 text-lg uppercase">
+                  CRACKDOWN ACTIVE: NON-COMPLIANT BIKES ARE SUBJECT TO SEIZURE AND DESTRUCTION.
                 </div>
 
-                <div className="grid grid-cols-2 gap-8">
-                  <div className="space-y-8">
-                    <div>
-                      <h3 className="text-lg font-black border-b-2 border-amber-500 mb-3 text-slate-900 uppercase tracking-tighter">1. Compliance</h3>
-                      <ul className="text-sm space-y-3">
-                        <li><strong>Max Power:</strong> 250W Continuous.</li>
-                        <li><strong>Max Speed:</strong> 25km/h motor cut-off.</li>
-                        <li><strong>Sticker Required:</strong> EN 15194 must be visible.</li>
-                        <li className="text-red-700 font-bold italic">Bikes rated {">"} 250W are legally Motorcycles and will be seized.</li>
-                      </ul>
-                    </div>
-                    
-                    <div>
-                      <h3 className="text-lg font-black border-b-2 border-amber-500 mb-3 text-slate-900 uppercase tracking-tighter">2. Enforcement</h3>
-                      <ul className="text-sm space-y-3">
-                        <li><strong>Dyno Testing:</strong> Roadside power tests.</li>
-                        <li><strong>Seizure:</strong> Immediate confiscation for non-compliance.</li>
-                        <li><strong>Crushing:</strong> High-powered bikes destroyed beyond reuse.</li>
-                      </ul>
-                    </div>
-
-                    <div>
-                      <h3 className="text-lg font-black border-b-2 border-amber-500 mb-3 text-slate-900 uppercase tracking-tighter">3. Import Changes</h3>
-                      <ul className="text-sm space-y-3">
-                        <li><strong>Federal Law:</strong> Import standards reinstated December 2025.</li>
-                        <li><strong>2021—2025 Gap:</strong> Older imports are still subject to current NSW 250W road usage laws.</li>
-                        <li><strong>1000W+ Motors:</strong> Strictly for private property only.</li>
-                      </ul>
-                    </div>
+                <div className="space-y-6 text-slate-800">
+                  <section className="border-b-2 border-[#1A2A3A] pb-1">
+                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none">1. The Compliance Sticker Rule</h3>
+                  </section>
+                  <div className="grid grid-cols-1 gap-2 text-sm font-medium">
+                    <p>• <strong>The 250W Cap:</strong> Motor power must not exceed 250W. The previous 500W allowance ended Dec 2025.</p>
+                    <p>• <strong>Mandatory Labeling:</strong> Permanent EN 15194 compliance sticker must be visible on the frame.</p>
+                    <p>• <strong>Rating {'>'} 250W:</strong> Legally a <strong>Motorcycle</strong>. Riding without registration/license is a criminal offense.</p>
                   </div>
 
-                  <div className="bg-slate-100 p-8 rounded-xl border-2 border-slate-900 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-4xl font-black text-red-700 mb-2 leading-none tracking-tighter">PARENTAL ALERT</h3>
-                      <p className="text-xl font-bold mb-6 underline uppercase text-slate-900">Is your house at risk?</p>
-                      
-                      <p className="text-lg leading-snug mb-8 font-semibold text-slate-800">
-                        If an underage rider causes injury on an illegal bike, <strong className="text-red-700">Home Insurance is VOID.</strong>
-                      </p>
-                      
-                      <div className="bg-white p-6 border-2 border-red-200 rounded-lg mb-8 shadow-sm">
-                        <p className="text-lg font-black text-slate-900 uppercase mb-2 underline tracking-tighter">The "House" Scenario:</p>
-                        <p className="text-base text-slate-700 leading-relaxed font-black uppercase">
-                          Without insurance, legal debts result in the <span className="text-red-600 underline">seizure and sale</span> of the family home.
-                        </p>
+                  <section className="border-b-2 border-[#1A2A3A] pb-1 pt-2">
+                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none">2. Seizure {'&'} Retailer Accountability</h3>
+                  </section>
+                  <div className="grid grid-cols-1 gap-2 text-sm font-medium leading-tight">
+                    <p>• <strong>No Sticker = Seizure:</strong> Bikes lacking compliance stickers are presumed illegal.</p>
+                    <p>• <strong>Retailer Warning:</strong> Selling high-power bikes as "legal" is a breach of Consumer Law.</p>
+                    <p>• <strong>Dyno Testing:</strong> Police use portable units to test motor wattage output in real-time roadside.</p>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4 pt-4">
+                    <div className="bg-[#F4F7F6] p-4 rounded-lg border border-[#1A2A3A]">
+                      <h4 className="font-black text-xs uppercase mb-2 leading-none">Penalties at a Glance</h4>
+                      <div className="text-[10px] space-y-1 font-bold leading-tight">
+                        <p>Unregistered Vehicle: $700+ Fine</p>
+                        <p>Uninsured Vehicle: $700+ Fine</p>
+                        <p>Unlicensed Rider: Court Attendance</p>
+                        <p>TfNSW Seizure Fee: $1,200+</p>
                       </div>
                     </div>
+                    <div className="bg-white p-4 rounded-lg border-2 border-[#C0392B]">
+                      <h4 className="font-black text-xs text-[#C0392B] uppercase mb-2 leading-none">Quick Compliance Check</h4>
+                      <div className="text-[10px] space-y-1 font-bold leading-tight">
+                        <p>□ Permanent EN 15194 sticker?</p>
+                        <p>□ Motor rated 250W or less?</p>
+                        <p>□ Motor assist cuts out at 25km/h?</p>
+                        <p>□ Approved helmet being worn?</p>
+                      </div>
+                    </div>
+                  </div>
 
-                    <p className="text-xs text-slate-600 italic font-medium leading-tight border-t border-slate-200 pt-4">
-                      Negligent supervision of a minor on an unregistered motor vehicle leads to direct personal liability.
-                    </p>
+                  <section className="border-b-2 border-[#C0392B] pb-1 pt-2">
+                    <h3 className="text-xl font-black text-[#C0392B] uppercase tracking-tighter leading-none">Parents: Is Your Home At Risk?</h3>
+                  </section>
+                  <div className="grid grid-cols-1 gap-1 text-[11px] font-bold leading-snug bg-red-50 p-2 border border-red-200 rounded">
+                    <p>1. <strong>NO INSURANCE:</strong> Home policies exclude unregistered motor vehicles.</p>
+                    <p>2. <strong>PERSONAL LIABILITY:</strong> Parents sued for millions in medical damages.</p>
+                    <p>3. <strong>ASSET LIQUIDATION:</strong> Savings and the family home seized to pay debts.</p>
+                  </div>
+
+                  <section className="border-b-2 border-[#1A2A3A] pb-1 pt-2">
+                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none">3. Federal Import Laws</h3>
+                  </section>
+                  <div className="text-sm font-medium leading-tight">
+                    <p>• 1000W+ Motors: Strictly for Private Property Only. Software limits are invalid.</p>
                   </div>
                 </div>
 
-                <div className="mt-12 p-6 bg-slate-900 text-white rounded-xl flex justify-between items-center">
-                  <div>
-                    <h4 className="font-black text-amber-500 text-lg uppercase tracking-widest leading-none">Statutory Reference</h4>
-                    <p className="text-[10px] opacity-70 mt-1">Current as of February 2026.</p>
-                  </div>
-                  <div className="text-right text-[10px] opacity-80 font-mono leading-relaxed uppercase">
-                    Road Vehicle Standards Act 2018 (Cth)<br/>
-                    Road Transport Act 2013 (NSW)<br/>
-                    Road Rules 2014 (NSW)
-                  </div>
-                </div>
-
-                <div className="mt-auto pt-6 text-center">
-                  <p className="text-[10px] font-black text-slate-900 tracking-tighter mb-2">OFFICIAL INFORMATION: TRANSPORT.NSW.GOV.AU/ROADSAFETY</p>
-                  <div className="flex justify-center gap-12 opacity-30">
-                    <div className="text-[8px] uppercase font-black tracking-[0.2em]">Safety First</div>
-                    <div className="text-[8px] uppercase font-black tracking-[0.2em]">Asset Security</div>
-                  </div>
+                <div className="absolute bottom-10 left-10 right-10 bg-[#1A2A3A] text-white p-6 rounded-lg text-center">
+                   <h4 className="font-black text-[#F39C12] uppercase text-sm tracking-widest leading-none">Official Statutory Reference</h4>
+                   <p className="text-[10px] mt-2 opacity-80 uppercase font-mono tracking-tighter">Road Rules 2014 | Road Transport Act 2013 | RVS Act 2018</p>
                 </div>
               </div>
             </div>
-            <p className="text-slate-400 text-xs italic mt-4 md:hidden">Tip: Pinch to zoom or swipe the flyer to view the full details.</p>
+            <p className="text-slate-400 text-xs italic mt-4 md:hidden text-center">Tip: Pinch to zoom or swipe the flyer to view full details.</p>
           </div>
         )}
       </main>

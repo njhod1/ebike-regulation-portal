@@ -1,0 +1,128 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- UNIVERSAL PREAMBLE BLOCK ---
+\usepackage[a4paper, top=1.2cm, bottom=1.2cm, left=1.2cm, right=1.2cm]{geometry}
+\usepackage{fontspec}
+\usepackage[english, bidi=basic, provide=*]{babel}
+
+% Set default font to Sans Serif for a modern, "government notice" look
+\babelfont{rm}{Noto Sans}
+
+% Packages for styling
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{amssymb} % Required for the \square symbol
+
+% Define Brand Colors
+\definecolor{Navy}{HTML}{1A2A3A}
+\definecolor{Orange}{HTML}{F39C12}
+\definecolor{DangerRed}{HTML}{C0392B}
+\definecolor{LightGray}{HTML}{F4F7F6}
+\definecolor{Slate}{HTML}{64748B}
+
+% Title Formatting
+\titleformat{\section}{\color{Navy}\normalfont\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+\begin{document}
+
+\pagestyle{empty} % Remove page numbers
+
+% Header Section
+\begin{tcolorbox}[colback=Navy, colframe=Navy, arc=0mm, top=8mm, bottom=8mm]
+    \centering
+    \color{white}
+    {\huge \textbf{URGENT: E-BIKE REGULATIONS}} \\
+    \vspace{2mm}
+    {\large \textbf{NSW COMPLIANCE \& PARENTAL LIABILITY GUIDE 2026}}
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% Primary Warning Banner
+\begin{tcolorbox}[colback=DangerRed, colframe=DangerRed, arc=2mm, top=3mm, bottom=3mm]
+    \centering
+    \color{white} \small \bfseries
+    CRACKDOWN ACTIVE: NON-COMPLIANT BIKES ARE SUBJECT TO SEIZURE AND DESTRUCTION.
+\end{tcolorbox}
+
+\section*{1. THE COMPLIANCE STICKER RULE}
+Under the \textbf{Road Rules 2014}, any e-bike used in public must be an EPAC (Electrically Power Assisted Cycle).
+\begin{itemize}[label=--, nosep, topsep=4pt]
+    \item \textbf{The 250W Cap:} Motor power must not exceed 250W. The previous 500W allowance ended Dec 2025.
+    \item \textbf{Mandatory Labeling:} A permanent \textbf{EN 15194 compliance sticker} must be visible on the frame.
+    \item \textbf{Rating > 250W:} Legally classified as a \textbf{Motorcycle}. Riding without registration, insurance, and a license is a criminal offense subject to vehicle impoundment.
+\end{itemize}
+
+\section*{2. SEIZURE \& RETAILER ACCOUNTABILITY}
+Pursuant to the \textbf{Road Transport Act 2013}, Police are conducting active roadside inspections:
+\begin{itemize}[label=--, nosep, topsep=4pt]
+    \item \textbf{No Sticker = Immediate Seizure:} Bikes lacking compliance stickers are presumed illegal.
+    \item \textbf{Retailer Warning:} Businesses selling motorbikes as "e-bikes" without road-legality warnings are in breach of \textbf{Australian Consumer Law}. Report illegal sales to Fair Trading.
+    \item \textbf{Dyno Testing:} Police use portable Dyno units to test motor wattage output in real-time.
+\end{itemize}
+
+% Penalties & Risk Box Grid
+\vspace{4mm}
+\begin{minipage}[t]{0.48\textwidth}
+    \begin{tcolorbox}[colback=LightGray, colframe=Navy, title=\textbf{PENALTIES AT A GLANCE}, fonttitle=\bfseries\small, top=2pt, bottom=2pt]
+        \scriptsize
+        \begin{description}[nosep, leftmargin=0pt]
+            \item[Unregistered Vehicle:] \$700+ Fine
+            \item[Uninsured Vehicle:] \$700+ Fine
+            \item[Unlicensed Rider:] Court Attendance
+            \item[TfNSW Seizure Fee:] \$1,200+
+            \item[Destruction Order:] Final (No Appeal)
+        \end{description}
+    \end{tcolorbox}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+    \begin{tcolorbox}[colback=white, colframe=Orange, title=\textbf{QUICK COMPLIANCE CHECK}, fonttitle=\bfseries\small, top=2pt, bottom=2pt]
+        \scriptsize
+        $\square$ Is there a permanent EN 15194 sticker? \\
+        $\square$ Is the motor rated 250W or less? \\
+        $\square$ Does motor assist cut out at 25km/h? \\
+        $\square$ Is the rider wearing an approved helmet? \\
+        $\square$ Is the bike used on roads/shared paths?
+    \end{tcolorbox}
+\end{minipage}
+
+\vspace{4mm}
+
+% Risk Box
+\begin{tcolorbox}[colback=white, colframe=DangerRed, title=\textbf{PARENTS: IS YOUR HOME AT RISK?}, coltitle=white, fonttitle=\bfseries, top=4pt, bottom=4pt]
+    \small \textbf{If an underage rider causes an accident on an illegal e-bike:}
+    \begin{enumerate}[nosep, topsep=2pt]
+        \item \textbf{NO INSURANCE PROTECTION:} Home insurance policies strictly exclude "unregistered motor vehicles." Illegal e-bikes fall under this category.
+        \item \textbf{PERSONAL LIABILITY:} Parents can be sued for millions in medical costs and damages.
+        \item \textbf{ASSET LIQUIDATION:} Your house, savings, and assets can be seized to pay legal debts.
+    \end{enumerate}
+\end{tcolorbox}
+
+\section*{3. FEDERAL IMPORT \& OFF-ROAD USE}
+The \textbf{Road Vehicle Standards Act 2018} now restricts the entry of high-powered "e-motorbikes." 
+\begin{itemize}[label=--, nosep, topsep=4pt]
+    \item \textbf{Off-Road Only:} Motors over 250W are strictly for \textbf{Private Property Only}.
+    \item \textbf{The "Gap" Period:} Bikes imported 2021--2025 are not "grandfathered." If they exceed 250W, they are illegal for public road use today.
+\end{itemize}
+
+\vfill
+
+% Enhanced Footer
+\begin{tcolorbox}[colback=Navy, colframe=Navy, arc=0mm, top=4mm, bottom=4mm]
+    \centering
+    \color{white}
+    \textbf{\small OFFICIAL STATUTORY REFERENCE | TRANSPORT FOR NSW} \\
+    \vspace{1mm}
+    \footnotesize
+    For the full compliance checklist and official safety videos, visit: \\
+    \href{https://www.transport.nsw.gov.au/roadsafety/bicycle-riders/ebikes}{\color{Orange}\textbf{www.transport.nsw.gov.au/roadsafety/ebikes}} \\
+    \vspace{2mm}
+    \color{Slate}\scriptsize \textit{Legal Notice: This guide is for educational purposes. Always refer to the Road Transport Act 2013 (NSW) for definitive law.}
+\end{tcolorbox}
+
+\end{document}
