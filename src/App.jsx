@@ -282,14 +282,14 @@ const App = () => {
                   
                   <div className="space-y-6">
                     <div className="border-l-2 border-white pl-4">
-                      {/* NORMALIZED: Fixed font sizes to match points 01 and 02 */}
+                      {/* NORMALIZED: Points 01 and 02 now have identical font treatment */}
                       <h4 className="font-bold text-white uppercase text-lg tracking-tight mb-1 leading-none">01. No Insurance</h4>
-                      <p className="text-xs text-red-100 leading-snug">Home & Contents policies exclude "unregistered motor vehicles." Illegal e-bikes are motorbikes.</p>
+                      <p className="text-xs text-red-100 leading-snug">Home & Contents policies exclude "unregistered motor vehicles." Illegal e-bikes are motorcycles.</p>
                     </div>
                     <div className="border-l-2 border-white pl-4">
-                      {/* NORMALIZED: Fixed font sizes to match points 01 and 02 */}
+                      {/* NORMALIZED: Points 01 and 02 now have identical font treatment */}
                       <h4 className="font-bold text-white uppercase text-lg tracking-tight mb-1 leading-none">02. ASSET SEIZURE</h4>
-                      <p className="text-xs text-red-100 font-black uppercase leading-tight">Your family home and personal assets can be seized to pay legal judgments.</p>
+                      <p className="text-xs text-red-100 leading-snug">Your family home and personal assets can be seized to pay legal judgments.</p>
                     </div>
                   </div>
                 </div>
@@ -319,23 +319,24 @@ const App = () => {
           </div>
         )}
 
-        {/* A4 Flyer View - Visually matching your preferred LaTeX design exactly */}
+        {/* A4 Flyer View - Adjusted for single page print */}
         {activeTab === 'flyer' && (
           <div className="flex flex-col items-center py-6 sm:py-10 animate-in fade-in zoom-in-95">
             <div className="w-full max-w-full overflow-x-auto overflow-y-hidden pb-10 flex flex-col items-center cursor-grab active:cursor-grabbing">
+              {/* FIXED: Height adjusted to 287mm to ensure single-page print from browsers */}
               <div className="bg-white shadow-2xl overflow-hidden print:shadow-none border-[6px] sm:border-[12px] border-slate-900 origin-top scale-[0.4] sm:scale-[0.55] md:scale-75 lg:scale-100 transition-transform mb-[-500px] sm:mb-[-400px] md:mb-[-150px] lg:mb-10" 
-                   style={{ width: '210mm', minHeight: '297mm', padding: '15mm' }}>
+                   style={{ width: '210mm', height: '287mm', padding: '12mm' }}>
                 
-                <div className="bg-[#1A2A3A] text-white text-center py-8 -mx-10 -mt-10 mb-6">
+                <div className="bg-[#1A2A3A] text-white text-center py-6 -mx-10 -mt-10 mb-4">
                   <h1 className="text-5xl font-black tracking-tighter uppercase leading-none">URGENT: E-Bike Regulations</h1>
                   <p className="text-xl font-bold text-[#F39C12] uppercase tracking-widest mt-1">NSW Compliance {'&'} Parental Liability Guide 2026</p>
                 </div>
 
-                <div className="bg-[#C0392B] text-white text-center font-bold py-3 mb-6 text-lg uppercase">
-                  CRACKDOWN ACTIVE: NON-COMPLIANT BIKES ARE SUBJECT TO SEIZURE AND DESTRUCTION.
+                <div className="bg-[#C0392B] text-white text-center font-bold py-2 mb-4 text-lg uppercase">
+                  CRACKDOWN ACTIVE: ILLEGAL BIKES SEIZED AND DESTROYED
                 </div>
 
-                <div className="space-y-6 text-slate-800">
+                <div className="space-y-4 text-slate-800">
                   <section className="border-b-2 border-[#1A2A3A] pb-1">
                     <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none">1. The Compliance Sticker Rule</h3>
                   </section>
@@ -351,12 +352,12 @@ const App = () => {
                   <div className="grid grid-cols-1 gap-2 text-sm font-medium leading-tight">
                     <p>• <strong>No Sticker = Seizure:</strong> Bikes lacking compliance stickers are presumed illegal.</p>
                     <p>• <strong>Retailer Warning:</strong> Selling high-power bikes as "legal" is a breach of Consumer Law.</p>
-                    <p>• <strong>Dyno Testing:</strong> Police use portable units to test motor wattage output in real-time roadside.</p>
+                    <p>• <strong>Dyno Testing:</strong> Police use portable units to test motor wattage output roadside.</p>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 pt-4">
-                    <div className="bg-[#F4F7F6] p-4 rounded-lg border border-[#1A2A3A]">
-                      <h4 className="font-black text-xs uppercase mb-2 leading-none">Penalties at a Glance</h4>
+                  <div className="grid grid-cols-2 gap-4 pt-2">
+                    <div className="bg-[#F4F7F6] p-3 rounded-lg border border-[#1A2A3A]">
+                      <h4 className="font-black text-xs uppercase mb-1 leading-none">Penalties at a Glance</h4>
                       <div className="text-[10px] space-y-1 font-bold leading-tight">
                         <p>Unregistered Vehicle: $700+ Fine</p>
                         <p>Uninsured Vehicle: $700+ Fine</p>
@@ -364,8 +365,8 @@ const App = () => {
                         <p>TfNSW Seizure Fee: $1,200+</p>
                       </div>
                     </div>
-                    <div className="bg-white p-4 rounded-lg border-2 border-[#C0392B]">
-                      <h4 className="font-black text-xs text-[#C0392B] uppercase mb-2 leading-none">Quick Compliance Check</h4>
+                    <div className="bg-white p-3 rounded-lg border-2 border-[#C0392B]">
+                      <h4 className="font-black text-xs text-[#C0392B] uppercase mb-1 leading-none">Quick Compliance Check</h4>
                       <div className="text-[10px] space-y-1 font-bold leading-tight">
                         <p>□ Permanent EN 15194 sticker?</p>
                         <p>□ Motor rated 250W or less?</p>
@@ -375,7 +376,7 @@ const App = () => {
                     </div>
                   </div>
 
-                  <section className="border-b-2 border-[#C0392B] pb-1 pt-2">
+                  <section className="border-b-2 border-[#C0392B] pb-1 pt-1">
                     <h3 className="text-xl font-black text-[#C0392B] uppercase tracking-tighter leading-none">Parents: Is Your Home At Risk?</h3>
                   </section>
                   <div className="grid grid-cols-1 gap-1 text-[11px] font-bold leading-snug bg-red-50 p-2 border border-red-200 rounded">
@@ -384,7 +385,7 @@ const App = () => {
                     <p>3. <strong>ASSET LIQUIDATION:</strong> Savings and the family home seized to pay debts.</p>
                   </div>
 
-                  <section className="border-b-2 border-[#1A2A3A] pb-1 pt-2">
+                  <section className="border-b-2 border-[#1A2A3A] pb-1 pt-1">
                     <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none">3. Federal Import Laws</h3>
                   </section>
                   <div className="text-sm font-medium leading-tight">
@@ -392,9 +393,9 @@ const App = () => {
                   </div>
                 </div>
 
-                <div className="absolute bottom-10 left-10 right-10 bg-[#1A2A3A] text-white p-6 rounded-lg text-center">
+                <div className="absolute bottom-8 left-10 right-10 bg-[#1A2A3A] text-white p-5 rounded-lg text-center">
                    <h4 className="font-black text-[#F39C12] uppercase text-sm tracking-widest leading-none">Official Statutory Reference</h4>
-                   <p className="text-[10px] mt-2 opacity-80 uppercase font-mono tracking-tighter">Road Rules 2014 | Road Transport Act 2013 | RVS Act 2018</p>
+                   <p className="text-[9px] mt-1 opacity-80 uppercase font-mono tracking-tighter leading-none">Road Rules 2014 | Road Transport Act 2013 | RVS Act 2018</p>
                 </div>
               </div>
             </div>
