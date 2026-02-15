@@ -155,12 +155,17 @@ const App = () => {
     FAIR_TRADING: "https://www.fairtrading.nsw.gov.au/help-centre/online-tools/make-a-complaint"
   };
 
+  const navItems = [
+    { id: 'website', label: 'Information Website' },
+    { id: 'flyer', label: 'Printable A4 Flyer' },
+  ];
+
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
       {/* Print-specific Styles */}
       <style dangerouslySetInnerHTML={{ __html: `
         @media print {
-          @page { size: A4; margin: 0; }
+          @page { size: A4; margin: 10mm 0 0 0; }
           nav, button, .print-hide { display: none !important; }
           body, .min-h-screen { background: white !important; padding: 0 !important; margin: 0 !important; }
           main { width: 210mm !important; margin: 0 auto !important; padding: 0 !important; }
@@ -170,7 +175,7 @@ const App = () => {
             border: none !important; 
             margin: 0 !important; 
             width: 210mm !important; 
-            height: 297mm !important;
+            height: 280mm !important; /* Shorter than 297mm to prevent overflow and shifting */
             padding: 15mm !important;
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
@@ -298,13 +303,13 @@ const App = () => {
                   
                   <div className="space-y-6">
                     <div className="border-l-2 border-white pl-4">
-                      {/* NORMALIZED: Points 01 and 02 match exactly */}
-                      <h4 className="font-bold text-white uppercase text-lg tracking-tight mb-1 leading-none">01. No Insurance</h4>
+                      {/* NORMALIZED: Points 01 and 02 match perfectly */}
+                      <h4 className="font-black text-white uppercase text-xl tracking-tight mb-1 leading-none tracking-tighter">01. NO INSURANCE</h4>
                       <p className="text-xs text-red-100 leading-snug">Home & Contents policies exclude "unregistered motor vehicles." Illegal e-bikes are motorbikes.</p>
                     </div>
                     <div className="border-l-2 border-white pl-4">
-                      {/* NORMALIZED: Points 01 and 02 match exactly */}
-                      <h4 className="font-bold text-white uppercase text-lg tracking-tight mb-1 leading-none">02. ASSET SEIZURE</h4>
+                      {/* NORMALIZED: Points 01 and 02 match perfectly */}
+                      <h4 className="font-black text-white uppercase text-xl tracking-tight mb-1 leading-none tracking-tighter">02. ASSET SEIZURE</h4>
                       <p className="text-xs text-red-100 font-black uppercase leading-tight">Your family home and personal assets can be seized to pay legal judgments.</p>
                     </div>
                   </div>
@@ -340,7 +345,7 @@ const App = () => {
           <div className="flex flex-col items-center py-6 sm:py-10 animate-in fade-in zoom-in-95">
             <div className="w-full max-w-full overflow-x-auto overflow-y-hidden pb-10 flex flex-col items-center cursor-grab active:cursor-grabbing">
               <div className="print-container bg-white shadow-2xl overflow-hidden border-[6px] sm:border-[12px] border-slate-900 origin-top scale-[0.4] sm:scale-[0.55] md:scale-75 lg:scale-100 transition-transform mb-[-550px] sm:mb-[-400px] md:mb-[-150px] lg:mb-10" 
-                   style={{ width: '210mm', height: '297mm', padding: '15mm', boxSizing: 'border-box' }}>
+                   style={{ width: '210mm', height: '280mm', padding: '15mm', boxSizing: 'border-box' }}>
                 
                 <div className="bg-[#1A2A3A] text-white text-center py-8 -mx-10 -mt-10 mb-6">
                   <h1 className="text-5xl font-black tracking-tighter uppercase leading-none">URGENT: E-Bike Regulations</h1>
@@ -353,7 +358,7 @@ const App = () => {
 
                 <div className="space-y-6 text-slate-800">
                   <section className="border-b-2 border-[#1A2A3A] pb-1">
-                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none">1. The Compliance Sticker Rule</h3>
+                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none pb-1">1. The Compliance Sticker Rule</h3>
                   </section>
                   <div className="grid grid-cols-1 gap-2 text-sm font-medium">
                     <p>• <strong>The 250W Cap:</strong> Motor power must not exceed 250W. The previous 500W allowance ended Dec 2025.</p>
@@ -362,7 +367,7 @@ const App = () => {
                   </div>
 
                   <section className="border-b-2 border-[#1A2A3A] pb-1 pt-2">
-                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none">2. Seizure {'&'} Retailer Accountability</h3>
+                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none pb-1">2. Seizure {'&'} Retailer Accountability</h3>
                   </section>
                   <div className="grid grid-cols-1 gap-2 text-sm font-medium leading-tight">
                     <p>• <strong>No Sticker = Seizure:</strong> Bikes lacking compliance stickers are presumed illegal.</p>
@@ -414,10 +419,5 @@ const App = () => {
     </div>
   );
 };
-
-const navItems = [
-  { id: 'website', label: 'Information Website' },
-  { id: 'flyer', label: 'Printable A4 Flyer' },
-];
 
 export default App;
