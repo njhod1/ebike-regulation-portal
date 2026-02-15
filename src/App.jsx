@@ -162,23 +162,32 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
-      {/* Print-specific Styles */}
+      {/* Print-specific Styles: Fixing Order and Single Page Fit */}
       <style dangerouslySetInnerHTML={{ __html: `
         @media print {
           @page { size: A4; margin: 0; }
-          nav, button, .print-hide { display: none !important; }
-          body, .min-h-screen { background: white !important; padding: 0 !important; margin: 0 !important; }
-          main { width: 210mm !important; margin: 0 auto !important; padding: 0 !important; }
+          nav, footer, button, .print-hide, .animate-in { display: none !important; }
+          body, .min-h-screen { background: white !important; margin: 0 !important; padding: 0 !important; }
+          main { margin: 0 !important; padding: 0 !important; }
+          
+          /* Forced takeover to ensure correct order and single page */
           .print-container { 
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            display: block !important;
             transform: none !important; 
             box-shadow: none !important; 
             border: none !important; 
             margin: 0 !important; 
             width: 210mm !important; 
-            height: 275mm !important; /* Shorter to guarantee room at bottom and single page */
-            padding: 15mm 15mm 5mm 15mm !important;
+            height: 282mm !important; /* Fixed height to force single page */
+            padding: 15mm !important;
+            box-sizing: border-box !important;
+            background: white !important;
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
+            overflow: hidden !important;
           }
         }
       `}} />
@@ -303,12 +312,10 @@ const App = () => {
                   
                   <div className="space-y-6">
                     <div className="border-l-2 border-white pl-4">
-                      {/* NORMALIZED: Fixed point 01 to match point 02 in size and style */}
                       <h4 className="font-black text-white uppercase text-xl tracking-tight mb-1 leading-none tracking-tighter">01. NO INSURANCE</h4>
                       <p className="text-xs text-red-100 leading-snug">Home & Contents policies exclude "unregistered motor vehicles." Illegal e-bikes are motorbikes.</p>
                     </div>
                     <div className="border-l-2 border-white pl-4">
-                      {/* NORMALIZED: Ensuring point 02 remains consistent with point 01 */}
                       <h4 className="font-black text-white uppercase text-xl tracking-tight mb-1 leading-none tracking-tighter">02. ASSET SEIZURE</h4>
                       <p className="text-xs text-red-100 font-black uppercase leading-tight">Your family home and personal assets can be seized to pay legal judgments.</p>
                     </div>
@@ -344,9 +351,9 @@ const App = () => {
         {activeTab === 'flyer' && (
           <div className="flex flex-col items-center py-6 sm:py-10 animate-in fade-in zoom-in-95">
             <div className="w-full max-w-full overflow-x-auto overflow-y-hidden pb-10 flex flex-col items-center cursor-grab active:cursor-grabbing">
-              {/* HEIGHT ADJUSTED TO 275mm TO PREVENT SECOND BLANK PAGE AND TOP CLIPPING */}
+              {/* HEIGHT ADJUSTED TO 282mm TO PREVENT SECOND BLANK PAGE AND ENSURE CORRECT ORDER */}
               <div className="print-container bg-white shadow-2xl overflow-hidden border-[6px] sm:border-[12px] border-slate-900 origin-top scale-[0.4] sm:scale-[0.55] md:scale-75 lg:scale-100 transition-transform mb-[-550px] sm:mb-[-450px] md:mb-[-150px] lg:mb-10" 
-                   style={{ width: '210mm', height: '275mm', padding: '15mm', boxSizing: 'border-box' }}>
+                   style={{ width: '210mm', height: '282mm', padding: '15mm', boxSizing: 'border-box' }}>
                 
                 <div className="bg-[#1A2A3A] text-white text-center py-8 -mx-10 -mt-10 mb-6">
                   <h1 className="text-5xl font-black tracking-tighter uppercase leading-none">URGENT: E-Bike Regulations</h1>
