@@ -23,7 +23,7 @@ const StatBox = ({ label, value }) => (
 );
 
 /**
- * PENALTY GRID COMPONENT
+ * PENALTY GRID COMPONENT - Updated for bottom-right alignment
  */
 function PenaltyGrid() {
   const penalties = [
@@ -36,12 +36,14 @@ function PenaltyGrid() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
       {penalties.map((p, i) => (
-        <div key={i} className="bg-slate-50 p-4 rounded-xl border border-slate-100">
-          <div className="flex justify-between items-start mb-1">
-            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider leading-none">{p.label}</span>
+        <div key={i} className="bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between min-h-[90px]">
+          <div>
+            <span className="text-xs font-bold text-slate-500 uppercase tracking-wider leading-none block mb-1">{p.label}</span>
+            <p className="text-xs text-slate-600 italic leading-tight">{p.desc}</p>
+          </div>
+          <div className="text-right mt-1">
             <span className="text-sm font-black text-red-600 tracking-tighter leading-none">{p.cost}</span>
           </div>
-          <p className="text-xs text-slate-600 italic leading-tight">{p.desc}</p>
         </div>
       ))}
     </div>
@@ -219,6 +221,13 @@ const App = () => {
         </div>
       </nav>
 
+      {/* Warning Banner */}
+      {activeTab === 'website' && (
+        <div className="bg-red-700 text-white py-3 text-center font-bold px-4 text-xs sm:text-sm print:hidden">
+          🚨 CRITICAL UPDATE: NEW "CRUSH" LAWS ACTIVE AS OF FEBRUARY 2026
+        </div>
+      )}
+
       {/* Main Content Area */}
       <main className="max-w-6xl mx-auto p-4 sm:p-6">
         
@@ -297,12 +306,13 @@ const App = () => {
                   
                   <div className="space-y-6">
                     <div className="border-l-2 border-white pl-4">
-                      {/* NORMALIZED SIDEBAR TEXT: Points 01 and 02 match exactly */}
-                      <h4 className="font-black text-white uppercase text-xl tracking-tighter mb-1 leading-none">01. NO INSURANCE</h4>
+                      {/* FIXED: Removed rogue brace and normalized sidebar headers */}
+                      <h4 className="font-black text-white uppercase text-xl tracking-tight mb-1 leading-none">01. NO INSURANCE</h4>
                       <p className="text-xs text-red-100 leading-snug">Home & Contents policies exclude "unregistered motor vehicles." Illegal e-bikes are motorbikes.</p>
                     </div>
                     <div className="border-l-2 border-white pl-4">
-                      <h4 className="font-black text-white uppercase text-xl tracking-tighter mb-1 leading-none">02. ASSET SEIZURE</h4>
+                      {/* FIXED: Normalized formatting to match Point 01 exactly */}
+                      <h4 className="font-black text-white uppercase text-xl tracking-tight mb-1 leading-none">02. ASSET SEIZURE</h4>
                       <p className="text-xs text-red-100 font-black uppercase leading-tight">Your family home and personal assets can be seized to pay legal judgments.</p>
                     </div>
                   </div>
