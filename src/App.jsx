@@ -243,7 +243,7 @@ const App = () => {
 
                 <section>
                   <SectionHeader title="Seizure & Retailer Accountability" icon={Hammer} color="text-red-700" />
-                  <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
+                  <div className="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-slate-200">
                     <div className="flex items-start gap-4 p-4 bg-red-50 border-l-4 border-red-600 rounded-r-xl mb-6">
                       <AlertCircle className="text-red-600 shrink-0" />
                       <p className="text-sm text-red-900 font-bold leading-snug">
@@ -282,14 +282,14 @@ const App = () => {
                   
                   <div className="space-y-6">
                     <div className="border-l-2 border-white pl-4">
-                      {/* NORMALIZED: Points 01 and 02 now have identical font treatment */}
+                      {/* NORMALIZED: Point 01 matches Point 02 exactly */}
                       <h4 className="font-bold text-white uppercase text-lg tracking-tight mb-1 leading-none">01. No Insurance</h4>
-                      <p className="text-xs text-red-100 leading-snug">Home & Contents policies exclude "unregistered motor vehicles." Illegal e-bikes are motorcycles.</p>
+                      <p className="text-xs text-red-100 leading-snug">Home & Contents policies exclude "unregistered motor vehicles." Illegal e-bikes are motorbikes.</p>
                     </div>
                     <div className="border-l-2 border-white pl-4">
-                      {/* NORMALIZED: Points 01 and 02 now have identical font treatment */}
+                      {/* NORMALIZED: Point 02 matches Point 01 exactly */}
                       <h4 className="font-bold text-white uppercase text-lg tracking-tight mb-1 leading-none">02. ASSET SEIZURE</h4>
-                      <p className="text-xs text-red-100 leading-snug">Your family home and personal assets can be seized to pay legal judgments.</p>
+                      <p className="text-xs text-red-100 font-black uppercase leading-tight">Your family home and personal assets can be seized to pay legal judgments.</p>
                     </div>
                   </div>
                 </div>
@@ -319,13 +319,20 @@ const App = () => {
           </div>
         )}
 
-        {/* A4 Flyer View - Adjusted for single page print */}
+        {/* A4 Flyer View - Optimized for Single Page PDF Printing */}
         {activeTab === 'flyer' && (
           <div className="flex flex-col items-center py-6 sm:py-10 animate-in fade-in zoom-in-95">
+            <style dangerouslySetInnerHTML={{ __html: `
+              @media print {
+                body { background: white !important; margin: 0 !important; padding: 0 !important; }
+                .print-container { margin: 0 !important; padding: 0 !important; transform: none !important; box-shadow: none !important; border: none !important; width: 100% !important; height: auto !important; }
+                .print-hide { display: none !important; }
+              }
+            `}} />
             <div className="w-full max-w-full overflow-x-auto overflow-y-hidden pb-10 flex flex-col items-center cursor-grab active:cursor-grabbing">
-              {/* FIXED: Height adjusted to 287mm to ensure single-page print from browsers */}
-              <div className="bg-white shadow-2xl overflow-hidden print:shadow-none border-[6px] sm:border-[12px] border-slate-900 origin-top scale-[0.4] sm:scale-[0.55] md:scale-75 lg:scale-100 transition-transform mb-[-500px] sm:mb-[-400px] md:mb-[-150px] lg:mb-10" 
-                   style={{ width: '210mm', height: '287mm', padding: '12mm' }}>
+              {/* HEIGHT ADJUSTED TO 285mm TO ENSURE BROWSER MARGINS DON'T TRIGGER SECOND PAGE */}
+              <div className="print-container bg-white shadow-2xl overflow-hidden print:shadow-none border-[6px] sm:border-[12px] border-slate-900 origin-top scale-[0.4] sm:scale-[0.55] md:scale-75 lg:scale-100 transition-transform mb-[-550px] sm:mb-[-450px] md:mb-[-150px] lg:mb-10" 
+                   style={{ width: '210mm', height: '285mm', padding: '12mm', boxSizing: 'border-box', WebkitPrintColorAdjust: 'exact' }}>
                 
                 <div className="bg-[#1A2A3A] text-white text-center py-6 -mx-10 -mt-10 mb-4">
                   <h1 className="text-5xl font-black tracking-tighter uppercase leading-none">URGENT: E-Bike Regulations</h1>
@@ -333,12 +340,12 @@ const App = () => {
                 </div>
 
                 <div className="bg-[#C0392B] text-white text-center font-bold py-2 mb-4 text-lg uppercase">
-                  CRACKDOWN ACTIVE: ILLEGAL BIKES SEIZED AND DESTROYED
+                  CRACKDOWN ACTIVE: NON-COMPLIANT BIKES ARE SUBJECT TO SEIZURE AND DESTRUCTION.
                 </div>
 
                 <div className="space-y-4 text-slate-800">
                   <section className="border-b-2 border-[#1A2A3A] pb-1">
-                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none">1. The Compliance Sticker Rule</h3>
+                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none pb-1">1. The Compliance Sticker Rule</h3>
                   </section>
                   <div className="grid grid-cols-1 gap-2 text-sm font-medium">
                     <p>• <strong>The 250W Cap:</strong> Motor power must not exceed 250W. The previous 500W allowance ended Dec 2025.</p>
@@ -347,12 +354,12 @@ const App = () => {
                   </div>
 
                   <section className="border-b-2 border-[#1A2A3A] pb-1 pt-2">
-                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none">2. Seizure {'&'} Retailer Accountability</h3>
+                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none pb-1">2. Seizure {'&'} Retailer Accountability</h3>
                   </section>
                   <div className="grid grid-cols-1 gap-2 text-sm font-medium leading-tight">
                     <p>• <strong>No Sticker = Seizure:</strong> Bikes lacking compliance stickers are presumed illegal.</p>
                     <p>• <strong>Retailer Warning:</strong> Selling high-power bikes as "legal" is a breach of Consumer Law.</p>
-                    <p>• <strong>Dyno Testing:</strong> Police use portable units to test motor wattage output roadside.</p>
+                    <p>• <strong>Dyno Testing:</strong> Police use portable units to test motor wattage output in real-time roadside.</p>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4 pt-2">
@@ -399,7 +406,7 @@ const App = () => {
                 </div>
               </div>
             </div>
-            <p className="text-slate-400 text-xs italic mt-4 md:hidden text-center">Tip: Pinch to zoom or swipe the flyer to view full details.</p>
+            <p className="text-slate-400 text-xs italic mt-4 md:hidden text-center print-hide">Tip: Pinch to zoom or swipe the flyer to view full details.</p>
           </div>
         )}
       </main>
