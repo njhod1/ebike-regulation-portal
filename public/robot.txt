@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Direct search engines to your sitemap
+
+Sitemap: https://www.google.com/search?q=https://nsw-ebike-safety-2026.netlify.app/sitemap.xml
