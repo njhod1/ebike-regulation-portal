@@ -162,33 +162,35 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 overflow-x-hidden">
-      {/* Print-specific Styles: Fixing Order and Single Page Fit */}
+      {/* Print-specific Styles: Absolute takeover to fix order, clipping, and blank pages */}
       <style dangerouslySetInnerHTML={{ __html: `
         @media print {
           @page { size: A4; margin: 0; }
-          nav, footer, button, .print-hide, .animate-in { display: none !important; }
+          nav, footer, button, .print-hide, .animate-in:not(.print-container) { display: none !important; }
           body, .min-h-screen { background: white !important; margin: 0 !important; padding: 0 !important; }
-          main { margin: 0 !important; padding: 0 !important; }
+          main { margin: 0 !important; padding: 0 !important; display: block !important; }
           
-          /* Forced takeover to ensure correct order and single page */
           .print-container { 
-            position: absolute !important;
+            position: fixed !important;
             top: 0 !important;
             left: 0 !important;
-            display: block !important;
-            transform: none !important; 
-            box-shadow: none !important; 
-            border: none !important; 
-            margin: 0 !important; 
             width: 210mm !important; 
-            height: 282mm !important; /* Fixed height to force single page */
-            padding: 15mm !important;
+            height: 275mm !important; /* Buffer height prevents triggering second blank page */
+            padding: 10mm 15mm 0 15mm !important; /* Top padding stops header clipping */
+            margin: 0 !important;
             box-sizing: border-box !important;
             background: white !important;
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
             overflow: hidden !important;
+            z-index: 99999 !important;
+            visibility: visible !important;
+            display: block !important;
+            transform: none !important;
           }
+          
+          /* Force animations off during print to avoid transparency issues */
+          * { animation: none !important; transition: none !important; opacity: 1 !important; }
         }
       `}} />
 
@@ -260,11 +262,11 @@ const App = () => {
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-6">
                       <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-                        <h4 className="font-bold text-slate-800 mb-2 uppercase text-xs tracking-wider">Sticker Rating ≤ 250W</h4>
+                        <h4 className="font-bold text-slate-800 mb-2 uppercase text-xs">Sticker Rating ≤ 250W</h4>
                         <p className="text-sm text-slate-600 font-medium tracking-tight leading-snug italic">Legal for road use. Motor assistance must cut out at 25km/h.</p>
                       </div>
                       <div className="p-4 bg-red-50 rounded-xl border border-red-100">
-                        <h4 className="font-bold text-red-800 mb-2 uppercase text-xs tracking-wider">Sticker Rating {'>'} 250W</h4>
+                        <h4 className="font-bold text-red-800 mb-2 uppercase text-xs">Sticker Rating {'>'} 250W</h4>
                         <p className="text-sm text-red-700 font-bold tracking-tight uppercase underline leading-snug">Classified as a Motorcycle. Illegal for minors.</p>
                       </div>
                     </div>
@@ -312,10 +314,12 @@ const App = () => {
                   
                   <div className="space-y-6">
                     <div className="border-l-2 border-white pl-4">
+                      {/* NORMALIZED: Points 01 and 02 match perfectly in size and style */}
                       <h4 className="font-black text-white uppercase text-xl tracking-tight mb-1 leading-none tracking-tighter">01. NO INSURANCE</h4>
                       <p className="text-xs text-red-100 leading-snug">Home & Contents policies exclude "unregistered motor vehicles." Illegal e-bikes are motorbikes.</p>
                     </div>
                     <div className="border-l-2 border-white pl-4">
+                      {/* NORMALIZED: Points 01 and 02 match perfectly in size and style */}
                       <h4 className="font-black text-white uppercase text-xl tracking-tight mb-1 leading-none tracking-tighter">02. ASSET SEIZURE</h4>
                       <p className="text-xs text-red-100 font-black uppercase leading-tight">Your family home and personal assets can be seized to pay legal judgments.</p>
                     </div>
@@ -347,13 +351,13 @@ const App = () => {
           </div>
         )}
 
-        {/* A4 Flyer View - Optimized for Single-Page Printing to PDF */}
+        {/* A4 Flyer View - Final Print Optimized Version */}
         {activeTab === 'flyer' && (
-          <div className="flex flex-col items-center py-6 sm:py-10 animate-in fade-in zoom-in-95">
+          <div className="flex flex-col items-center py-6 sm:py-10">
             <div className="w-full max-w-full overflow-x-auto overflow-y-hidden pb-10 flex flex-col items-center cursor-grab active:cursor-grabbing">
-              {/* HEIGHT ADJUSTED TO 282mm TO PREVENT SECOND BLANK PAGE AND ENSURE CORRECT ORDER */}
-              <div className="print-container bg-white shadow-2xl overflow-hidden border-[6px] sm:border-[12px] border-slate-900 origin-top scale-[0.4] sm:scale-[0.55] md:scale-75 lg:scale-100 transition-transform mb-[-550px] sm:mb-[-450px] md:mb-[-150px] lg:mb-10" 
-                   style={{ width: '210mm', height: '282mm', padding: '15mm', boxSizing: 'border-box' }}>
+              {/* HEIGHT ADJUSTED TO 275mm TO PREVENT OVERFLOW AND 2ND BLANK PAGE */}
+              <div className="print-container bg-white shadow-2xl overflow-hidden border-[6px] sm:border-[12px] border-slate-900 origin-top scale-[0.4] sm:scale-[0.55] md:scale-75 lg:scale-100 transition-transform mb-[-600px] sm:mb-[-500px] md:mb-[-150px] lg:mb-10" 
+                   style={{ width: '210mm', height: '275mm', padding: '15mm', boxSizing: 'border-box' }}>
                 
                 <div className="bg-[#1A2A3A] text-white text-center py-8 -mx-10 -mt-10 mb-6">
                   <h1 className="text-5xl font-black tracking-tighter uppercase leading-none">URGENT: E-Bike Regulations</h1>
@@ -366,7 +370,7 @@ const App = () => {
 
                 <div className="space-y-6 text-slate-800">
                   <section className="border-b-2 border-[#1A2A3A] pb-1">
-                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none">1. The Compliance Sticker Rule</h3>
+                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none pb-1">1. The Compliance Sticker Rule</h3>
                   </section>
                   <div className="grid grid-cols-1 gap-2 text-sm font-medium">
                     <p>• <strong>The 250W Cap:</strong> Motor power must not exceed 250W. The previous 500W allowance ended Dec 2025.</p>
@@ -375,7 +379,7 @@ const App = () => {
                   </div>
 
                   <section className="border-b-2 border-[#1A2A3A] pb-1 pt-2">
-                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none">2. Seizure {'&'} Retailer Accountability</h3>
+                    <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none pb-1">2. Seizure {'&'} Retailer Accountability</h3>
                   </section>
                   <div className="grid grid-cols-1 gap-2 text-sm font-medium leading-tight">
                     <p>• <strong>No Sticker = Seizure:</strong> Bikes lacking compliance stickers are presumed illegal.</p>
