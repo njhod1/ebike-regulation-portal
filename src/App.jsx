@@ -38,12 +38,11 @@ function PenaltyGrid() {
       {penalties.map((p, i) => (
         <div key={i} className="bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between h-full min-h-[110px]">
           <div className="mb-2">
-            {/* Added block and margin to prevent overlap seen in Image 6 */}
-            <span className="block text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1 leading-tight">{p.label}</span>
-            <p className="text-xs text-slate-600 italic leading-tight">{p.desc}</p>
+            <span className="block text-xs font-black text-slate-500 uppercase tracking-widest mb-1 leading-tight">{p.label}</span>
+            <p className="text-sm text-slate-600 italic leading-tight">{p.desc}</p>
           </div>
           <div className="text-right border-t border-slate-200 pt-2 mt-auto">
-            <span className="text-sm font-black text-red-600 uppercase tracking-tighter">{p.cost}</span>
+            <span className="text-base font-black text-red-600 uppercase tracking-tighter">{p.cost}</span>
           </div>
         </div>
       ))}
