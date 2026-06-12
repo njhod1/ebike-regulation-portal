@@ -27,10 +27,10 @@ const StatBox = ({ label, value }) => (
  */
 function PenaltyGrid() {
   const penalties = [
-    { label: "Unregistered Vehicle", cost: "$700+", desc: "Illegal e-bikes are motorbikes" },
-    { label: "Uninsured Vehicle", cost: "$700+", desc: "Mandatory CTP requirements" },
+    { label: "Unregistered Vehicle", cost: "$686–$2,200", desc: "Illegal e-bikes classified as motor vehicles" },
+    { label: "Uninsured Vehicle", cost: "$686–$5,500", desc: "Mandatory CTP insurance required" },
     { label: "Unlicensed Rider", cost: "Court", desc: "Criminal record implications" },
-    { label: "Impound Fee", cost: "$1,200+", desc: "TfNSW seizure costs" }
+    { label: "Footpath Speeding", cost: "Up to $2,200", desc: "Exceeding 10 km/h on footpaths" }
   ];
 
   return (
@@ -61,18 +61,18 @@ function LegalityQuiz() {
   const questions = [
     {
       id: 'sticker',
-      question: "Does the bike have a permanent EN 15194 compliance sticker?",
-      info: "Look near the pedals or on the frame for a silver/white manufacturer label."
+      question: "Is the bike rated at 250W or less on the manufacturer's label?",
+      info: "Check the frame or near the motor. Bikes sold after 1 Mar 2026 must also carry an EN 15194 mark. All bikes need EN 15194 compliance by 1 Mar 2029."
     },
     {
       id: 'wattage',
-      question: "Is the motor rated at 250W or less?",
-      info: "Check the sticker or manual. Anything over 250W is legally a motorcycle in NSW."
+      question: "Was the bike purchased new after 1 March 2026, or does it carry an EN 15194 certification mark?",
+      info: "Bikes bought before 1 Mar 2026 (up to 500W) have a grace period until 1 Mar 2029. New bikes must be EN 15194 certified."
     },
     {
       id: 'speed',
-      question: "Does the motor assistance cut out automatically at 25km/h?",
-      info: "If the motor keeps pushing you past 25km/h without pedaling, it's non-compliant."
+      question: "Does motor assistance cut out automatically at 25 km/h?",
+      info: "If the motor keeps pushing past 25 km/h without pedalling, the bike is non-compliant regardless of its rated wattage."
     }
   ];
 
@@ -155,6 +155,7 @@ const App = () => {
     TfNSW_EBIKES: "https://www.transport.nsw.gov.au/roadsafety/bicycle-riders/ebikes",
     FAMILY_ADVICE_PDF: "https://www.transport.nsw.gov.au/system/files/media/documents/2024/crs_e-bikes_families.pdf",
     FAIR_TRADING: "https://www.fairtrading.nsw.gov.au/help-centre/online-tools/make-a-complaint",
+    NSW_EBIKE_FAQS: "https://www.nsw.gov.au/driving-boating-and-transport/bikes-e-bikes-e-scooters/bicycles-electric-bikes/e-bike-faqs",
     PDF_DOWNLOAD: "/ebike_regulation_flyer.pdf"
   };
 
@@ -223,7 +224,7 @@ const App = () => {
 
       {activeTab === 'website' && (
         <div className="bg-red-700 text-white py-3 text-center font-bold px-4 text-xs sm:text-sm print:hidden">
-          🚨 CRITICAL UPDATE: NEW "CRUSH" LAWS ACTIVE AS OF FEBRUARY 2026
+          🚨 2026 CRACKDOWN ACTIVE: 250W ROAD LIMIT FROM 1 MAR 2026 · SEIZURE &amp; CRUSH POWERS FROM 24 MAR 2026
         </div>
       )}
 
@@ -246,23 +247,54 @@ const App = () => {
               <StatBox label="Penalty" value="Seizure" />
             </div>
 
+            {/* Key Dates Timeline */}
+            <div className="bg-white border border-slate-200 rounded-2xl shadow-sm p-6 mb-8 sm:mb-12">
+              <h2 className="text-sm font-black uppercase tracking-widest text-slate-500 mb-4">Key Regulatory Dates</h2>
+              <ol className="relative border-l-2 border-amber-400 space-y-5 ml-2">
+                <li className="pl-5">
+                  <span className="absolute -left-[7px] mt-1 w-3 h-3 rounded-full bg-amber-400"></span>
+                  <p className="text-xs font-black text-amber-600 uppercase tracking-widest">1 Feb 2026</p>
+                  <p className="text-sm text-slate-700 mt-0.5">All new e-bikes sold in NSW must carry a Fair Trading <strong>Certificate of Approval</strong> and mandatory safety marking.</p>
+                </li>
+                <li className="pl-5">
+                  <span className="absolute -left-[7px] mt-1 w-3 h-3 rounded-full bg-amber-400"></span>
+                  <p className="text-xs font-black text-amber-600 uppercase tracking-widest">1 Mar 2026</p>
+                  <p className="text-sm text-slate-700 mt-0.5">Road-use power limit drops from 500 W → <strong>250 W</strong>. Owners who bought a 500 W bike <em>before</em> this date get a <strong>grace period until 1 Mar 2029</strong>.</p>
+                </li>
+                <li className="pl-5">
+                  <span className="absolute -left-[7px] mt-1 w-3 h-3 rounded-full bg-red-500"></span>
+                  <p className="text-xs font-black text-red-600 uppercase tracking-widest">24 Mar 2026</p>
+                  <p className="text-sm text-slate-700 mt-0.5"><strong>Road Transport Amendment (Non-registrable Motor Vehicles) Bill 2026</strong> introduced — NSW Police and Transport Officers can now seize and crush illegal e-bikes.</p>
+                </li>
+                <li className="pl-5">
+                  <span className="absolute -left-[7px] mt-1 w-3 h-3 rounded-full bg-slate-400"></span>
+                  <p className="text-xs font-black text-slate-500 uppercase tracking-widest">1 Mar 2029</p>
+                  <p className="text-sm text-slate-700 mt-0.5">Grace period ends. <strong>All</strong> e-bikes on public roads must meet the EN 15194 standard. No exceptions.</p>
+                </li>
+              </ol>
+            </div>
+
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
               <div className="lg:col-span-2 space-y-8 sm:space-y-10">
                 <section>
                   <SectionHeader title="The Compliance Sticker Rule" icon={Zap} />
                   <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
                     <p className="mb-4 text-slate-700 leading-relaxed text-sm sm:text-base">
-                      Every e-bike used on NSW roads or shared paths must be an <strong>EPAC</strong>. Legality is determined by the manufacturer's label.
+                      Every <em>new</em> e-bike sold for use on NSW roads or shared paths must be an <strong>EPAC</strong> (Electrically Power Assisted Cycle). Legality is determined by the manufacturer's label and certified power output.
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-4">
                       <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
                         <h4 className="font-bold text-slate-800 mb-2 uppercase text-xs tracking-wider">Sticker Rating ≤ 250W</h4>
-                        <p className="text-sm text-slate-600 font-medium tracking-tight italic">Legal for road use. Motor assistance must cut out at 25km/h.</p>
+                        <p className="text-sm text-slate-600 font-medium tracking-tight italic">Legal for road use. Motor assistance must cut out at 25 km/h.</p>
                       </div>
                       <div className="p-4 bg-red-50 rounded-xl border border-red-100">
                         <h4 className="font-bold text-red-800 mb-2 uppercase text-xs tracking-wider">Sticker Rating {'>'} 250W</h4>
-                        <p className="text-sm text-red-700 font-bold tracking-tight uppercase underline leading-snug">Classified as a Motorcycle. Illegal for minors.</p>
+                        <p className="text-sm text-red-700 font-bold tracking-tight uppercase underline leading-snug">Classified as a Motorcycle. Illegal for unlicensed riders.</p>
                       </div>
+                    </div>
+                    <div className="mt-5 p-4 bg-amber-50 border border-amber-200 rounded-xl">
+                      <p className="text-xs font-black text-amber-800 uppercase tracking-widest mb-1">Grace Period — Existing 500W Owners</p>
+                      <p className="text-sm text-amber-900 leading-snug">If you owned a 500 W e-bike <strong>before 1 March 2026</strong>, you may continue riding it on NSW roads until <strong>1 March 2029</strong>. After that date, all bikes must be EN 15194-compliant and ≤ 250 W — no exceptions.</p>
                     </div>
                   </div>
                 </section>
@@ -273,7 +305,7 @@ const App = () => {
                     <div className="flex items-start gap-4 p-4 bg-red-50 border-l-4 border-red-600 rounded-r-xl mb-6">
                       <AlertCircle className="text-red-600 shrink-0" />
                       <p className="text-sm text-red-900 font-bold leading-snug">
-                        Under the Road Transport Act 2013, illegal bikes are destroyed (crushed). Police use portable <strong>Dyno Units</strong> to test wattage on-the-spot.
+                        Under the <strong>Road Transport Amendment (Non-registrable Motor Vehicles) Act 2026</strong> (amending the Road Transport Act 2013), non-compliant bikes can be seized and <strong>crushed</strong>. NSW Police use portable <strong>Dyno Units</strong> to test whether motor power cuts out at 25 km/h — if it doesn't, the bike is illegal.
                       </p>
                     </div>
                     <a href={LINKS.FAIR_TRADING} target="_blank" rel="noreferrer" className="block w-full py-3 bg-slate-900 text-white rounded-xl text-center font-bold text-xs uppercase tracking-widest hover:bg-slate-800 transition-all">
@@ -327,7 +359,8 @@ const App = () => {
                 <div>
                   <h3 className="font-bold text-slate-800 mb-4 uppercase tracking-widest underline decoration-amber-500 underline-offset-4">Safety & Compliance</h3>
                   <div className="space-y-3">
-                    <a href={LINKS.TfNSW_EBIKES} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline font-bold"><ExternalLink size={14}/> TfNSW: E-bike Safety & Sticker Info</a>
+                    <a href={LINKS.TfNSW_EBIKES} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline font-bold"><ExternalLink size={14}/> TfNSW: E-bike Safety &amp; Compliance</a>
+                    <a href={LINKS.NSW_EBIKE_FAQS} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline font-bold"><ExternalLink size={14}/> NSW Government: E-Bike FAQs</a>
                     <a href={LINKS.FAMILY_ADVICE_PDF} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline font-bold"><ExternalLink size={14}/> Advice for families (Official PDF)</a>
                   </div>
                 </div>
@@ -352,7 +385,7 @@ const App = () => {
                 </div>
 
                 <div className="bg-[#C0392B] text-white text-center font-bold py-3 mb-6 text-lg uppercase leading-tight">
-                  CRACKDOWN ACTIVE: NON-COMPLIANT BIKES ARE SUBJECT TO SEIZURE AND DESTRUCTION.
+                  CRACKDOWN ACTIVE (MAR 2026): NON-COMPLIANT BIKES SUBJECT TO SEIZURE AND DESTRUCTION.
                 </div>
 
                 <div className="space-y-6 text-slate-800">
@@ -360,9 +393,10 @@ const App = () => {
                     <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none pb-1">1. The Compliance Sticker Rule</h3>
                   </section>
                   <div className="grid grid-cols-1 gap-2 text-sm font-medium">
-                    <p>• <strong>The 250W Cap:</strong> Motor power must not exceed 250W.</p>
-                    <p>• <strong>Mandatory Labeling:</strong> Permanent EN 15194 compliance sticker must be visible on the frame.</p>
-                    <p>• <strong>Rating {'>'} 250W:</strong> Legally a <strong>Motorcycle</strong>. Illegal for unlicensed minors.</p>
+                    <p>• <strong>The 250W Cap:</strong> Motor power must not exceed 250W (from 1 March 2026).</p>
+                    <p>• <strong>EN 15194 Standard:</strong> Required on all new bikes sold from Feb 2026. Mandatory for ALL road use from 1 March 2029.</p>
+                    <p>• <strong>Grace Period:</strong> 500W bikes owned before 1 Mar 2026 remain legal until 1 Mar 2029 in NSW only.</p>
+                    <p>• <strong>Rating {'>'} 250W (new purchase):</strong> Legally a <strong>Motorcycle</strong>. Illegal for unlicensed riders.</p>
                   </div>
 
                   <section className="border-b-2 border-[#1A2A3A] pb-1 pt-2">
@@ -371,16 +405,16 @@ const App = () => {
                   <div className="grid grid-cols-1 gap-2 text-sm font-medium leading-tight">
                     <p>• <strong>No Sticker = Seizure:</strong> Bikes lacking compliance stickers are presumed illegal.</p>
                     <p>• <strong>Retailer Warning:</strong> Selling high-power bikes as "legal" is a breach of Consumer Law.</p>
-                    <p>• <strong>Dyno Testing:</strong> Police use portable units to test motor wattage roadside.</p>
+                    <p>• <strong>Dyno Testing:</strong> NSW Police use portable roadside dyno units to verify motor power cuts out at 25 km/h.</p>
                   </div>
 
                   <div className="grid grid-cols-2 gap-4 pt-4">
                     <div className="bg-[#F4F7F6] p-4 rounded-lg border border-[#1A2A3A]">
                       <h4 className="font-black text-xs uppercase mb-2">Penalties at a Glance</h4>
                       <div className="text-[10px] space-y-1 font-bold">
-                        <p>Unregistered Vehicle: $700+ Fine</p>
-                        <p>Uninsured Vehicle: $700+ Fine</p>
-                        <p>TfNSW Seizure Fee: $1,200+</p>
+                        <p>Unregistered Vehicle: $686–$2,200</p>
+                        <p>Uninsured Vehicle: $686–$5,500</p>
+                        <p>Footpath Speeding: up to $2,200</p>
                       </div>
                     </div>
                     <div className="bg-white p-4 rounded-lg border-2 border-[#C0392B]">
