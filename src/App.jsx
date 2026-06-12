@@ -152,7 +152,7 @@ const App = () => {
     ROAD_TRANSPORT_ACT: "https://legislation.nsw.gov.au/view/html/inforce/current/act-2013-018",
     VEHICLE_STANDARDS_ACT: "https://www.legislation.gov.au/Series/C2018A00061",
     TfNSW_EBIKES: "https://www.transport.nsw.gov.au/roadsafety/bicycle-riders/ebikes",
-    FAMILY_ADVICE_PDF: "https://www.transport.nsw.gov.au/system/files/media/documents/2024/crs_e-bikes_families.pdf",
+    FAMILY_ADVICE_PDF: "https://www.transport.nsw.gov.au/system/files/media/documents/2025/crs_safety_on_wheels.pdf",
     FAIR_TRADING: "https://www.fairtrading.nsw.gov.au/help-centre/online-tools/make-a-complaint",
     NSW_EBIKE_FAQS: "https://www.nsw.gov.au/driving-boating-and-transport/bikes-e-bikes-e-scooters/bicycles-electric-bikes/e-bike-faqs",
     PDF_DOWNLOAD: "/ebike_regulation_flyer.pdf"
@@ -360,7 +360,7 @@ const App = () => {
                   <div className="space-y-3">
                     <a href={LINKS.TfNSW_EBIKES} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline font-bold"><ExternalLink size={14}/> TfNSW: E-bike Safety &amp; Compliance</a>
                     <a href={LINKS.NSW_EBIKE_FAQS} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline font-bold"><ExternalLink size={14}/> NSW Government: E-Bike FAQs</a>
-                    <a href={LINKS.FAMILY_ADVICE_PDF} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline font-bold"><ExternalLink size={14}/> Advice for families (Official PDF)</a>
+                    <a href={LINKS.FAMILY_ADVICE_PDF} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-blue-600 hover:underline font-bold"><ExternalLink size={14}/> Safety on Wheels — Parents &amp; Carers Guide (TfNSW PDF)</a>
                   </div>
                 </div>
               </div>
