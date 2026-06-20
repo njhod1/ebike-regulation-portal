@@ -126,7 +126,7 @@ export const nsw = {
   },
 
   flyer: {
-    available: true,
-    pdfPath: '/ebike_regulation_flyer.pdf',
+    available: false,
+    pdfPath: '/ebike_national_flyer.pdf',
   },
 }
