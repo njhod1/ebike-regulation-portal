@@ -1,6 +1,6 @@
 import { ALL_STATES } from '@/data/index.js'
 
-const BASE_URL = 'https://nsw-ebike-safety-2026.netlify.app'
+const BASE_URL = 'https://australia-ebike-laws.netlify.app'
 
 export default function sitemap() {
   return [
