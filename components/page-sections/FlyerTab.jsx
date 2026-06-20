@@ -20,7 +20,7 @@ export default function FlyerTab({ flyer, stateName }) {
             style={{ width: '210mm', height: '275mm', padding: '15mm', boxSizing: 'border-box' }}
           >
             <div className="bg-[#1A2A3A] text-white text-center py-8 -mx-10 -mt-10 mb-6">
-              <h1 className="text-5xl font-black tracking-tighter uppercase leading-none">URGENT: E-Bike Regulations</h1>
+              <h2 className="text-5xl font-black tracking-tighter uppercase leading-none">URGENT: E-Bike Regulations</h2>
               <p className="text-xl font-bold text-[#F39C12] uppercase tracking-widest mt-1">{stateName} Compliance &amp; Parental Liability Guide 2026</p>
             </div>
 
