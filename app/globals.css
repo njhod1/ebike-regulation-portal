@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+  @page { size: A4; margin: 0; }
+  body { visibility: hidden !important; background: white !important; margin: 0 !important; padding: 0 !important; }
+  #root { visibility: hidden !important; }
+  .print-container {
+    visibility: visible !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 210mm !important;
+    height: 275mm !important;
+    padding: 10mm 15mm !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    background: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    display: block !important;
+    overflow: hidden !important;
+  }
+  .print-container * { visibility: visible !important; opacity: 1 !important; animation: none !important; }
+  nav, footer, button, .print-hide { display: none !important; }
+}
