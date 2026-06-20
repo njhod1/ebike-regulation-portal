@@ -151,7 +151,7 @@ NT  & All ages & None & Mirrors national standard. \\
 
 \end{minipage}
 
-\vfill
+\vspace{4mm}
 
 % ── FOOTER ────────────────────────────────────────────────────────────────
 \begin{tcolorbox}[colback=Navy, colframe=Navy, arc=0mm, top=3mm, bottom=3mm]
