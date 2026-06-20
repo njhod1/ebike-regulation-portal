@@ -1,0 +1,168 @@
+\documentclass[10pt, a4paper]{article}
+
+\usepackage[a4paper, top=0.9cm, bottom=0.9cm, left=1.1cm, right=1.1cm]{geometry}
+\usepackage{fontspec}
+\usepackage[english, bidi=basic, provide=*]{babel}
+\babelfont{rm}{Noto Sans}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[draft=false]{qrcode}
+
+\definecolor{Navy}{HTML}{1A2A3A}
+\definecolor{Orange}{HTML}{F39C12}
+\definecolor{DangerRed}{HTML}{C0392B}
+\definecolor{LightGray}{HTML}{F4F7F6}
+\definecolor{Slate}{HTML}{64748B}
+\definecolor{AmberBg}{HTML}{FFFBEB}
+\definecolor{AmberBorder}{HTML}{F59E0B}
+\definecolor{GreenBg}{HTML}{F0FDF4}
+\definecolor{GreenBorder}{HTML}{16A34A}
+
+\titleformat{\section}{\color{Navy}\normalfont\normalsize\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{7pt}{4pt}
+
+\hypersetup{hidelinks}
+
+\begin{document}
+\pagestyle{empty}
+
+% ── HEADER ──────────────────────────────────────────────────────────────────
+\begin{tcolorbox}[colback=Navy, colframe=Navy, arc=0mm, top=5mm, bottom=5mm]
+  \centering
+  \color{white}
+  {\large \textbf{AUSTRALIAN E-BIKE REGULATIONS 2026}} \\
+  \vspace{1mm}
+  {\normalsize \textbf{National Compliance \& Parental Liability Guide — All States \& Territories}}
+\end{tcolorbox}
+
+\vspace{2mm}
+
+% ── NATIONAL STANDARD BANNER ─────────────────────────────────────────────
+\begin{tcolorbox}[colback=Navy!90, colframe=Navy, arc=2mm, top=2mm, bottom=2mm]
+  \centering
+  \color{Orange} \small \bfseries
+  NATIONAL STANDARD: 250W MAXIMUM · 25 KM/H MOTOR CUT-OFF · EN 15194 CERTIFICATION
+\end{tcolorbox}
+
+\vspace{3mm}
+
+% ── TWO COLUMN LAYOUT ─────────────────────────────────────────────────────
+\begin{minipage}[t]{0.62\textwidth}
+
+\section*{1. UNIVERSAL RULES (ALL STATES)}
+\begin{itemize}[label=--, nosep, topsep=3pt, itemsep=1pt]
+  \item \textbf{250W Maximum:} Motor power must not exceed 250W on any public road or path.
+  \item \textbf{25 km/h Cut-off:} Motor assistance must stop at 25 km/h in all jurisdictions.
+  \item \textbf{No Throttle Cruising:} Throttle-only riding above 6 km/h is illegal nationwide.
+  \item \textbf{EN 15194 Standard:} Required on all new e-bikes sold from Feb 2026 (NSW). Mandatory for all road use nationally from \textbf{1 Mar 2029}.
+  \item \textbf{Over 250W = Motorcycle:} Requires registration, insurance and a licence. Riding without these is a criminal offence.
+  \item \textbf{Helmet Required:} An approved bicycle helmet is mandatory in all states.
+\end{itemize}
+
+\vspace{3mm}
+
+\section*{2. STATE-BY-STATE KEY DIFFERENCES}
+\vspace{2mm}
+{\scriptsize
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{>{\bfseries}p{0.9cm} p{2.1cm} p{1.1cm} p{3.6cm}}
+\toprule
+\textbf{State} & \textbf{Footpaths} & \textbf{Min Age} & \textbf{Key Note} \\
+\midrule
+NSW & Adults banned & None & Seizure \& crush powers (Mar 2026). Grace period for 500W bikes until 1 Mar 2029. \\
+VIC & Under 13 only & None & Strictest footpath rule in Australia. \\
+QLD & Allowed & 16\textsuperscript{*} & \textsuperscript{*}Minimum age 16 + licensing proposed from Jul 2026 — before parliament. \\
+WA  & Shared paths & 16+ & Minimum riding age 16 in force. \\
+SA  & All ages & None & No state exceptions. Mirrors national standard. \\
+TAS & All ages & None & Mirrors national standard. \\
+ACT & All ages & None & Extensive shared path network in Canberra. \\
+NT  & All ages & None & Mirrors national standard. \\
+\bottomrule
+\end{tabular}
+}
+
+\vspace{3mm}
+
+\section*{3. PARENTS: IS YOUR HOME AT RISK?}
+\begin{tcolorbox}[colback=white, colframe=DangerRed, top=3pt, bottom=3pt]
+  \small \textbf{If an underage rider causes an accident on an illegal e-bike:}
+  \begin{enumerate}[nosep, topsep=2pt, itemsep=1pt]
+    \item \textbf{NO INSURANCE:} Home policies exclude ``unregistered motor vehicles.'' Illegal e-bikes fall under this category.
+    \item \textbf{PERSONAL LIABILITY:} Parents can be sued for millions in medical costs and damages.
+    \item \textbf{ASSET LIQUIDATION:} Your house, savings and assets can be seized to pay legal debts.
+  \end{enumerate}
+\end{tcolorbox}
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.34\textwidth}
+
+% ── QUICK CHECK BOX ───────────────────────────────────────────────────────
+\begin{tcolorbox}[colback=AmberBg, colframe=AmberBorder, title=\textbf{QUICK COMPLIANCE CHECK}, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
+  \scriptsize
+  ☐ Motor rated \textbf{250W or less}? \\[2pt]
+  ☐ Motor assist cuts out at \textbf{25 km/h}? \\[2pt]
+  ☐ \textbf{No throttle} above 6 km/h? \\[2pt]
+  ☐ \textbf{EN 15194} certificate or mark? \\[2pt]
+  ☐ Rider wearing an \textbf{approved helmet}? \\[4pt]
+  \textit{All yes = road legal in all states.}
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ── PENALTIES BOX ─────────────────────────────────────────────────────────
+\begin{tcolorbox}[colback=LightGray, colframe=Navy, title=\textbf{TYPICAL PENALTIES}, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
+  \scriptsize
+  \begin{description}[nosep, leftmargin=0pt, itemsep=2pt]
+    \item[Unregistered Vehicle:] \$686–\$2,200+
+    \item[Uninsured Vehicle:] \$686–\$5,500+
+    \item[Unlicensed Rider:] Court attendance
+    \item[Footpath (adult, NSW/VIC):] Up to \$2,200
+    \item[Destruction Order:] Final — no return
+  \end{description}
+  \vspace{2pt}
+  \textit{\tiny Amounts vary by state. Check your state page for exact figures.}
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ── NSW ALERT ─────────────────────────────────────────────────────────────
+\begin{tcolorbox}[colback=white, colframe=DangerRed, title=\textcolor{DangerRed}{\textbf{NSW ONLY}}, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
+  \scriptsize
+  Police have active \textbf{seizure \& crush} powers for non-compliant e-bikes (Mar 2026). \\[2pt]
+  Roadside \textbf{Dyno Units} verify the 25 km/h cut-off on the spot. \\[2pt]
+  500W bike owners: \textbf{grace period until 1 Mar 2029} only.
+\end{tcolorbox}
+
+\vspace{4mm}
+
+% ── QR CODE ───────────────────────────────────────────────────────────────
+\begin{tcolorbox}[colback=white, colframe=Navy, top=3pt, bottom=3pt]
+  \centering
+  \textbf{\scriptsize FULL STATE-BY-STATE GUIDE} \\[3pt]
+  \qrcode[height=2.2cm]{https://australia-ebike-laws.netlify.app} \\[3pt]
+  {\tiny \ttfamily australia-ebike-laws.netlify.app}
+\end{tcolorbox}
+
+\end{minipage}
+
+\vspace{4mm}
+
+% ── FOOTER ────────────────────────────────────────────────────────────────
+\begin{tcolorbox}[colback=Navy, colframe=Navy, arc=0mm, top=3mm, bottom=3mm]
+  \centering
+  \color{white}
+  \textbf{\small OFFICIAL STATUTORY REFERENCE} \\
+  \vspace{1mm}
+  \footnotesize
+  Road Rules 2014 (each state) \quad|\quad Road Transport Act 2013 (NSW) \quad|\quad Road Vehicle Standards Act 2018 (Cth) \\
+  \vspace{1mm}
+  \color{Slate}\scriptsize \textit{For educational purposes only. Always refer to your state's current legislation. Information current as at June 2026.}
+\end{tcolorbox}
+
+\end{document}
