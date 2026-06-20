@@ -19,15 +19,13 @@ export default function StatutoryFooter({ links, flyer }) {
               </a>
             ))}
           </div>
-          {flyer?.available && (
-            <a
-              href={flyer.pdfPath}
-              download
-              className="mt-4 flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-emerald-600 text-white rounded-xl font-black uppercase text-sm hover:bg-emerald-700 transition-all shadow-lg"
-            >
-              <Download size={18} /> Download Official PDF Flyer
-            </a>
-          )}
+          <a
+            href="/ebike_national_flyer.pdf"
+            download
+            className="mt-4 flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-emerald-600 text-white rounded-xl font-black uppercase text-sm hover:bg-emerald-700 transition-all shadow-lg"
+          >
+            <Download size={18} /> Download National Guide (PDF)
+          </a>
         </div>
         <div>
           <h3 className="font-bold text-slate-800 mb-4 uppercase tracking-widest underline decoration-amber-500 underline-offset-4">Safety &amp; Compliance</h3>
