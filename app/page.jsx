@@ -1,14 +1,30 @@
 import Link from 'next/link'
 import { ALL_STATES } from '@/data/index.js'
 
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'AU E-Bike Laws',
+  url: 'https://australia-ebike-laws.netlify.app',
+  description: 'Complete guide to e-bike regulations across all Australian states and territories.',
+  inLanguage: 'en-AU',
+}
+
 export const metadata = {
   title: 'Australian E-Bike Laws 2026 — All States & Territories',
   description: 'Complete guide to e-bike regulations, power limits, penalties, and compliance requirements across all 8 Australian states and territories.',
+  alternates: { canonical: 'https://australia-ebike-laws.netlify.app' },
+  openGraph: {
+    title: 'Australian E-Bike Laws 2026 — All States & Territories',
+    description: 'Complete guide to e-bike regulations across all 8 Australian states and territories.',
+    url: 'https://australia-ebike-laws.netlify.app',
+  },
 }
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
       <div className="bg-red-700 text-white py-3 text-center font-bold px-4 text-xs sm:text-sm print:hidden">
         250W LIMIT NATIONAL STANDARD · CHECK YOUR STATE FOR LOCAL ENFORCEMENT RULES
       </div>
