@@ -2,17 +2,19 @@ export const sa = {
   name: 'South Australia',
   slug: 'sa',
   abbreviation: 'SA',
-  summary: '250W limit. No minimum age. Adults allowed on footpaths.',
+  summary: '250W limit. No minimum age for e-bikes. E-scooters and PMDs legalised from 13 Jul 2025. PMD rules under review Jun 2026.',
 
   seo: {
-    title: 'South Australia E-Bike Laws 2026: 250W Limit & Compliance Guide',
-    description: 'Complete guide to South Australia e-bike regulations 2026. 250W power limit, no minimum age, footpath rules.',
+    title: 'South Australia E-Bike Laws 2026: 250W Limit, PMD Rules & Compliance Guide',
+    description: 'South Australia e-bike regulations 2026. 250W power limit, no minimum age. E-scooters & PMDs legalised Jul 2025, review underway Jun 2026.',
     canonicalPath: '/sa',
     ogImage: '/og-preview.png',
   },
 
   alertBanner: {
-    show: false,
+    show: true,
+    color: 'amber',
+    text: 'SA PMD REVIEW UNDERWAY (JUN 2026): E-scooters & personal mobility devices legalised from 13 Jul 2025. Rules under review.',
   },
 
   stats: [
@@ -22,7 +24,18 @@ export const sa = {
     { label: 'Footpaths', value: 'All ages' },
   ],
 
-  keyDates: [],
+  keyDates: [
+    {
+      date: '13 Jul 2025',
+      color: 'amber',
+      text: 'Private <strong>e-scooters and personal mobility devices (PMDs)</strong> legalised for use on footpaths, shared paths, bike paths and many roads in South Australia. PMDs are capped at <strong>10 km/h on footpaths</strong> and 25 km/h on bike lanes. Riders must be 16 or over. No licence or registration required.',
+    },
+    {
+      date: 'Jun 2026',
+      color: 'slate',
+      text: '<strong>SA Department for Infrastructure and Transport review commenced</strong> to assess how the July 2025 PMD laws are working and identify areas for improvement. Further rule changes possible in 2026–27.',
+    },
+  ],
 
   compliance: {
     gracePeriod: {
