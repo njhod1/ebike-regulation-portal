@@ -2,17 +2,19 @@ export const wa = {
   name: 'Western Australia',
   slug: 'wa',
   abbreviation: 'WA',
-  summary: '250W limit. Minimum age 16. Adults allowed on shared paths.',
+  summary: '250W limit. Minimum age 16. Parliamentary inquiry completed Dec 2025. WA leading national e-mobility standards push.',
 
   seo: {
-    title: 'Western Australia E-Bike Laws 2026: 250W Limit, Age 16 & Compliance Guide',
-    description: 'Complete guide to Western Australia e-bike regulations 2026. 250W power limit, minimum age 16, and shared path rules.',
+    title: 'Western Australia E-Bike Laws 2026: 250W Limit, Age 16 & National Standards Push',
+    description: 'Western Australia e-bike regulations 2026. 250W limit, minimum age 16. Dec 2025 Ride Safe inquiry complete. WA leading national e-mobility device standards reform.',
     canonicalPath: '/wa',
     ogImage: '/og-preview.png',
   },
 
   alertBanner: {
-    show: false,
+    show: true,
+    color: 'amber',
+    text: 'WA REFORM UNDERWAY: RIDE SAFE INQUIRY (DEC 2025) — GOVERNMENT SUPPORTS 32/33 RECOMMENDATIONS. NATIONAL STANDARDS FRAMEWORK IN DEVELOPMENT.',
   },
 
   stats: [
@@ -22,7 +24,18 @@ export const wa = {
     { label: 'Footpaths', value: 'Shared paths' },
   ],
 
-  keyDates: [],
+  keyDates: [
+    {
+      date: 'Dec 2025',
+      color: 'amber',
+      text: 'WA Parliamentary Committee tabled the <strong>Ride Safe report</strong> — an inquiry into eRideable and e-bike safety. The Cook Government supported <strong>32 of 33 recommendations</strong>, including anti-tampering measures, speed-limiting technology, school education programmes, and improved infrastructure.',
+    },
+    {
+      date: 'Mar 2026',
+      color: 'amber',
+      text: 'WA Transport Minister announced Western Australia is <strong>leading a national push</strong> for stronger eRideable device standards in partnership with other states and the National Transport Commission. No legislative changes have been enacted yet — further reforms expected as the national framework develops.',
+    },
+  ],
 
   compliance: {
     gracePeriod: {

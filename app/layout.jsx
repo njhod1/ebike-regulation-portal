@@ -17,11 +17,12 @@ export const metadata = {
     card: 'summary_large_image',
     images: ['/og-preview.png'],
   },
+  icons: { icon: '/Favicon.svg', type: 'image/svg+xml' },
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en-AU">
       <body>
         <SiteNav />
         {children}

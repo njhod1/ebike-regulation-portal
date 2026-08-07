@@ -56,6 +56,25 @@ function StateJsonLd({ stateData }) {
   )
 }
 
+function StateFaqJsonLd({ quiz }) {
+  if (!quiz?.length) return null
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: quiz.map(q => ({
+      '@type': 'Question',
+      name: q.question,
+      acceptedAnswer: { '@type': 'Answer', text: q.info },
+    })),
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export default async function Page({ params }) {
   const { state } = await params
   const stateData = ALL_STATES.find(s => s.slug === state)
@@ -63,6 +82,7 @@ export default async function Page({ params }) {
   return (
     <>
       <StateJsonLd stateData={stateData} />
+      <StateFaqJsonLd quiz={stateData.quiz} />
       <StatePage stateData={stateData} />
     </>
   )

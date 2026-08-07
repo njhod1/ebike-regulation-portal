@@ -29,3 +29,8 @@ out/
 
 # Claude Code internal
 .claude/
+# LaTeX build artefacts
+National Flyer Source.aux
+National Flyer Source.out
+National Flyer Source.log
+National Flyer Source.pdf

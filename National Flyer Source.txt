@@ -74,11 +74,11 @@
 \toprule
 \textbf{State} & \textbf{Footpaths} & \textbf{Min Age} & \textbf{Key Note} \\
 \midrule
-NSW & Adults banned & None & Seizure \& crush powers (Mar 2026). Grace period for 500W bikes until 1 Mar 2029. \\
+NSW & Adults: 10 km/h & None & Seizure \& crush powers (Mar 2026). Grace period for 500W bikes until 1 Mar 2029. \\
 VIC & Under 13 only & None & Strictest footpath rule in Australia. \\
-QLD & Allowed & 16\textsuperscript{*} & \textsuperscript{*}Minimum age 16 + licensing proposed from Jul 2026 — before parliament. \\
-WA  & Shared paths & 16+ & Minimum riding age 16 in force. \\
-SA  & All ages & None & No state exceptions. Mirrors national standard. \\
+QLD & 12 km/h cap & 16+ & Seizure powers from 1 Jul 2026. Age 16 + learner's licence from 31 Aug 2026. \\
+WA  & Shared paths & 16+ & Ride Safe inquiry (Dec 2025): WA leading national device-standards push. \\
+SA  & All ages & None & PMDs (e-scooters) legalised from 13 Jul 2025. PMD rules under review 2026. \\
 TAS & All ages & None & Mirrors national standard. \\
 ACT & All ages & None & Extensive shared path network in Canberra. \\
 NT  & All ages & None & Mirrors national standard. \\
@@ -162,7 +162,7 @@ NT  & All ages & None & Mirrors national standard. \\
   \footnotesize
   Road Rules 2014 (each state) \quad|\quad Road Transport Act 2013 (NSW) \quad|\quad Road Vehicle Standards Act 2018 (Cth) \\
   \vspace{1mm}
-  \color{Slate}\scriptsize \textit{For educational purposes only. Always refer to your state's current legislation. Information current as at June 2026.}
+  \color{Slate}\scriptsize \textit{For educational purposes only. Always refer to your state's current legislation. Information current as at August 2026.}
 \end{tcolorbox}
 
 \end{document}
