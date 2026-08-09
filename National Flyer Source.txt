@@ -64,29 +64,29 @@
   \item \textbf{Helmet Required:} An approved bicycle helmet is mandatory in all states.
 \end{itemize}
 
-\vspace{3mm}
+\vspace{2mm}
 
 \section*{2. STATE-BY-STATE KEY DIFFERENCES}
-\vspace{2mm}
+\vspace{1mm}
 {\scriptsize
-\renewcommand{\arraystretch}{1.3}
-\begin{tabular}{>{\bfseries}p{0.9cm} p{2.1cm} p{1.1cm} p{3.6cm}}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{>{\bfseries}p{0.9cm} p{2.0cm} p{1.0cm} p{3.7cm}}
 \toprule
-\textbf{State} & \textbf{Footpaths} & \textbf{Min Age} & \textbf{Key Note} \\
+\textbf{State} & \textbf{Footpaths} & \textbf{Age} & \textbf{Key Note} \\
 \midrule
-NSW & Adults: 10 km/h & None & Seizure \& crush powers (Mar 2026). Grace period for 500W bikes until 1 Mar 2029. \\
-VIC & Under 13 only & None & Strictest footpath rule in Australia. \\
-QLD & 12 km/h cap & 16+ & Seizure powers from 1 Jul 2026. Age 16 + learner's licence from 31 Aug 2026. \\
-WA  & Shared paths & 16+ & Ride Safe inquiry (Dec 2025): WA leading national device-standards push. \\
-SA  & All ages & None & PMDs (e-scooters) legalised from 13 Jul 2025. PMD rules under review 2026. \\
-TAS & All ages & None & Mirrors national standard. \\
-ACT & All ages & None & Extensive shared path network in Canberra. \\
-NT  & All ages & None & Mirrors national standard. \\
+NSW & Adults: 10 km/h & — & Seizure \& crush powers (Mar 2026). 500W grace period until 1 Mar 2029. \\
+VIC & Under 13 only & — & Strictest footpath rule in Australia. \\
+QLD & 12 km/h cap & 16+ & Seizure powers (1 Jul 2026). Age 16 + learner's licence from 31 Aug 2026. \\
+WA  & Shared paths & 16+ & Ride Safe inquiry (Dec 2025). National device-standards push underway. \\
+SA  & All ages & — & E-scooters/PMDs legalised Jul 2025. Rules under review 2026. \\
+TAS & All ages & — & Mirrors national standard. \\
+ACT & All ages & — & Extensive shared path network in Canberra. \\
+NT  & All ages & — & Mirrors national standard. \\
 \bottomrule
 \end{tabular}
 }
 
-\vspace{3mm}
+\vspace{2mm}
 
 \section*{3. PARENTS: IS YOUR HOME AT RISK?}
 \begin{tcolorbox}[colback=white, colframe=DangerRed, top=3pt, bottom=3pt]
@@ -118,10 +118,11 @@ NT  & All ages & None & Mirrors national standard. \\
 % ── PENALTIES BOX ─────────────────────────────────────────────────────────
 \begin{tcolorbox}[colback=LightGray, colframe=Navy, title=\textbf{TYPICAL PENALTIES}, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
   \scriptsize
-  \begin{description}[nosep, leftmargin=0pt, itemsep=2pt]
+  \begin{description}[nosep, leftmargin=0pt, itemsep=1pt]
     \item[Unregistered Vehicle:] \$686–\$2,200+
     \item[Uninsured Vehicle:] \$686–\$5,500+
     \item[Unlicensed Rider:] Court attendance
+    \item[No Helmet:] \$25 (NT) to \$518 (QLD)
     \item[Footpath (adult, NSW/VIC):] Up to \$2,200
     \item[Destruction Order:] Final — no return
   \end{description}

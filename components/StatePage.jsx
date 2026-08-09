@@ -7,6 +7,7 @@ import PenaltyGrid from '@/components/page-sections/PenaltyGrid'
 import ParentalLiabilitySection from '@/components/page-sections/ParentalLiabilitySection'
 import StatutoryFooter from '@/components/page-sections/StatutoryFooter'
 import FlyerTab from '@/components/page-sections/FlyerTab'
+import EnforcementNotices from '@/components/page-sections/EnforcementNotices'
 
 export default function StatePage({ stateData }) {
   const {
@@ -21,6 +22,7 @@ export default function StatePage({ stateData }) {
     quiz,
     links,
     flyer,
+    notices,
   } = stateData
 
   return (
@@ -59,6 +61,7 @@ export default function StatePage({ stateData }) {
             <div className="lg:col-span-2 space-y-8 sm:space-y-10">
               <ComplianceStickerSection compliance={compliance} stateName={name} />
               <SeizureSection seizure={seizure} />
+              <EnforcementNotices notices={notices} />
             </div>
 
             <div className="space-y-6">
