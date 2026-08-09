@@ -42,6 +42,7 @@ export const nt = {
     { label: 'Unregistered Vehicle', cost: '$500+', desc: 'Illegal e-bikes classified as motor vehicles' },
     { label: 'Uninsured Vehicle', cost: '$500+', desc: 'Mandatory CTP insurance required' },
     { label: 'Unlicensed Rider', cost: 'Court', desc: 'Criminal record implications' },
+    { label: 'No Helmet', cost: '$25', desc: 'Approved helmet mandatory. Lowest helmet fine in Australia' },
   ],
 
   footpathRule: {

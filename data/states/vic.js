@@ -43,6 +43,7 @@ export const vic = {
     { label: 'Uninsured Vehicle', cost: '$826–$4,957', desc: 'Mandatory CTP insurance required' },
     { label: 'Unlicensed Rider', cost: 'Court', desc: 'Criminal record implications' },
     { label: 'Footpath (adult)', cost: 'Fine applies', desc: 'Adults not permitted on footpaths' },
+    { label: 'No Helmet', cost: '~$254', desc: 'Approved helmet mandatory. Amount indexed annually to VIC penalty units' },
   ],
 
   footpathRule: {

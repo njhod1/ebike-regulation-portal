@@ -55,6 +55,7 @@ export const wa = {
     { label: 'Unregistered Vehicle', cost: '$550–$2,200', desc: 'Illegal e-bikes classified as motor vehicles' },
     { label: 'Uninsured Vehicle', cost: '$550–$2,200', desc: 'Mandatory CTP insurance required' },
     { label: 'Unlicensed Rider', cost: 'Court', desc: 'Criminal record implications' },
+    { label: 'No Helmet', cost: '$50', desc: 'Approved helmet mandatory. Lowest helmet fine of any mainland state' },
   ],
 
   footpathRule: {
@@ -100,6 +101,15 @@ export const wa = {
       id: 'age',
       question: "Is the rider aged 16 or over?",
       info: "Western Australia requires riders to be at least 16 years old to operate an e-bike.",
+    },
+  ],
+
+  notices: [
+    {
+      date: 'Jan 2026',
+      title: 'Operation Moorhead — Perth Enforcement Action',
+      text: 'WA Police seized 36 e-rideables, charged 25 juveniles (aged 11–16) and 4 adults with traffic offences including "no authority to drive" and "use of unlicensed vehicle on a road." This targeted operation in Perth became the model explicitly adopted by NSW for its 2026 crackdown. It demonstrates how a dedicated, hotspot-focused enforcement operation produces rapid results.',
+      url: 'https://bicyclenetwork.com.au/newsroom/2026/02/12/nsw-police-to-seize-and-crush-illegal-e-bikes/',
     },
   ],
 

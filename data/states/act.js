@@ -42,6 +42,7 @@ export const act = {
     { label: 'Unregistered Vehicle', cost: '$680+', desc: 'Illegal e-bikes classified as motor vehicles' },
     { label: 'Uninsured Vehicle', cost: '$680+', desc: 'Mandatory CTP insurance required' },
     { label: 'Unlicensed Rider', cost: 'Court', desc: 'Criminal record implications' },
+    { label: 'No Helmet', cost: '$121', desc: 'Approved helmet mandatory for all riders' },
   ],
 
   footpathRule: {

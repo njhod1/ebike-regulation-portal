@@ -70,6 +70,7 @@ export const nsw = {
     { label: 'Uninsured Vehicle', cost: '$686–$5,500', desc: 'Mandatory CTP insurance required' },
     { label: 'Unlicensed Rider', cost: 'Court', desc: 'Criminal record implications' },
     { label: 'Footpath Speeding', cost: 'Up to $2,200', desc: 'Exceeding 10 km/h on footpaths' },
+    { label: 'No Helmet', cost: '$410', desc: 'Approved helmet mandatory. Flat on-the-spot fine' },
   ],
 
   footpathRule: {
@@ -109,6 +110,27 @@ export const nsw = {
       id: 'speed',
       question: "Does motor assistance cut out automatically at 25 km/h?",
       info: "If the motor keeps pushing past 25 km/h without pedalling, the bike is non-compliant regardless of its rated wattage.",
+    },
+  ],
+
+  notices: [
+    {
+      date: 'Mar 2026',
+      title: 'Tweed Shire Enforcement Blitz',
+      text: 'NSW Police and Transport for NSW ran a paired blitz in Tweed Shire: one week of pop-up education stalls, followed by one week of active fines. Fines issued: $410 (no helmet) · $136 (adult footpath riding) · from $723 (illegal modifications). This model is being rolled out to other known hotspot corridors.',
+      url: 'https://www.tweed.nsw.gov.au/council/news-updates/latest-news/general-news/ebike-blitz',
+    },
+    {
+      date: 'Feb 2026',
+      title: 'Roadside Dyno Units Deployed',
+      text: '3 portable dynamometer units — funded at $100,000 from the Community Road Safety Fund — are trialling roadside testing at known illegal e-bike hotspots. Units verify whether the motor cuts out at 25 km/h. The NRMA has noted 3 units is insufficient for the scale of the problem. The approach is modelled on WA\'s Operation Moorhead (Jan 2026), which seized 36 e-rideables and charged 25 juveniles and 4 adults in a single Perth operation.',
+      url: 'https://www.mynrma.com.au/open-road/news/2026/tighter-laws-for-e-bikes',
+    },
+    {
+      date: '2024–2025',
+      title: 'Northern Beaches "Know the Code" Campaign',
+      text: 'Australia\'s first behavioural-change e-bike safety campaign, targeting teenage riders and parents. Delivered via 60 signage locations, school posters, social media, and partnerships with Bicycle NSW and local police. Council reports a reduction in complaints. Important limitation: councils have no enforcement power — education only. Northern Beaches Council has formally lobbied the NSW Government for enforcement powers to be transferred to councils.',
+      url: 'https://www.northernbeaches.nsw.gov.au/council/news/media-releases/stronger-approach-to-use-e-bikes-and-e-scooters-welcome',
     },
   ],
 
