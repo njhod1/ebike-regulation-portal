@@ -11,6 +11,7 @@
 \usepackage{hyperref}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{amssymb}
 \usepackage[draft=false]{qrcode}
 
 \definecolor{Navy}{HTML}{1A2A3A}
@@ -60,23 +61,10 @@
   \item \textbf{250W Maximum:} Motor power must not exceed 250W on any public road or path.
   \item \textbf{25 km/h Cut-off:} Motor assistance must stop at 25 km/h in all jurisdictions.
   \item \textbf{No Throttle Cruising:} Throttle-only riding above 6 km/h is illegal nationwide.
-  \item \textbf{EN 15194 Standard:} Required on all new e-bikes sold from Feb 2026 (NSW). Mandatory for all road use nationally from \textbf{1 Mar 2029}.
+  \item \textbf{EN 15194 Standard:} Mandatory on all new e-bikes sold in NSW from Feb 2026; a national import standard applies from Dec 2025. Road-use compliance deadlines vary by state — see table below.
   \item \textbf{Over 250W = Motorcycle:} Requires registration, insurance and a licence. Riding without these is a criminal offence.
   \item \textbf{Helmet Required:} An approved bicycle helmet is mandatory in all states.
 \end{itemize}
-
-\vspace{1.5mm}
-
-% ── QUICK CHECK BOX ──────────────────────────────────────────────────────
-\begin{tcolorbox}[colback=AmberBg, colframe=AmberBorder, title=\textbf{QUICK COMPLIANCE CHECK}, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
-  \scriptsize
-  ☐ Motor rated \textbf{250W or less}? \\[1pt]
-  ☐ Motor assist cuts out at \textbf{25 km/h}? \\[1pt]
-  ☐ \textbf{No throttle} above 6 km/h? \\[1pt]
-  ☐ \textbf{EN 15194} certificate or mark? \\[1pt]
-  ☐ Rider wearing an \textbf{approved helmet}? \\[2pt]
-  \textit{All yes = road legal in all states.}
-\end{tcolorbox}
 
 \vspace{1.5mm}
 
@@ -84,27 +72,35 @@
 \vspace{1mm}
 {\scriptsize
 \renewcommand{\arraystretch}{1.15}
-\begin{tabular}{>{\bfseries}p{0.9cm} p{2.0cm} p{1.0cm} p{3.7cm}}
+\begin{tabular}{>{\bfseries}p{0.9cm} p{1.9cm} p{1.0cm} p{3.8cm}}
 \toprule
 \textbf{State} & \textbf{Footpaths} & \textbf{Age} & \textbf{Key Note} \\
 \midrule
 NSW & Adults: 10 km/h & — & Seizure \& crush powers (Mar 2026). 500W grace period until 1 Mar 2029. \\
-VIC & Under 13 only & — & Strictest footpath rule in Australia. \\
-QLD & 12 km/h cap & 16+ & Seizure powers (1 Jul 2026). Age 16 + learner's licence from 31 Aug 2026. \\
-WA  & Shared paths & 16+ & Ride Safe inquiry (Dec 2025). National device-standards push underway. \\
-SA  & All ages & — & E-scooters/PMDs legalised Jul 2025. Rules under review 2026. \\
+VIC & Under 13 only & — & Strictest footpath rule. Drone \& blitz enforcement (52\% non-compliant, CBD). \\
+QLD & 12 km/h cap & 12+$^\ast$ & Seizure powers (1 Jul 2026); tiered ages from 31 Aug. AMA QLD called the law ``watered down.'' \\
+WA & Shared paths & 16+ & Ride Safe inquiry (Dec 2025): 32/33 recommendations backed; national push underway. \\
+SA & All ages & — & E-scooters/PMDs legalised Jul 2025. Rules under review since Jun 2026. \\
 TAS & All ages & — & Mirrors national standard. \\
 ACT & All ages & — & Extensive shared path network in Canberra. \\
 NT  & All ages & — & Mirrors national standard. \\
 \bottomrule
-\end{tabular}
+\end{tabular} \\[2pt]
+\textit{\tiny $^\ast$QLD: under-12s cannot ride in public; ages 12–15 must be directly supervised; 16+ needs a learner's licence.}
 }
 
 \vspace{1.5mm}
 
+{\scriptsize\color{DangerRed}
+\textbf{MEDICAL ALERT (Jun 2026):} AMA Queensland called weakened e-mobility laws a \textit{``shocking disregard for safety.''} Emergency departments nationwide report rising child injuries from non-compliant e-bikes.
+}
+
+\vspace{1mm}
+
 \section*{3. PARENTS: IS YOUR HOME AT RISK?}
 \begin{tcolorbox}[colback=white, colframe=DangerRed, top=3pt, bottom=3pt]
   \small \textbf{If an underage rider causes an accident on an illegal e-bike:}
+  \hyphenpenalty=10000 \exhyphenpenalty=10000
   \begin{enumerate}[nosep, topsep=2pt, itemsep=1pt]
     \item \textbf{NO INSURANCE:} Home policies exclude ``unregistered motor vehicles.'' Illegal e-bikes fall under this category.
     \item \textbf{PERSONAL LIABILITY:} Parents can be sued for millions in medical costs and damages.
@@ -121,34 +117,62 @@ NT  & All ages & — & Mirrors national standard. \\
 \begin{tcolorbox}[colback=LightGray, colframe=Navy, top=3pt, bottom=3pt]
   \scriptsize
   \begin{description}[nosep, leftmargin=0pt, itemsep=1pt]
-    \item[Unregistered Vehicle:] \$686–\$2,200+
-    \item[Uninsured Vehicle:] \$686–\$5,500+
+    \item[Unregistered Vehicle:] \$500 (NT) to \$3,189 (QLD)
+    \item[Uninsured Vehicle:] \$500 (NT) to \$5,500+ (NSW)
     \item[Unlicensed Rider:] Court attendance
     \item[No Helmet:] \$25 (NT) to \$518 (QLD)
-    \item[Footpath (adult, NSW/VIC):] Up to \$2,200
-    \item[Destruction Order:] Final — no return
+    \item[Drink Riding (QLD):] Up to \$6,908
+    \item[Footpath Speeding (NSW):] Up to \$2,200 — VIC bans adults outright
+    \item[Destruction Order (NSW/QLD):] Final — no return
   \end{description}
   \vspace{2pt}
   \textit{\tiny Amounts vary by state. Check your state page for exact figures.}
 \end{tcolorbox}
 
-\vspace{4mm}
+\vspace{3mm}
 
 % ── NSW ALERT ─────────────────────────────────────────────────────────────
-\begin{tcolorbox}[colback=white, colframe=DangerRed, title=\textcolor{DangerRed}{\textbf{NSW ONLY}}, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
+\begin{tcolorbox}[colback=white, colframe=DangerRed, title=\textbf{NSW SPOTLIGHT}, coltitle=white, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
   \scriptsize
-  Police have active \textbf{seizure \& crush} powers for non-compliant e-bikes (Mar 2026). \\[2pt]
-  Roadside \textbf{Dyno Units} verify the 25 km/h cut-off on the spot. \\[2pt]
-  500W bike owners: \textbf{grace period until 1 Mar 2029} only.
+  Police have active \textbf{seizure \& crush} powers (Mar 2026) — QLD gained matching seize \& destroy powers from Jul 2026. \\[2pt]
+  Roadside \textbf{Dyno Units} verify the 25 km/h cut-off on the spot (NSW only). \\[2pt]
+  500W bike owners: \textbf{grace period until 1 Mar 2029} (NSW only).
 \end{tcolorbox}
 
-\vspace{4mm}
+\vspace{3mm}
+
+% ── QUICK CHECK BOX ──────────────────────────────────────────────────────
+\begin{tcolorbox}[colback=AmberBg, colframe=AmberBorder, title=\textbf{QUICK COMPLIANCE CHECK}, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
+  \scriptsize
+  $\square$ Motor rated \textbf{250W or less}? \\[1pt]
+  $\square$ Motor assist cuts out at \textbf{25 km/h}? \\[1pt]
+  $\square$ \textbf{No throttle} above 6 km/h? \\[1pt]
+  $\square$ \textbf{EN 15194} certificate or mark? \\[1pt]
+  $\square$ Rider meets your state's \textbf{minimum age}? \\[1pt]
+  $\square$ Rider wearing an \textbf{approved helmet}? \\[2pt]
+  \textit{All yes = road legal in all states.}
+\end{tcolorbox}
+
+\vspace{3mm}
+
+% ── NATIONAL SNAPSHOT ────────────────────────────────────────────────────
+\begin{tcolorbox}[colback=LightGray, colframe=Navy, title=\textbf{NATIONAL SAFETY SNAPSHOT}, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
+  \scriptsize
+  \begin{description}[nosep, leftmargin=0pt, itemsep=1.5pt]
+    \item[15+ deaths (2025):] Reported nationally in e-mobility incidents (NRMA)
+    \item[52\% non-compliant:] Melbourne CBD blitz, Operation Consider
+    \item[\$6.6M funding:] ACCC national safety standard, announced May 2026
+    \item[12 deaths (2025):] Queensland alone, per Amy's Foundation
+  \end{description}
+\end{tcolorbox}
+
+\vspace{3mm}
 
 % ── QR CODE ───────────────────────────────────────────────────────────────
 \begin{tcolorbox}[colback=white, colframe=Navy, top=3pt, bottom=3pt]
   \centering
   \textbf{\scriptsize FULL STATE-BY-STATE GUIDE} \\[3pt]
-  \qrcode[height=2.2cm]{https://australia-ebike-laws.netlify.app} \\[3pt]
+  \qrcode[height=2.1cm]{https://australia-ebike-laws.netlify.app} \\[3pt]
   {\tiny \ttfamily australia-ebike-laws.netlify.app}
 \end{tcolorbox}
 
