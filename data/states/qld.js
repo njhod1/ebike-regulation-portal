@@ -50,8 +50,7 @@ export const qld = {
   compliance: {
     gracePeriod: {
       exists: true,
-      deadline: 'End Feb 2027',
-      description: 'Existing owners have until the end of February 2027 to ensure their e-bike complies with EN 15194. After this date, Queensland Police can seize and destroy any non-compliant device.',
+      text: 'Existing owners have until the end of February 2027 to ensure their e-bike complies with EN 15194. After this date, Queensland Police can seize and destroy any non-compliant device.',
     },
     enStandard: {
       mandatoryFromDate: 'End Feb 2027',
