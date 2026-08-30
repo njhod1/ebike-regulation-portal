@@ -5,7 +5,7 @@ export const vic = {
   summary: '250W limit, adults not allowed on footpaths. Children under 13 only.',
 
   seo: {
-    title: 'Victoria E-Bike Laws 2026: 250W Limit, Footpath Rules & Compliance Guide',
+    title: 'Victoria E-Bike Laws 2026: 250W Limit & Footpath Rules',
     description: 'Complete guide to Victoria e-bike regulations 2026. 250W power limit, EN 15194 standard, footpath rules for adults and children.',
     canonicalPath: '/vic',
     ogImage: '/og-preview.png',

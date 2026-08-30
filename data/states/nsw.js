@@ -5,7 +5,7 @@ export const nsw = {
   summary: '250W limit in force from 1 Mar 2026. Seizure & crush powers active from 24 Mar 2026.',
 
   seo: {
-    title: 'NSW E-Bike Laws 2026: 250W Limit, Seizure Powers & Compliance Guide',
+    title: 'NSW E-Bike Laws 2026: 250W Limit & Seizure Powers',
     description: 'The official 2026 guide to NSW e-bike laws. Verify 250W power limits, compliance stickers, and new enforcement powers including seizure and crush.',
     canonicalPath: '/nsw',
     ogImage: '/og-preview.png',
