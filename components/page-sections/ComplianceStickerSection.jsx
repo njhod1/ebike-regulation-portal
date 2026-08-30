@@ -21,7 +21,7 @@ export default function ComplianceStickerSection({ compliance, stateName }) {
         </div>
         {compliance?.gracePeriod?.exists && (
           <div className="mt-5 p-4 bg-amber-50 border border-amber-200 rounded-xl">
-            <p className="text-xs font-black text-amber-800 uppercase tracking-widest mb-1">Grace Period — Existing 500W Owners</p>
+            <p className="text-xs font-black text-amber-800 uppercase tracking-widest mb-1">Grace Period</p>
             <p
               className="text-sm text-amber-900 leading-snug"
               dangerouslySetInnerHTML={{ __html: compliance.gracePeriod.text }}
