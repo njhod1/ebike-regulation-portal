@@ -1,8 +1,9 @@
 import './globals.css'
 import SiteNav from '@/components/nav/SiteNav'
+import { SITE_URL } from '@/lib/site'
 
 export const metadata = {
-  metadataBase: new URL('https://australia-ebike-laws.netlify.app'),
+  metadataBase: new URL(SITE_URL),
   title: { default: 'Australian E-Bike Laws 2026', template: '%s | AU E-Bike Laws' },
   description: 'The complete guide to e-bike regulations across all Australian states and territories — power limits, penalties, compliance requirements, and parental liability explained.',
   keywords: ['e-bike laws Australia', 'electric bike regulations', 'NSW e-bike', 'EPAC', '250W limit', 'e-bike compliance', 'e-bike penalties Australia'],

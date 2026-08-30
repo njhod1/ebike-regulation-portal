@@ -5,7 +5,7 @@ export const sa = {
   summary: '250W limit. No minimum age for e-bikes. E-scooters and PMDs legalised from 13 Jul 2025. PMD rules under review Jun 2026.',
 
   seo: {
-    title: 'South Australia E-Bike Laws 2026: 250W Limit, PMD Rules & Compliance Guide',
+    title: 'South Australia E-Bike Laws 2026: 250W Limit & PMD Rules',
     description: 'South Australia e-bike regulations 2026. 250W power limit, no minimum age. E-scooters & PMDs legalised Jul 2025, review underway Jun 2026.',
     canonicalPath: '/sa',
     ogImage: '/og-preview.png',

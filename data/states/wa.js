@@ -5,8 +5,8 @@ export const wa = {
   summary: '250W limit. Minimum age 16. Parliamentary inquiry completed Dec 2025. WA leading national e-mobility standards push.',
 
   seo: {
-    title: 'Western Australia E-Bike Laws 2026: 250W Limit, Age 16 & National Standards Push',
-    description: 'Western Australia e-bike regulations 2026. 250W limit, minimum age 16. Dec 2025 Ride Safe inquiry complete. WA leading national e-mobility device standards reform.',
+    title: 'Western Australia E-Bike Laws 2026: 250W Limit & Age 16',
+    description: 'Western Australia e-bike regulations 2026: 250W limit, min age 16. Dec 2025 Ride Safe inquiry complete - WA leading a national e-mobility standards push.',
     canonicalPath: '/wa',
     ogImage: '/og-preview.png',
   },

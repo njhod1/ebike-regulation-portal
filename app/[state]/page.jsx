@@ -1,8 +1,9 @@
 import { ALL_STATES, STATE_SLUGS } from '@/data/index.js'
 import { notFound } from 'next/navigation'
 import StatePage from '@/components/StatePage'
+import { SITE_URL } from '@/lib/site'
 
-const BASE_URL = 'https://australia-ebike-laws.netlify.app'
+const BASE_URL = SITE_URL
 
 export async function generateStaticParams() {
   return STATE_SLUGS.map(slug => ({ state: slug }))
@@ -14,13 +15,13 @@ export async function generateMetadata({ params }) {
   if (!stateData) return {}
   const { seo } = stateData
   return {
-    title: seo.title,
+    title: { absolute: seo.title },
     description: seo.description,
-    alternates: { canonical: `${BASE_URL}${seo.canonicalPath}` },
+    alternates: { canonical: seo.canonicalPath },
     openGraph: {
       title: seo.title,
       description: seo.description,
-      url: `${BASE_URL}${seo.canonicalPath}`,
+      url: seo.canonicalPath,
       images: [{ url: seo.ogImage ?? '/og-preview.png', width: 1200, height: 630 }],
     },
     twitter: {

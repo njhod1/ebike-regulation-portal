@@ -35,6 +35,10 @@ public/
   ebike_national_flyer.pdf   # Compiled national summary flyer, linked from FlyerTab.jsx
 
 National Flyer Source.txt    # LaTeX source for the national flyer PDF (see below)
+
+lib/site.js                  # SITE_URL — the single source of truth for the site's
+                              # origin, used everywhere a full URL is needed (see
+                              # Custom domain below)
 ```
 
 ## Updating state law content
@@ -73,6 +77,28 @@ rm -f "National Flyer Source.tex" "National Flyer Source.aux" "National Flyer So
 ```
 
 Requires a TeX distribution with `xelatex` and the packages used in the source (`tcolorbox`, `titlesec`, `qrcode`, `amssymb`, etc.) and the Noto Sans font. Keep the flyer to a single page — check the compiled output visually (e.g. render to PNG) after any edit, since the two-column layout is sensitive to content length changes.
+
+Note: the domain is hardcoded in the flyer's QR code and URL text (it's a static PDF, not part of the Next.js build, so `NEXT_PUBLIC_SITE_URL` doesn't reach it) — update and recompile it manually after a domain change, see **Custom domain** below.
+
+## Custom domain
+
+The site's origin is read from `NEXT_PUBLIC_SITE_URL` (see `lib/site.js`), which every canonical URL, Open Graph/Twitter tag, JSON-LD block, `sitemap.xml`, and `robots.txt` derives from. It falls back to `https://australia-ebike-laws.netlify.app` when unset.
+
+To move to a custom domain:
+
+1. Buy the domain from any registrar (or an existing one you hold, e.g. Webcentral) — no need to register it through Netlify.
+2. In Netlify: **Site configuration → Domain management → Add a domain**, then follow Netlify's DNS instructions (either point the registrar's nameservers at Netlify, or add the A/CNAME records Netlify gives you at your registrar). Keep hosting on Netlify — a Next.js App Router build like this one needs a Node runtime that typical shared/cPanel hosting doesn't provide.
+3. In Netlify: **Site configuration → Environment variables**, set `NEXT_PUBLIC_SITE_URL` to the new domain (e.g. `https://ebikelaws.com.au`, no trailing slash), then trigger a redeploy. No code changes needed.
+4. Update `google` in `app/layout.jsx`'s `metadata.verification` once you've re-verified the new domain in Google Search Console, and submit the new `sitemap.xml` there.
+5. Regenerate `National Flyer Source.txt`'s QR code and URL text by hand (it's a compiled PDF, not part of the Next.js build, so it doesn't pick up the env var) — see **National flyer (PDF)** below.
+
+## SEO
+
+- Every page has a unique `<title>` (kept under 60 characters so Google doesn't truncate it) and meta description (under 160 characters) — see each state's `seo.title`/`seo.description` in `data/states/<slug>.js`. State page titles use `title: { absolute: seo.title }` in `generateMetadata` specifically to bypass the root layout's `%s | AU E-Bike Laws` template, which was silently appending 17 characters to every state title before this was caught.
+- `metadataBase` (root layout) plus relative `alternates.canonical`/`openGraph.url` values mean every page's canonical and OG URLs resolve correctly without hardcoding the domain per-page.
+- JSON-LD: `WebSite` schema on the homepage, `WebPage` + `BreadcrumbList` + `FAQPage` (from each state's `quiz`) on every state page.
+- `sitemap.xml` and `robots.txt` are generated from `ALL_STATES`, so a new state added to `data/index.js` is picked up automatically.
+- Open Graph/Twitter card image (`public/og-preview.png`, 1200×630) and favicon (`public/Favicon.svg`) are set site-wide with a per-state `ogImage` override available in `seo`.
 
 ## Development
 

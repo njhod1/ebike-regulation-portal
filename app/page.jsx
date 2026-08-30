@@ -1,23 +1,24 @@
 import Link from 'next/link'
 import { ALL_STATES } from '@/data/index.js'
+import { SITE_URL } from '@/lib/site'
 
 const websiteJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: 'AU E-Bike Laws',
-  url: 'https://australia-ebike-laws.netlify.app',
+  url: SITE_URL,
   description: 'Complete guide to e-bike regulations across all Australian states and territories.',
   inLanguage: 'en-AU',
 }
 
 export const metadata = {
-  title: 'Australian E-Bike Laws 2026 — All States & Territories',
+  title: { absolute: 'Australian E-Bike Laws 2026 — All States & Territories' },
   description: 'Complete guide to e-bike regulations, power limits, penalties, and compliance requirements across all 8 Australian states and territories.',
-  alternates: { canonical: 'https://australia-ebike-laws.netlify.app' },
+  alternates: { canonical: '/' },
   openGraph: {
     title: 'Australian E-Bike Laws 2026 — All States & Territories',
     description: 'Complete guide to e-bike regulations across all 8 Australian states and territories.',
-    url: 'https://australia-ebike-laws.netlify.app',
+    url: '/',
   },
 }
 

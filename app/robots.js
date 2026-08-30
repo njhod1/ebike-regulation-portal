@@ -1,6 +1,8 @@
+import { SITE_URL } from '@/lib/site'
+
 export default function robots() {
   return {
     rules: { userAgent: '*', allow: '/' },
-    sitemap: 'https://australia-ebike-laws.netlify.app/sitemap.xml',
+    sitemap: `${SITE_URL}/sitemap.xml`,
   }
 }
