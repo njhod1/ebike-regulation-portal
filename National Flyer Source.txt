@@ -131,7 +131,7 @@ NT  & All ages & — & Mirrors national standard. \\
 \vspace{3mm}
 
 % ── NSW ALERT ─────────────────────────────────────────────────────────────
-\begin{tcolorbox}[colback=white, colframe=DangerRed, title=\textcolor{DangerRed}{\textbf{NSW ONLY}}, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
+\begin{tcolorbox}[colback=white, colframe=DangerRed, title=\textbf{NSW ONLY}, coltitle=white, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
   \scriptsize
   Police have active \textbf{seizure \& crush} powers for non-compliant e-bikes (Mar 2026). \\[2pt]
   Roadside \textbf{Dyno Units} verify the 25 km/h cut-off on the spot. \\[2pt]
