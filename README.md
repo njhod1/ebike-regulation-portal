@@ -2,7 +2,7 @@
 
 A Next.js reference site covering Australian e-bike, e-scooter and personal mobility device (PMD) regulations for every state and territory — power/speed limits, minimum ages, footpath rules, penalties, parental liability, enforcement notices and a compliance quiz — plus a downloadable national summary flyer.
 
-Live site: https://australia-ebike-laws.netlify.app
+Live site: https://e-bikelaws.au
 
 ## Stack
 
@@ -82,14 +82,16 @@ Note: the domain is hardcoded in the flyer's QR code and URL text (it's a static
 
 ## Custom domain
 
-The site's origin is read from `NEXT_PUBLIC_SITE_URL` (see `lib/site.js`), which every canonical URL, Open Graph/Twitter tag, JSON-LD block, `sitemap.xml`, and `robots.txt` derives from. It falls back to `https://australia-ebike-laws.netlify.app` when unset.
+The site's origin is read from `NEXT_PUBLIC_SITE_URL` (see `lib/site.js`), which every canonical URL, Open Graph/Twitter tag, JSON-LD block, `sitemap.xml`, and `robots.txt` derives from. It falls back to `https://e-bikelaws.au` (the current production domain) when unset.
 
-To move to a custom domain:
+The site moved from `australia-ebike-laws.netlify.app` to `e-bikelaws.au` in Aug 2026: registered via Webcentral, DNS delegated to Netlify DNS (nameservers, not manual A/CNAME records — simpler and gives full CDN benefit for the apex domain), `NEXT_PUBLIC_SITE_URL` set in Netlify, and a new Google Search Console **Domain property** verified via DNS TXT record (more robust than the old per-URL meta tag method — one property covers `http`/`https`/`www`/non-`www` and survives future hosting changes). The `google-site-verification` meta tag still in `app/layout.jsx` is a leftover from the old domain's separate GSC property; it's inert now and can be ignored or removed.
 
-1. Buy the domain from any registrar (or an existing one you hold, e.g. Webcentral) — no need to register it through Netlify.
-2. In Netlify: **Site configuration → Domain management → Add a domain**, then follow Netlify's DNS instructions (either point the registrar's nameservers at Netlify, or add the A/CNAME records Netlify gives you at your registrar). Keep hosting on Netlify — a Next.js App Router build like this one needs a Node runtime that typical shared/cPanel hosting doesn't provide.
-3. In Netlify: **Site configuration → Environment variables**, set `NEXT_PUBLIC_SITE_URL` to the new domain (e.g. `https://ebikelaws.com.au`, no trailing slash), then trigger a redeploy. No code changes needed.
-4. Update `google` in `app/layout.jsx`'s `metadata.verification` once you've re-verified the new domain in Google Search Console, and submit the new `sitemap.xml` there.
+To move to a different custom domain again in future:
+
+1. Buy the domain from any registrar — no need to register it through Netlify.
+2. In Netlify: **Site configuration → Domain management → Add a domain**, then **Set up Netlify DNS** for it (recommended over manual A/CNAME records) and update the domain's nameservers at the registrar to the four Netlify gives you.
+3. In Netlify: **Site configuration → Environment variables**, set `NEXT_PUBLIC_SITE_URL` to the new domain (no trailing slash), then trigger a redeploy. No code changes needed — also update the fallback in `lib/site.js` to match, so local dev and any deploy without the env var set still points at the right place.
+4. Google Search Console → **Add property → Domain** → verify via the DNS TXT record it gives you (add it in Netlify's DNS records panel) → submit `sitemap.xml` under **Sitemaps**.
 5. Regenerate `National Flyer Source.txt`'s QR code and URL text by hand (it's a compiled PDF, not part of the Next.js build, so it doesn't pick up the env var) — see **National flyer (PDF)** below.
 
 ## SEO
