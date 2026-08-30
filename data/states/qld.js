@@ -141,6 +141,12 @@ export const qld = {
       text: 'Transport Minister Brent Mickelberg replaced the proposed full ban on under-16s with a tiered system: ages 12–17 may ride under parental supervision; ages 16+ with a learner\'s permit may ride without supervision. Bicycle Queensland CEO Dr Matthew Burke warned the laws would make Queensland "the hardest place in the world to ride a legal e-bike" and criticised the failure to close the private-property loophole allowing sale and use of illegal devices on private land.',
       url: 'https://www.abc.net.au/news/2026-06-02/qld-government-waters-down-under-16s-e-scooter-ban/106748582',
     },
+    {
+      date: 'Dec 2025 / May 2026',
+      title: 'FEDERAL: EN 15194 IMPORT STANDARD & $6.6M ACCC SAFETY PROGRAM',
+      text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. In May 2026, the Federal Government allocated $6.6 million over three years for the ACCC to develop a mandatory national safety standard covering speed limits, power caps, battery fire safety and consumer labelling. Public consultation is expected in late 2026. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
+      url: 'https://bicyclenetwork.com.au/newsroom/2025/12/03/feds-return-to-euro-e-bike-standard/',
+    },
   ],
 
   links: {
