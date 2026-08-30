@@ -116,13 +116,13 @@ NT  & All ages & — & Mirrors national standard. \\
 \begin{tcolorbox}[colback=LightGray, colframe=Navy, top=3pt, bottom=3pt]
   \scriptsize
   \begin{description}[nosep, leftmargin=0pt, itemsep=1pt]
-    \item[Unregistered Vehicle:] \$686–\$2,478
-    \item[Uninsured Vehicle:] \$686–\$5,500+
+    \item[Unregistered Vehicle:] \$500 (NT) to \$3,189 (QLD)
+    \item[Uninsured Vehicle:] \$500 (NT) to \$5,500+ (NSW)
     \item[Unlicensed Rider:] Court attendance
     \item[No Helmet:] \$25 (NT) to \$518 (QLD)
     \item[Drink Riding (QLD):] Up to \$6,908
-    \item[Footpath (adult, NSW/VIC):] Up to \$2,478
-    \item[Destruction Order:] Final — no return
+    \item[Footpath Speeding (NSW):] Up to \$2,200 — VIC bans adults outright
+    \item[Destruction Order (NSW/QLD):] Final — no return
   \end{description}
   \vspace{2pt}
   \textit{\tiny Amounts vary by state. Check your state page for exact figures.}
