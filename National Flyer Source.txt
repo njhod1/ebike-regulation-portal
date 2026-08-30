@@ -100,6 +100,7 @@ NT  & All ages & — & Mirrors national standard. \\
 \section*{3. PARENTS: IS YOUR HOME AT RISK?}
 \begin{tcolorbox}[colback=white, colframe=DangerRed, top=3pt, bottom=3pt]
   \small \textbf{If an underage rider causes an accident on an illegal e-bike:}
+  \hyphenpenalty=10000 \exhyphenpenalty=10000
   \begin{enumerate}[nosep, topsep=2pt, itemsep=1pt]
     \item \textbf{NO INSURANCE:} Home policies exclude ``unregistered motor vehicles.'' Illegal e-bikes fall under this category.
     \item \textbf{PERSONAL LIABILITY:} Parents can be sued for millions in medical costs and damages.
