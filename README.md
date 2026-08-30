@@ -1,16 +1,72 @@
-# React + Vite
+# Australian E-Bike Regulation Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Next.js reference site covering Australian e-bike, e-scooter and personal mobility device (PMD) regulations for every state and territory — power/speed limits, minimum ages, footpath rules, penalties, parental liability, enforcement notices and a compliance quiz — plus a downloadable national summary flyer.
 
-Currently, two official plugins are available:
+Live site: https://australia-ebike-laws.netlify.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Stack
 
-## React Compiler
+- [Next.js 15](https://nextjs.org/) (App Router, static generation)
+- React 19
+- Tailwind CSS
+- Deployed on Netlify (`@netlify/plugin-nextjs`), auto-deploys on merge to `main`
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## Project structure
 
-## Expanding the ESLint configuration
+```
+app/
+  page.jsx            # Homepage
+  [state]/page.jsx     # Per-state page, statically generated for each slug in data/states
+  layout.jsx, robots.js, sitemap.js
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+data/states/*.js       # One file per state/territory — the single source of truth for all
+                        # law content (summary, key dates, penalties, quiz, enforcement
+                        # notices, links, etc). Slugs: nsw, vic, qld, wa, sa, tas, act, nt
+
+components/
+  StatePage.jsx         # Assembles a state page from its data file
+  page-sections/         # Individual sections (penalties grid, key-dates timeline,
+                          # compliance quiz, enforcement notices, seizure powers,
+                          # parental liability, statutory footer, flyer tab)
+  nav/                   # Site nav + state selector
+  ui/                    # Shared small components (stat box, section header)
+
+public/
+  ebike_national_flyer.pdf   # Compiled national summary flyer, linked from FlyerTab.jsx
+
+National Flyer Source.txt    # LaTeX source for the national flyer PDF (see below)
+```
+
+## Updating state law content
+
+Each state/territory is a single data object in `data/states/<slug>.js`, imported and rendered by `components/StatePage.jsx`. To update or correct a law:
+
+1. Edit the relevant fields in `data/states/<slug>.js` — `summary`, `alertBanner`, `stats`, `keyDates`, `compliance`, `seizure`, `penalties`, `footpathRule`, `minimumAge`, `parentalLiability`, `quiz`, `notices`, `links`.
+2. `notices` is the enforcement/news feed rendered by `EnforcementNotices.jsx` — add a dated entry with `title`, `text` and a source `url` for any new government bulletin, enforcement operation, or safety notice.
+3. Run `npm run dev` and check the page renders as expected before committing.
+
+## National flyer (PDF)
+
+`public/ebike_national_flyer.pdf` is a one-page, two-column A4 summary compiled from `National Flyer Source.txt` (LaTeX). To regenerate it after a law change:
+
+```bash
+cp "National Flyer Source.txt" "National Flyer Source.tex"
+xelatex -interaction=nonstopmode "National Flyer Source.tex"
+cp "National Flyer Source.pdf" public/ebike_national_flyer.pdf
+rm -f "National Flyer Source.tex" "National Flyer Source.aux" "National Flyer Source.log" "National Flyer Source.out"
+```
+
+Requires a TeX distribution with `xelatex` and the packages used in the source (`tcolorbox`, `titlesec`, `qrcode`, `amssymb`, etc.) and the Noto Sans font. Keep the flyer to a single page — check the compiled output visually (e.g. render to PNG) after any edit, since the two-column layout is sensitive to content length changes.
+
+## Development
+
+```bash
+npm install
+npm run dev      # local dev server
+npm run build    # production build
+npm run lint      # ESLint
+```
+
+## Disclaimer
+
+Content is for educational purposes only and is not legal advice. Regulations change frequently — always verify against the current legislation and official state transport authority guidance linked from each state page.
