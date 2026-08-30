@@ -39,11 +39,27 @@ National Flyer Source.txt    # LaTeX source for the national flyer PDF (see belo
 
 ## Updating state law content
 
-Each state/territory is a single data object in `data/states/<slug>.js`, imported and rendered by `components/StatePage.jsx`. To update or correct a law:
+Each state/territory is a single data object in `data/states/<slug>.js`, imported and rendered by `components/StatePage.jsx`. There is no schema validation on these files — a wrong field name is a silent `undefined` at best and a build-breaking crash at worst (see **Field shapes matter** below) — so match the shapes already used by an existing state exactly, and always build before merging (see **Before committing**).
 
 1. Edit the relevant fields in `data/states/<slug>.js` — `summary`, `alertBanner`, `stats`, `keyDates`, `compliance`, `seizure`, `penalties`, `footpathRule`, `minimumAge`, `parentalLiability`, `quiz`, `notices`, `links`.
 2. `notices` is the enforcement/news feed rendered by `EnforcementNotices.jsx` — add a dated entry with `title`, `text` and a source `url` for any new government bulletin, enforcement operation, or safety notice.
-3. Run `npm run dev` and check the page renders as expected before committing.
+3. Run `npm run build` (not just `npm run dev`) and confirm all 8 state pages generate before committing — see **Before committing**.
+
+### Field shapes that matter
+
+A few nested fields are read by name in the components, so a typo or a different key silently breaks (or crashes) the page:
+
+- `compliance.gracePeriod` — when `exists: true`, must include a `text` field (HTML string, rendered via `dangerouslySetInnerHTML` in `ComplianceStickerSection.jsx`). **Not** `description` or `deadline` — that mismatch is exactly what broke `/qld`'s production build for several deploys: an `undefined` value there crashes `next build` while prerendering, not just renders blank.
+- `compliance.enStandard` — `mandatoryFromDate` (string or `null`) and `text`.
+- `seizure` — when `show: true`, must include `billName` and `description` (both used directly, not `text`); `fairTradingLink` is optional (`null` if none).
+- `keyDates[]` — `date`, `color`, `text`.
+- `notices[]` — `date`, `title`, `text`, `url`.
+- `quiz[]` — `id`, `question`, `info`.
+- `penalties[]` — `label`, `cost`, `desc`.
+
+### Before committing
+
+`npm run build` is the closest local equivalent to what Netlify actually runs — `npm run dev` alone does not reliably catch a prerender-time crash. Always run a full build after editing `data/states/*.js`, and check that **all 8 state routes** appear in the output (`/nsw`, `/vic`, `/qld`, `/wa`, `/sa`, `/tas`, `/act`, `/nt`) with no `Error occurred prerendering page` lines above them.
 
 ## National flyer (PDF)
 
