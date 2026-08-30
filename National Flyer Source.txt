@@ -172,8 +172,8 @@ NT  & All ages & — & Mirrors national standard. \\
 \begin{tcolorbox}[colback=white, colframe=Navy, top=3pt, bottom=3pt]
   \centering
   \textbf{\scriptsize FULL STATE-BY-STATE GUIDE} \\[3pt]
-  \qrcode[height=2.1cm]{https://australia-ebike-laws.netlify.app} \\[3pt]
-  {\tiny \ttfamily australia-ebike-laws.netlify.app}
+  \qrcode[height=2.1cm]{https://e-bikelaws.au} \\[3pt]
+  {\tiny \ttfamily e-bikelaws.au}
 \end{tcolorbox}
 
 \end{minipage}
