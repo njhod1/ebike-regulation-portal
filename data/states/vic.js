@@ -12,7 +12,9 @@ export const vic = {
   },
 
   alertBanner: {
-    show: false,
+    show: true,
+    color: 'amber',
+    text: 'VIC ENFORCEMENT ACTIVE: OPERATION CONSIDER (Melbourne CBD blitz) · OPERATION TRACK (drones follow riders home, Mornington Peninsula) — non-compliant e-bikes seized and riders prosecuted',
   },
 
   stats: [
@@ -87,6 +89,33 @@ export const vic = {
       id: 'footpath',
       question: "Are you an adult planning to ride on a footpath?",
       info: "Adults are NOT permitted to ride e-bikes on footpaths in Victoria. Only children under 13 with an accompanying adult may use footpaths.",
+    },
+  ],
+
+  notices: [
+    {
+      date: 'Jul 2026',
+      title: 'OPERATION TRACK — Vic Police Drones Follow Illegal Riders Home',
+      text: 'Victoria Police\'s High Visibility Community Engagement Team (HiCET) deployed drones on the Mornington Peninsula to pursue illegal e-bike riders to their homes and make arrests. First two months: 4 unregistered motorcycles impounded, 9 arrests. The approach closes the loophole of riders abandoning bikes and fleeing on foot. Victoria\'s fine for riding an unregistered motor vehicle is $1,018.',
+      url: 'https://bicyclenetwork.com.au/newsroom/2026/07/27/police-drones-swoop-on-non-legal-e-bikes/',
+    },
+    {
+      date: 'Aug 2025 / Jun 2026',
+      title: 'OPERATION CONSIDER — Melbourne CBD Blitz: 52% Non-Compliant',
+      text: 'Vic Police ran targeted Melbourne CBD blitzes: 135 e-bikes intercepted, 52% found non-compliant, 257 infringements issued. The operation was relaunched and expanded in June 2026. From 1 February 2025, Victorian retailers may only sell e-bikes meeting AS/NZS 15194:2018 and IEC 62133 standards — non-compliant stock can be seized.',
+      url: 'https://bicyclenetwork.com.au/newsroom/2025/08/07/police-target-reckless-e-bike-riding/',
+    },
+    {
+      date: 'Jun 2026',
+      title: 'MEDICAL COMMUNITY RAISES NATIONAL E-BIKE SAFETY CONCERNS',
+      text: 'AMA Queensland formally criticised weakened state e-mobility laws as a "shocking disregard for safety," warning that insufficient age restrictions put children at risk nationally. Emergency department physicians across Australia report treating preventable injuries — head trauma, broken bones, missing teeth, and fatalities. The AMA has called on all state and federal governments to enact evidence-based safety legislation rather than yielding to industry and lobby pressure.',
+      url: 'https://amaq.com.au/Web/Web/News/Media-releases/2026-Media-Releases/Shocking-disregard-for-safety-AMA-Queensland-disappointed-in-watered-down-e-mobility-laws.aspx',
+    },
+    {
+      date: 'Dec 2025 / May 2026',
+      title: 'FEDERAL: EN 15194 IMPORT STANDARD & $6.6M ACCC SAFETY PROGRAM',
+      text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. In May 2026, the Federal Government allocated $6.6 million over three years for the ACCC to develop a mandatory national safety standard covering speed limits, power caps, battery fire safety and consumer labelling. Public consultation is expected in late 2026. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
+      url: 'https://bicyclenetwork.com.au/newsroom/2025/12/03/feds-return-to-euro-e-bike-standard/',
     },
   ],
 

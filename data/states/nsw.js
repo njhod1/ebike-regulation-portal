@@ -132,6 +132,18 @@ export const nsw = {
       text: 'Australia\'s first behavioural-change e-bike safety campaign, targeting teenage riders and parents. Delivered via 60 signage locations, school posters, social media, and partnerships with Bicycle NSW and local police. Council reports a reduction in complaints. Important limitation: councils have no enforcement power — education only. Northern Beaches Council has formally lobbied the NSW Government for enforcement powers to be transferred to councils.',
       url: 'https://www.northernbeaches.nsw.gov.au/council/news/media-releases/stronger-approach-to-use-e-bikes-and-e-scooters-welcome',
     },
+    {
+      date: 'Jun 2026',
+      title: 'MEDICAL COMMUNITY RAISES NATIONAL E-BIKE SAFETY CONCERNS',
+      text: 'AMA Queensland formally criticised weakened state e-mobility laws as a "shocking disregard for safety," warning that insufficient age restrictions put children at risk nationally. Emergency department physicians across Australia report treating preventable injuries — head trauma, broken bones, missing teeth, and fatalities. The AMA has called on all state and federal governments to enact evidence-based safety legislation rather than yielding to industry and lobby pressure.',
+      url: 'https://amaq.com.au/Web/Web/News/Media-releases/2026-Media-Releases/Shocking-disregard-for-safety-AMA-Queensland-disappointed-in-watered-down-e-mobility-laws.aspx',
+    },
+    {
+      date: 'Dec 2025 / May 2026',
+      title: 'FEDERAL: EN 15194 IMPORT STANDARD & $6.6M ACCC SAFETY PROGRAM',
+      text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. In May 2026, the Federal Government allocated $6.6 million over three years for the ACCC to develop a mandatory national safety standard covering speed limits, power caps, battery fire safety and consumer labelling. Public consultation is expected in late 2026. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
+      url: 'https://bicyclenetwork.com.au/newsroom/2025/12/03/feds-return-to-euro-e-bike-standard/',
+    },
   ],
 
   links: {
