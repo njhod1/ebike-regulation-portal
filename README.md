@@ -65,6 +65,26 @@ A few nested fields are read by name in the components, so a typo or a different
 
 `npm run build` is the closest local equivalent to what Netlify actually runs — `npm run dev` alone does not reliably catch a prerender-time crash. Always run a full build after editing `data/states/*.js`, and check that **all 8 state routes** appear in the output (`/nsw`, `/vic`, `/qld`, `/wa`, `/sa`, `/tas`, `/act`, `/nt`) with no `Error occurred prerendering page` lines above them.
 
+## Content update workflow
+
+State e-bike/e-scooter law changes fast and unpredictably — there's no fixed schedule to update against, so this is a "when you hear about something" process, not a recurring job.
+
+**Finding out something changed:** the durable option is [Google Alerts](https://google.com/alerts) rather than relying on any single AI session to monitor continuously (scheduled/cron-style checks in an assistant session are bounded — they don't survive past that session). Set up alerts for a handful of queries: `e-bike laws Australia`, plus one per state (`NSW e-bike seizure`, `QLD e-mobility law`, `VIC e-scooter enforcement`, etc.). They land by email as things get published, at no cost and no ongoing maintenance.
+
+**Triage — how urgent, and what actually needs to change:**
+- A law newly **in force** (not just proposed) → update `summary`, `alertBanner`, `stats`, `minimumAge`/`compliance`/`seizure` as relevant, and add a `keyDates` entry.
+- A **proposed** bill or inquiry recommendation → usually just a `keyDates` entry (color `amber`/`slate`), not a change to the "current rules" fields yet.
+- An **enforcement operation, penalty change, or notable incident/statement** (e.g. a police operation, a peak-body statement like AMA Queensland's) → a `notices` entry, always with a source `url`.
+- Pure **commentary/opinion** with no rule or operation attached → usually skip, unless it's significant enough to be genuinely newsworthy on its own (judgement call).
+
+**The update itself, every time:**
+1. Identify which state(s) it affects and which category above it falls into.
+2. Edit the relevant fields in `data/states/<slug>.js` — see **Field shapes that matter** above for the exact keys each component expects.
+3. If it's significant enough to affect the national picture (a new universal rule, a state comparison table row, a national penalty figure), also update `National Flyer Source.txt` and regenerate the PDF — see **National flyer (PDF)** below.
+4. `npm run build` — mandatory, not optional (see **Before committing** above).
+5. Commit → PR → merge, so there's a reviewable history and an easy rollback if something's wrong.
+6. Spot-check the live page once deployed.
+
 ## National flyer (PDF)
 
 `public/ebike_national_flyer.pdf` is a one-page, two-column A4 summary compiled from `National Flyer Source.txt` (LaTeX). To regenerate it after a law change:
