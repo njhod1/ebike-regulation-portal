@@ -91,6 +91,7 @@ export default function HomePage() {
 
         <footer className="text-center text-slate-600 text-xs pb-10">
           <p>This site provides general information only. Always check official government sources for the latest regulations.</p>
+          <Link href="/about" className="inline-block mt-2 text-slate-500 hover:text-slate-800 font-bold uppercase tracking-wider">About this site</Link>
         </footer>
       </main>
     </div>

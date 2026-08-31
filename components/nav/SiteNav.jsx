@@ -10,9 +10,12 @@ export default function SiteNav({ currentSlug }) {
           <Shield className="text-amber-500" />
           <span className="font-black text-lg sm:text-xl tracking-tighter uppercase">AU E-Bike Laws</span>
         </Link>
-        <div className="flex items-center gap-2">
-          <span className="text-slate-400 text-xs hidden sm:block">Select state:</span>
-          <StateSelect currentSlug={currentSlug} />
+        <div className="flex items-center gap-4">
+          <Link href="/about" className="text-slate-400 hover:text-white text-xs font-bold uppercase tracking-wider hidden sm:block">About</Link>
+          <div className="flex items-center gap-2">
+            <span className="text-slate-400 text-xs hidden sm:block">Select state:</span>
+            <StateSelect currentSlug={currentSlug} />
+          </div>
         </div>
       </div>
     </nav>
