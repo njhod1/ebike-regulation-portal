@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { ExternalLink, Download } from 'lucide-react'
 
 export default function StatutoryFooter({ links, flyer }) {
@@ -43,6 +44,9 @@ export default function StatutoryFooter({ links, flyer }) {
             ))}
           </div>
         </div>
+      </div>
+      <div className="mt-10 text-center">
+        <Link href="/about" className="text-slate-500 hover:text-slate-800 text-xs font-bold uppercase tracking-wider">About this site</Link>
       </div>
     </footer>
   )
