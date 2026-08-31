@@ -18,7 +18,13 @@ export const metadata = {
     card: 'summary_large_image',
     images: ['/og-preview.png'],
   },
-  icons: { icon: '/Favicon.svg', type: 'image/svg+xml' },
+  icons: {
+    icon: [
+      { url: '/Favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
 }
 
 export default function RootLayout({ children }) {
