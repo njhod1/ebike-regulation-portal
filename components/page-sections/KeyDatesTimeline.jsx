@@ -8,7 +8,7 @@ export default function KeyDatesTimeline({ dates }) {
   }
 
   const textColor = {
-    amber: 'text-amber-600',
+    amber: 'text-amber-700',
     red: 'text-red-600',
     slate: 'text-slate-500',
   }

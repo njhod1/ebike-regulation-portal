@@ -11,7 +11,7 @@ export default function EnforcementNotices({ notices }) {
         {notices.map((notice, i) => (
           <div key={i} className="bg-white rounded-2xl shadow-sm border border-slate-200 p-5">
             <div className="flex items-start justify-between gap-4 mb-1">
-              <span className="text-xs font-bold text-amber-600 uppercase tracking-widest">{notice.date}</span>
+              <span className="text-xs font-bold text-amber-700 uppercase tracking-widest">{notice.date}</span>
               {notice.url && (
                 <a
                   href={notice.url}

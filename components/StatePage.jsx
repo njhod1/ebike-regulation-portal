@@ -42,7 +42,7 @@ export default function StatePage({ stateData }) {
         <div>
           <header className="mb-8 sm:mb-12 text-center py-6 sm:py-10">
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-4 tracking-tight leading-none uppercase">
-              {name} <span className="text-amber-500">&</span> E-Bike Laws
+              {name} <span className="text-amber-700">&</span> E-Bike Laws
             </h1>
             <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto px-2">
               Official 2026 guide to e-bike regulations, compliance requirements and penalties in {name}.

@@ -33,7 +33,7 @@ export default function HomePage() {
       <main className="max-w-6xl mx-auto p-4 sm:p-6">
         <header className="mb-12 text-center py-10">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-4 tracking-tight leading-none uppercase">
-            Australian <span className="text-amber-500">E-Bike</span> Laws 2026
+            Australian <span className="text-amber-700">E-Bike</span> Laws 2026
           </h1>
           <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto px-2">
             Select your state or territory to see the current e-bike regulations, penalties, and compliance requirements.
@@ -48,12 +48,12 @@ export default function HomePage() {
               className="group bg-white rounded-2xl shadow-sm border border-slate-200 p-6 hover:border-amber-500 hover:shadow-md transition-all"
             >
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl font-black text-amber-500 uppercase">{state.abbreviation}</span>
+                <span className="text-2xl font-black text-amber-700 uppercase">{state.abbreviation}</span>
               </div>
               <h2 className="font-bold text-slate-800 text-lg leading-tight mb-2 group-hover:text-slate-900">{state.name}</h2>
               <p className="text-xs text-slate-500 leading-snug">{state.summary}</p>
               <div className="mt-4 pt-3 border-t border-slate-100">
-                <span className="text-xs font-bold text-amber-600 uppercase tracking-wider">View Regulations →</span>
+                <span className="text-xs font-bold text-amber-700 uppercase tracking-wider">View Regulations →</span>
               </div>
             </Link>
           ))}
@@ -86,10 +86,10 @@ export default function HomePage() {
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download National Guide (PDF)
           </a>
-          <p className="mt-3 text-slate-400 text-xs">One-page printable summary covering all states &amp; territories</p>
+          <p className="mt-3 text-slate-600 text-xs">One-page printable summary covering all states &amp; territories</p>
         </div>
 
-        <footer className="text-center text-slate-400 text-xs pb-10">
+        <footer className="text-center text-slate-600 text-xs pb-10">
           <p>This site provides general information only. Always check official government sources for the latest regulations.</p>
         </footer>
       </main>
