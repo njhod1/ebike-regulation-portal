@@ -22,7 +22,7 @@ export default function StatutoryFooter({ links, flyer }) {
           <a
             href="/ebike_national_flyer.pdf"
             download
-            className="mt-4 flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-emerald-600 text-white rounded-xl font-black uppercase text-sm hover:bg-emerald-700 transition-all shadow-lg"
+            className="mt-4 flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 bg-emerald-700 text-white rounded-xl font-black uppercase text-sm hover:bg-emerald-800 transition-all shadow-lg"
           >
             <Download size={18} /> Download National Guide (PDF)
           </a>
