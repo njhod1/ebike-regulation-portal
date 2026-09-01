@@ -16,18 +16,20 @@ Live site: https://e-bikelaws.au
 ```
 app/
   page.jsx            # Homepage
+  about/page.jsx       # About page (publisher identity, sourcing, disclaimer)
   [state]/page.jsx     # Per-state page, statically generated for each slug in data/states
   layout.jsx, robots.js, sitemap.js
 
 data/states/*.js       # One file per state/territory — the single source of truth for all
                         # law content (summary, key dates, penalties, quiz, enforcement
-                        # notices, links, etc). Slugs: nsw, vic, qld, wa, sa, tas, act, nt
+                        # notices, reporting contacts, links, etc). Slugs: nsw, vic, qld,
+                        # wa, sa, tas, act, nt
 
 components/
   StatePage.jsx         # Assembles a state page from its data file
   page-sections/         # Individual sections (penalties grid, key-dates timeline,
                           # compliance quiz, enforcement notices, seizure powers,
-                          # parental liability, statutory footer, flyer tab)
+                          # how-to-report, parental liability, statutory footer, flyer tab)
   nav/                   # Site nav + state selector
   ui/                    # Shared small components (stat box, section header)
 
@@ -120,8 +122,8 @@ To move to a different custom domain again in future:
 - Every page has a unique `<title>` (kept under 60 characters so Google doesn't truncate it) and meta description (under 160 characters) — see each state's `seo.title`/`seo.description` in `data/states/<slug>.js`. State page titles use `title: { absolute: seo.title }` in `generateMetadata` specifically to bypass the root layout's `%s | AU E-Bike Laws` template, which was silently appending 17 characters to every state title before this was caught.
 - `metadataBase` (root layout) plus relative `alternates.canonical`/`openGraph.url` values mean every page's canonical and OG URLs resolve correctly without hardcoding the domain per-page.
 - JSON-LD: `WebSite` schema on the homepage, `WebPage` + `BreadcrumbList` + `FAQPage` (from each state's `quiz`) on every state page.
-- `sitemap.xml` and `robots.txt` are generated from `ALL_STATES`, so a new state added to `data/index.js` is picked up automatically.
-- Open Graph/Twitter card image (`public/og-preview.png`, 1200×630) and favicon (`public/Favicon.svg`) are set site-wide with a per-state `ogImage` override available in `seo`.
+- `sitemap.xml` and `robots.txt` are generated from `ALL_STATES`, so a new state added to `data/index.js` is picked up automatically. Static pages outside `data/states` (e.g. `/about`) are **not** automatic — add them to `app/sitemap.js` by hand.
+- Open Graph/Twitter card image (`public/og-preview.png`, 1200×630) and icons (`public/Favicon.svg`, `favicon.ico`, `apple-touch-icon.png`) are set site-wide via `app/layout.jsx`'s `metadata.icons`, with a per-state `ogImage` override available in `seo`.
 
 ## Development
 
