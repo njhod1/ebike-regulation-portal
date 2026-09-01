@@ -40,6 +40,19 @@ export const vic = {
     show: false,
   },
 
+  reporting: {
+    policeNonEmergency: '131 444',
+    policeOnlineForm: {
+      label: 'Report online to Victoria Police',
+      url: 'https://www.police.vic.gov.au/report',
+    },
+    fairTrading: {
+      label: 'Consumer Affairs Victoria — product safety complaint',
+      url: 'https://www.consumer.vic.gov.au/contact-us/resolve-your-problem/product-safety-complaint',
+      phone: '1300 55 81 81',
+    },
+  },
+
   penalties: [
     { label: 'Unregistered Vehicle', cost: '$826–$2,478', desc: 'Illegal e-bikes classified as motor vehicles' },
     { label: 'Uninsured Vehicle', cost: '$826–$4,957', desc: 'Mandatory CTP insurance required' },

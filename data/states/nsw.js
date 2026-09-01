@@ -62,7 +62,16 @@ export const nsw = {
     show: true,
     billName: 'Road Transport Amendment (Non-registrable Motor Vehicles) Act 2026',
     description: 'Under the Road Transport Amendment (Non-registrable Motor Vehicles) Act 2026 (amending the Road Transport Act 2013), non-compliant bikes can be seized and <strong>crushed</strong>. NSW Police use portable <strong>Dyno Units</strong> to test whether motor power cuts out at 25 km/h — if it doesn\'t, the bike is illegal.',
-    fairTradingLink: 'https://www.fairtrading.nsw.gov.au/help-centre/online-tools/make-a-complaint',
+  },
+
+  reporting: {
+    policeNonEmergency: '131 444',
+    policeOnlineForm: null,
+    fairTrading: {
+      label: 'NSW Fair Trading — general complaint form',
+      url: 'https://www.nsw.gov.au/departments-and-agencies/fair-trading/complaints-and-enquiries/how-nsw-fair-trading-handles-general-complaints/general-complaint-form',
+      phone: '13 32 20',
+    },
   },
 
   penalties: [

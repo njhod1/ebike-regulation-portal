@@ -62,7 +62,16 @@ export const qld = {
     show: true,
     billName: 'Transport Operations (Road Use Management) Act amendments 2026',
     description: 'from 1 July 2026, Queensland Police can <strong>seize, impound and destroy</strong> any e-bike or personal mobility device that clearly does not meet the legal standard. Officers can issue a <strong>$621 on-the-spot fine</strong>. Devices are assessed against the 250W motor limit and 25 km/h cut-off requirement.',
-    fairTradingLink: null,
+  },
+
+  reporting: {
+    policeNonEmergency: '131 444 (Policelink)',
+    policeOnlineForm: null,
+    fairTrading: {
+      label: 'QLD Office of Fair Trading — consumer complaint form',
+      url: 'https://smartforms.lgft.justice.qld.gov.au/form/?formCode=consumercomplaintform',
+      phone: null,
+    },
   },
 
   penalties: [
