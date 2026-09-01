@@ -55,7 +55,8 @@ A few nested fields are read by name in the components, so a typo or a different
 
 - `compliance.gracePeriod` — when `exists: true`, must include a `text` field (HTML string, rendered via `dangerouslySetInnerHTML` in `ComplianceStickerSection.jsx`). **Not** `description` or `deadline` — that mismatch is exactly what broke `/qld`'s production build for several deploys: an `undefined` value there crashes `next build` while prerendering, not just renders blank.
 - `compliance.enStandard` — `mandatoryFromDate` (string or `null`) and `text`.
-- `seizure` — when `show: true`, must include `billName` and `description` (both used directly, not `text`); `fairTradingLink` is optional (`null` if none).
+- `seizure` — when `show: true`, must include `billName` and `description` (both used directly, not `text`).
+- `reporting` — `policeNonEmergency` (string or `null` if unconfirmed — see below), `policeOnlineForm` (`{ label, url }` or `null`), `fairTrading` (`{ label, url, phone }`, `phone` optional). Rendered by `ReportingSection.jsx` on every state page; Crime Stoppers (1800 333 000) is hardcoded there since it's the same national number for every state. **Don't guess a phone number or reporting URL for this section** — it's safety-adjacent content, and a wrong number is worse than a missing one. Verify against the state's official police/consumer-affairs site first; if you can't verify a field, leave it `null` rather than publish a guess (this is why NT's `policeNonEmergency` is currently `null`).
 - `keyDates[]` — `date`, `color`, `text`.
 - `notices[]` — `date`, `title`, `text`, `url`.
 - `quiz[]` — `id`, `question`, `info`.

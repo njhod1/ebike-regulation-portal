@@ -51,6 +51,19 @@ export const sa = {
     show: false,
   },
 
+  reporting: {
+    policeNonEmergency: '131 444',
+    policeOnlineForm: {
+      label: 'Report a crime to SAPOL',
+      url: 'https://www.police.sa.gov.au/services-and-events/make-a-report-to-police/report-a-crime',
+    },
+    fairTrading: {
+      label: 'Consumer and Business Services SA',
+      url: 'https://www.sa.gov.au/topics/rights-and-law/consumer-rights/disputes/consumer-complaints',
+      phone: '131 882',
+    },
+  },
+
   penalties: [
     { label: 'Unregistered Vehicle', cost: '$574–$2,298', desc: 'Illegal e-bikes classified as motor vehicles' },
     { label: 'Uninsured Vehicle', cost: '$574–$2,298', desc: 'Mandatory CTP insurance required' },

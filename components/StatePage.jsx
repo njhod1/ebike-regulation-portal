@@ -2,6 +2,7 @@ import StatBox from '@/components/ui/StatBox'
 import KeyDatesTimeline from '@/components/page-sections/KeyDatesTimeline'
 import ComplianceStickerSection from '@/components/page-sections/ComplianceStickerSection'
 import SeizureSection from '@/components/page-sections/SeizureSection'
+import ReportingSection from '@/components/page-sections/ReportingSection'
 import LegalityQuiz from '@/components/page-sections/LegalityQuiz'
 import PenaltyGrid from '@/components/page-sections/PenaltyGrid'
 import ParentalLiabilitySection from '@/components/page-sections/ParentalLiabilitySection'
@@ -23,6 +24,7 @@ export default function StatePage({ stateData }) {
     links,
     flyer,
     notices,
+    reporting,
   } = stateData
 
   return (
@@ -61,6 +63,7 @@ export default function StatePage({ stateData }) {
             <div className="lg:col-span-2 space-y-8 sm:space-y-10">
               <ComplianceStickerSection compliance={compliance} stateName={name} />
               <SeizureSection seizure={seizure} />
+              <ReportingSection reporting={reporting} />
               <EnforcementNotices notices={notices} />
             </div>
 

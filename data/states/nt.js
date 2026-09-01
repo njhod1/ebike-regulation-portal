@@ -38,6 +38,19 @@ export const nt = {
     show: false,
   },
 
+  reporting: {
+    policeNonEmergency: null,
+    policeOnlineForm: {
+      label: 'NT Police online non-emergency report',
+      url: 'https://pfes.nt.gov.au/form/report-online',
+    },
+    fairTrading: {
+      label: 'NT Consumer Affairs',
+      url: 'https://consumeraffairs.nt.gov.au/for-consumers/complaints-and-disputes',
+      phone: '1800 019 319',
+    },
+  },
+
   penalties: [
     { label: 'Unregistered Vehicle', cost: '$500+', desc: 'Illegal e-bikes classified as motor vehicles' },
     { label: 'Uninsured Vehicle', cost: '$500+', desc: 'Mandatory CTP insurance required' },

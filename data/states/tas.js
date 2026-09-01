@@ -38,6 +38,19 @@ export const tas = {
     show: false,
   },
 
+  reporting: {
+    policeNonEmergency: '131 444',
+    policeOnlineForm: {
+      label: 'Report dangerous riding to Tasmania Police',
+      url: 'https://www.police.tas.gov.au/what-we-do/traffic-policing/report/',
+    },
+    fairTrading: {
+      label: 'Consumer, Building and Occupational Services (CBOS)',
+      url: 'https://www.cbos.tas.gov.au/contact-us/lodge-an-enquiry',
+      phone: '1300 654 499',
+    },
+  },
+
   penalties: [
     { label: 'Unregistered Vehicle', cost: '$560+', desc: 'Illegal e-bikes classified as motor vehicles' },
     { label: 'Uninsured Vehicle', cost: '$560+', desc: 'Mandatory CTP insurance required' },

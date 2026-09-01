@@ -51,6 +51,19 @@ export const wa = {
     show: false,
   },
 
+  reporting: {
+    policeNonEmergency: '131 444',
+    policeOnlineForm: {
+      label: 'Report a crime to WA Police',
+      url: 'https://www.police.wa.gov.au/Crime/Report-a-crime',
+    },
+    fairTrading: {
+      label: 'Consumer Protection WA',
+      url: 'https://www.consumerprotection.wa.gov.au/how-make-consumer-complaint',
+      phone: '1300 30 40 54',
+    },
+  },
+
   penalties: [
     { label: 'Unregistered Vehicle', cost: '$550–$2,200', desc: 'Illegal e-bikes classified as motor vehicles' },
     { label: 'Uninsured Vehicle', cost: '$550–$2,200', desc: 'Mandatory CTP insurance required' },

@@ -15,16 +15,6 @@ export default function SeizureSection({ seizure }) {
             dangerouslySetInnerHTML={{ __html: `Under the <strong>${seizure.billName}</strong>, ${seizure.description}` }}
           />
         </div>
-        {seizure.fairTradingLink && (
-          <a
-            href={seizure.fairTradingLink}
-            target="_blank"
-            rel="noreferrer"
-            className="block w-full py-3 bg-slate-900 text-white rounded-xl text-center font-bold text-xs uppercase tracking-widest hover:bg-slate-800 transition-all"
-          >
-            Report Illegal Retailers to Fair Trading
-          </a>
-        )}
       </div>
     </section>
   )

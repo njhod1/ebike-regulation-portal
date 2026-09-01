@@ -38,6 +38,19 @@ export const act = {
     show: false,
   },
 
+  reporting: {
+    policeNonEmergency: '131 444',
+    policeOnlineForm: {
+      label: 'ACT Policing online report',
+      url: 'https://forms.afp.gov.au/act/report',
+    },
+    fairTrading: {
+      label: 'Access Canberra — consumer rights help',
+      url: 'https://www.accesscanberra.act.gov.au/consumer-rights/get-help-with-a-consumer-issue',
+      phone: '13 22 81',
+    },
+  },
+
   penalties: [
     { label: 'Unregistered Vehicle', cost: '$680+', desc: 'Illegal e-bikes classified as motor vehicles' },
     { label: 'Uninsured Vehicle', cost: '$680+', desc: 'Mandatory CTP insurance required' },
