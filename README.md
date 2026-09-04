@@ -124,6 +124,7 @@ To move to a different custom domain again in future:
 - JSON-LD: `WebSite` schema on the homepage, `WebPage` + `BreadcrumbList` + `FAQPage` (from each state's `quiz`) on every state page.
 - `sitemap.xml` and `robots.txt` are generated from `ALL_STATES`, so a new state added to `data/index.js` is picked up automatically. Static pages outside `data/states` (e.g. `/about`) are **not** automatic — add them to `app/sitemap.js` by hand.
 - Open Graph/Twitter card image (`public/og-preview.png`, 1200×630) and icons (`public/Favicon.svg`, `favicon.ico`, `apple-touch-icon.png`) are set site-wide via `app/layout.jsx`'s `metadata.icons`, with a per-state `ogImage` override available in `seo`.
+- `app/llms.txt/route.js` serves an [llms.txt](https://llmstxt.org/) summary for AI agents/LLMs — a Next.js route handler (not a static file in `public/`) so it can use `SITE_URL` and pull each state's `summary` live from `data/states/*.js`, the same auto-sync pattern as `sitemap.xml`. `dynamic = 'force-static'` is set explicitly since Next.js 15 no longer statically optimizes route handlers by default. This is an emerging, non-standard convention (not a search ranking factor) — low priority, but cheap to keep accurate since it's generated, not hand-written.
 
 ## Development
 
