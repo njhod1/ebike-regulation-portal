@@ -124,6 +124,12 @@ export const nsw = {
 
   notices: [
     {
+      date: '11 Sep 2026',
+      title: 'Operation E-Voltage — 36 Illegal E-Bikes Seized on Northern Beaches',
+      text: 'NSW Police, Transport for NSW and the Bike Coordination and Training Unit ran a joint operation across Manly, Curl Curl, Dee Why, Warriewood and Avalon Beach, using drones to track riders and set up checkpoints. Result: 36 non-compliant e-bikes seized for destruction, 16 penalty notices and 46 caution notices (helmet and mobile phone offences). One e-bike seized from a 14-year-old at Warriewood was allegedly capable of exceeding 90 km/h. Owners have two weeks to appeal before their bikes are crushed.',
+      url: 'https://www.theguardian.com/world/2026/sep/12/nsw-police-seize-illegal-ebikes-northern-beaches-crushed',
+    },
+    {
       date: 'Mar 2026',
       title: 'Tweed Shire Enforcement Blitz',
       text: 'NSW Police and Transport for NSW ran a paired blitz in Tweed Shire: one week of pop-up education stalls, followed by one week of active fines. Fines issued: $410 (no helmet) · $136 (adult footpath riding) · from $723 (illegal modifications). This model is being rolled out to other known hotspot corridors.',
