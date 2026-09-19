@@ -29,7 +29,8 @@ components/
   StatePage.jsx         # Assembles a state page from its data file
   page-sections/         # Individual sections (penalties grid, key-dates timeline,
                           # compliance quiz, enforcement notices, seizure powers,
-                          # how-to-report, parental liability, statutory footer, flyer tab)
+                          # how-to-report, real-risk stats, parental liability,
+                          # statutory footer, flyer tab)
   nav/                   # Site nav + state selector
   ui/                    # Shared small components (stat box, section header)
 
@@ -59,6 +60,7 @@ A few nested fields are read by name in the components, so a typo or a different
 - `compliance.enStandard` — `mandatoryFromDate` (string or `null`) and `text`.
 - `seizure` — when `show: true`, must include `billName` and `description` (both used directly, not `text`).
 - `reporting` — `policeNonEmergency` (string or `null` if unconfirmed — see below), `policeOnlineForm` (`{ label, url }` or `null`), `fairTrading` (`{ label, url, phone }`, `phone` optional). Rendered by `ReportingSection.jsx` on every state page; Crime Stoppers (1800 333 000) is hardcoded there since it's the same national number for every state. **Don't guess a phone number or reporting URL for this section** — it's safety-adjacent content, and a wrong number is worse than a missing one. Verify against the state's official police/consumer-affairs site first; if you can't verify a field, leave it `null` rather than publish a guess (this is why NT's `policeNonEmergency` is currently `null`).
+- `realRisk` (optional) — `{ stat, detail, url }`, `url` optional. Rendered by `RealRiskSection.jsx` on every state page, above `keyDates`; the national baseline text (15+ deaths nationally, the AMA's injury description) is hardcoded there since it's the same fact everywhere, `realRisk` adds one state-specific highlight on top when a genuinely striking, already-sourced number exists (currently QLD, VIC, WA, NSW — see their `notices[]`/`keyDates[]` for the underlying source). Omit the field entirely for states without one; the section still renders the national baseline alone, don't force a weak or padded stat just to fill it.
 - `keyDates[]` — `date`, `color`, `text`.
 - `notices[]` — `date`, `title`, `text`, `url`.
 - `quiz[]` — `id`, `question`, `info`.

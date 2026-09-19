@@ -1,4 +1,5 @@
 import StatBox from '@/components/ui/StatBox'
+import RealRiskSection from '@/components/page-sections/RealRiskSection'
 import KeyDatesTimeline from '@/components/page-sections/KeyDatesTimeline'
 import ComplianceStickerSection from '@/components/page-sections/ComplianceStickerSection'
 import SeizureSection from '@/components/page-sections/SeizureSection'
@@ -25,6 +26,7 @@ export default function StatePage({ stateData }) {
     flyer,
     notices,
     reporting,
+    realRisk,
   } = stateData
 
   return (
@@ -56,6 +58,8 @@ export default function StatePage({ stateData }) {
               <StatBox key={i} label={stat.label} value={stat.value} />
             ))}
           </div>
+
+          <RealRiskSection stateName={name} realRisk={realRisk} />
 
           <KeyDatesTimeline dates={keyDates} />
 
