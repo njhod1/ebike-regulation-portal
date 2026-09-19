@@ -38,6 +38,12 @@ export const act = {
     show: false,
   },
 
+  realRisk: {
+    stat: '623 presentations vs. 51 official',
+    detail: 'Canberra Hospital recorded 623 e-scooter-related presentations over 15 months — more than 12x the roughly 51 injuries captured in official Canberra Health Services figures for a comparable period, a gap researchers attribute to how EDs code the cause of injury.',
+    url: 'https://www.canberratimes.com.au/story/8272983/canberras-real-e-scooter-injury-toll-revealed/',
+  },
+
   reporting: {
     policeNonEmergency: '131 444',
     policeOnlineForm: {

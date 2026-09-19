@@ -51,6 +51,12 @@ export const sa = {
     show: false,
   },
 
+  realRisk: {
+    stat: '1 death, 63 injuries (2025)',
+    detail: 'SA Police data reported one death and 63 injuries linked to e-scooter crashes in South Australia in 2025, the year new e-mobility laws came into force.',
+    url: 'https://daily.raa.com.au/face-the-facts-about-sas-e-scooter-laws/',
+  },
+
   reporting: {
     policeNonEmergency: '131 444',
     policeOnlineForm: {

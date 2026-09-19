@@ -65,9 +65,9 @@ export const nsw = {
   },
 
   realRisk: {
-    stat: 'Exceeding 90 km/h',
-    detail: "In Operation E-Voltage (Sep 2026), a seized e-bike belonging to a 14-year-old at Warriewood was allegedly capable of exceeding 90 km/h — well over 3x the legal limit.",
-    url: 'https://www.theguardian.com/world/2026/sep/12/nsw-police-seize-illegal-ebikes-northern-beaches-crushed',
+    stat: '4 deaths, 233 injuries (2025)',
+    detail: 'Transport for NSW data reported 4 e-bike-related deaths and 233 injuries in the first seven months of 2025 — a 77% rise on the 226 injuries recorded across all of 2024, when there were no deaths at all.',
+    url: 'https://cityhub.com.au/77-increase-in-injuries-4-lives-lost-public-concern-over-e-bikes-mounts/',
   },
 
   reporting: {
