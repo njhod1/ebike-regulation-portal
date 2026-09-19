@@ -51,6 +51,12 @@ export const wa = {
     show: false,
   },
 
+  realRisk: {
+    stat: '36 seized, 29 charged',
+    detail: 'Operation Moorhead: WA Police seized 36 e-rideables and charged 25 juveniles (aged 11–16) and 4 adults in a single Perth operation.',
+    url: 'https://bicyclenetwork.com.au/newsroom/2026/02/12/nsw-police-to-seize-and-crush-illegal-e-bikes/',
+  },
+
   reporting: {
     policeNonEmergency: '131 444',
     policeOnlineForm: {

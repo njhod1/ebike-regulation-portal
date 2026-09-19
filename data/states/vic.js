@@ -40,6 +40,12 @@ export const vic = {
     show: false,
   },
 
+  realRisk: {
+    stat: '52% non-compliant',
+    detail: 'Of 135 e-bikes intercepted in a Melbourne CBD blitz (Operation Consider), 52% were found non-compliant — illegal, and often dangerously so.',
+    url: 'https://bicyclenetwork.com.au/newsroom/2025/08/07/police-target-reckless-e-bike-riding/',
+  },
+
   reporting: {
     policeNonEmergency: '131 444',
     policeOnlineForm: {

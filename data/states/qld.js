@@ -64,6 +64,12 @@ export const qld = {
     description: 'from 1 July 2026, Queensland Police can <strong>seize, impound and destroy</strong> any e-bike or personal mobility device that clearly does not meet the legal standard. Officers can issue a <strong>$621 on-the-spot fine</strong>. Devices are assessed against the 250W motor limit and 25 km/h cut-off requirement.',
   },
 
+  realRisk: {
+    stat: '12 deaths (2025)',
+    detail: "Amy's Foundation reported 12 people died in Queensland from e-mobility incidents in 2025 alone.",
+    url: null,
+  },
+
   reporting: {
     policeNonEmergency: '131 444 (Policelink)',
     policeOnlineForm: null,

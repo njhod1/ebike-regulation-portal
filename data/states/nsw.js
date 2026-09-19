@@ -64,6 +64,12 @@ export const nsw = {
     description: 'Under the Road Transport Amendment (Non-registrable Motor Vehicles) Act 2026 (amending the Road Transport Act 2013), non-compliant bikes can be seized and <strong>crushed</strong>. NSW Police use portable <strong>Dyno Units</strong> to test whether motor power cuts out at 25 km/h — if it doesn\'t, the bike is illegal.',
   },
 
+  realRisk: {
+    stat: 'Exceeding 90 km/h',
+    detail: "In Operation E-Voltage (Sep 2026), a seized e-bike belonging to a 14-year-old at Warriewood was allegedly capable of exceeding 90 km/h — well over 3x the legal limit.",
+    url: 'https://www.theguardian.com/world/2026/sep/12/nsw-police-seize-illegal-ebikes-northern-beaches-crushed',
+  },
+
   reporting: {
     policeNonEmergency: '131 444',
     policeOnlineForm: null,
