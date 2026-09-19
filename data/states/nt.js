@@ -38,6 +38,12 @@ export const nt = {
     show: false,
   },
 
+  realRisk: {
+    stat: '111 ED presentations in 8 months',
+    detail: 'A Top End Health Service/Charles Darwin University study recorded 111 e-scooter-related emergency department presentations across Darwin and Palmerston in just 8 months (Jan–Sep 2021), with 24 patients requiring surgery and a cost to the health system exceeding $350,000.',
+    url: 'https://www.cdu.edu.au/news/research-reveals-electric-scooter-injury-impacts-darwin',
+  },
+
   reporting: {
     policeNonEmergency: null,
     policeOnlineForm: {

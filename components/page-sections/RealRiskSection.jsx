@@ -7,7 +7,7 @@ export default function RealRiskSection({ stateName, realRisk }) {
       <SectionHeader title="The Real Risk" icon={HeartCrack} color="text-red-700" />
       <div className="bg-red-50 border border-red-200 rounded-2xl p-6 sm:p-8">
         <p className="text-sm text-red-900 leading-relaxed mb-4">
-          <strong>15+ Australians died</strong> in e-mobility incidents in 2025 (NRMA). Emergency department physicians nationwide report treating preventable injuries from non-compliant e-bikes — <strong>head trauma, broken bones, missing teeth, and fatalities</strong> — prompting the AMA to call weakened state laws a <em>"shocking disregard for safety."</em>
+          <strong>15+ Australians died</strong> in e-mobility incidents in 2025 (NRMA). A University of Melbourne study identified <strong>37 fatal e-scooter incidents nationally between 2020 and 2025</strong> — more than <strong>one in three involved a child under 18</strong>. Emergency department physicians nationwide report treating preventable injuries from non-compliant e-bikes — <strong>head trauma, broken bones, missing teeth, and fatalities</strong> — prompting the AMA to call weakened state laws a <em>"shocking disregard for safety."</em>
         </p>
 
         {realRisk && (

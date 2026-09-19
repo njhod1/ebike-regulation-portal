@@ -41,9 +41,9 @@ export const vic = {
   },
 
   realRisk: {
-    stat: '52% non-compliant',
-    detail: 'Of 135 e-bikes intercepted in a Melbourne CBD blitz (Operation Consider), 52% were found non-compliant — illegal, and often dangerously so.',
-    url: 'https://bicyclenetwork.com.au/newsroom/2025/08/07/police-target-reckless-e-bike-riding/',
+    stat: '2,778 ED presentations',
+    detail: "Monash University's Accident Research Centre, using Victorian Emergency Minimum Dataset figures, recorded 2,778 e-micromobility emergency department presentations in Victoria between 2017/18 and 2022/23 (534 e-bike-specific) — the e-bike presentation rate rose more than 15-fold over that period.",
+    url: 'https://lens.monash.edu/e-micromobility-is-booming-but-so-are-injuries/',
   },
 
   reporting: {

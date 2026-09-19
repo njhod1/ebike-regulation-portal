@@ -52,9 +52,9 @@ export const wa = {
   },
 
   realRisk: {
-    stat: '36 seized, 29 charged',
-    detail: 'Operation Moorhead: WA Police seized 36 e-rideables and charged 25 juveniles (aged 11–16) and 4 adults in a single Perth operation.',
-    url: 'https://bicyclenetwork.com.au/newsroom/2026/02/12/nsw-police-to-seize-and-crush-illegal-e-bikes/',
+    stat: '7 deaths in 2025',
+    detail: "WA's parliamentary Ride Safe inquiry found 7 e-scooter-related deaths in Western Australia in 2025 alone — more than the previous three years combined — and 12 rider deaths since 2022.",
+    url: 'https://www.abc.net.au/news/2025-12-04/e-rideables-inquiry-calls-for-wide-ranging-changes-to-wa-laws/106099232',
   },
 
   reporting: {

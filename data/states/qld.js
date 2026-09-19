@@ -65,9 +65,9 @@ export const qld = {
   },
 
   realRisk: {
-    stat: '12 deaths (2025)',
-    detail: "Amy's Foundation reported 12 people died in Queensland from e-mobility incidents in 2025 alone.",
-    url: null,
+    stat: '12 deaths, 6,300+ ED visits',
+    detail: 'Queensland Health data tabled in Parliament recorded 12 deaths and more than 6,300 emergency department presentations linked to e-mobility devices in the year to March 2025, including 200+ major trauma cases and 60+ requiring intensive care.',
+    url: 'https://www.racq.com.au/news/advocacy/reform-critical-after-qld-e-mobility-injuries-almost-double',
   },
 
   reporting: {
