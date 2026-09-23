@@ -26,6 +26,11 @@ export const nsw = {
 
   keyDates: [
     {
+      date: '1 Nov 2025',
+      color: 'amber',
+      text: '<strong>DIY-converted e-bikes banned from trains and Metro.</strong> Regular pedal bikes fitted with aftermarket batteries and motors — a known fire risk from poor-quality wiring and second-hand batteries — can no longer be carried in fare-paid areas of Sydney Trains, NSW TrainLink and Metro. Factory-built e-bikes and shared e-bikes are unaffected. Penalty: $400–$1,100.',
+    },
+    {
       date: '1 Feb 2026',
       color: 'amber',
       text: 'All new e-bikes sold in NSW must carry a Fair Trading <strong>Certificate of Approval</strong> and mandatory safety marking.',
@@ -39,6 +44,11 @@ export const nsw = {
       date: '24 Mar 2026',
       color: 'red',
       text: '<strong>Road Transport Amendment (Non-registrable Motor Vehicles) Bill 2026</strong> introduced — NSW Police and Transport Officers can now seize and crush illegal e-bikes.',
+    },
+    {
+      date: '14 Aug 2026',
+      color: 'amber',
+      text: '<strong>Australian-first shared e-bike scheme laws.</strong> Shared/dockless e-bike operators must now get approval from Transport for NSW and authorisation from councils before deploying, meeting state-wide minimum standards for insurance, helmets, device standards, device ID, and trip/incident/complaint data. Penalties up to $55,000 plus $5,500/day for ongoing non-compliance, including failing to remove e-bikes from inappropriate locations.',
     },
     {
       date: '1 Mar 2029',
