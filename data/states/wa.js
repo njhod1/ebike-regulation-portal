@@ -137,6 +137,12 @@ export const wa = {
       url: 'https://amaq.com.au/Web/Web/News/Media-releases/2026-Media-Releases/Shocking-disregard-for-safety-AMA-Queensland-disappointed-in-watered-down-e-mobility-laws.aspx',
     },
     {
+      date: '11 Feb 2026',
+      title: 'ONLINE SELLERS CAUGHT USING FAKE COMPLIANCE STICKERS',
+      text: "ABC News revealed online and overseas e-bike sellers were applying fake compliance stickers to high-powered, non-compliant bikes to help buyers evade police detection. The federal government reintroduced the EN 15194 national standard in late 2025 so certified bikes are verifiably safe and legal — but a genuine-looking sticker alone doesn't guarantee a bike is actually compliant. The government has flagged possible changes to national consumer law, including mandatory safety standards and bans on unsafe products.",
+      url: 'https://www.abc.net.au/news/2026-02-11/e-bike-sellers-fake-compliance-stickers-crackdown/106285924',
+    },
+    {
       date: 'Dec 2025 / May 2026',
       title: 'FEDERAL: EN 15194 IMPORT STANDARD & $6.6M ACCC SAFETY PROGRAM',
       text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. In May 2026, the Federal Government allocated $6.6 million over three years for the ACCC to develop a mandatory national safety standard covering speed limits, power caps, battery fire safety and consumer labelling. Public consultation is expected in late 2026. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
