@@ -140,6 +140,12 @@ export const nsw = {
 
   notices: [
     {
+      date: '29 Sep 2026',
+      title: 'Broadcaster Margaret Throsby Injured, Calls for Stricter Under-Age E-Bike Laws',
+      text: 'Former ABC Classic presenter Margaret Throsby, 84, suffered a broken hip, broken thumb and head injuries after being struck by a large "fat bike" e-bike ridden by two teenage boys in the Illawarra. The riders apologised and stayed with her until emergency services arrived. Throsby has since called for stricter legislation on e-bike use by children, describing it as "civically irresponsible" to allow unlicensed minors to ride heavy, fast e-bikes.',
+      url: 'https://www.abc.net.au/news/2026-09-29/margaret-throsby-injured-hit-by-e-bike/107204210',
+    },
+    {
       date: '11 Sep 2026',
       title: 'Operation E-Voltage — 36 Illegal E-Bikes Seized on Northern Beaches',
       text: 'NSW Police, Transport for NSW and the Bike Coordination and Training Unit ran a joint operation across Manly, Curl Curl, Dee Why, Warriewood and Avalon Beach, using drones to track riders and set up checkpoints. Result: 36 non-compliant e-bikes seized for destruction, 16 penalty notices and 46 caution notices (helmet and mobile phone offences). One e-bike seized from a 14-year-old at Warriewood was allegedly capable of exceeding 90 km/h. Owners have two weeks to appeal before their bikes are crushed.',
