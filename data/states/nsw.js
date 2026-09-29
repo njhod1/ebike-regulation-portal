@@ -158,6 +158,12 @@ export const nsw = {
       url: 'https://www.tweed.nsw.gov.au/council/news-updates/latest-news/general-news/ebike-blitz',
     },
     {
+      date: '21 May 2026',
+      title: 'Operation Cyclesafe — 35 E-Bikes Crushed in Tweed/Byron, 23 More Before the Courts',
+      text: 'Following almost a year of targeted enforcement under Operation Cyclesafe, Tweed/Byron Police District had 35 confiscated e-bikes destroyed — batteries removed, then dismantled at a waste management facility. Forfeiture applications for a further 23 e-bikes remained before the courts. Most bikes were confiscated over excessive speed, irresponsible behaviour and unsafe riding; officers engaged with hundreds of e-bike riders across the region during the operation.',
+      url: 'https://www.abc.net.au/news/2026-06-24/e-bike-tweed-police-blitz/106831920',
+    },
+    {
       date: 'Feb 2026',
       title: 'Roadside Dyno Units Deployed',
       text: '3 portable dynamometer units — funded at $100,000 from the Community Road Safety Fund — are trialling roadside testing at known illegal e-bike hotspots. Units verify whether the motor cuts out at 25 km/h. The NRMA has noted 3 units is insufficient for the scale of the problem. The approach is modelled on WA\'s Operation Moorhead (Jan 2026), which seized 36 e-rideables and charged 25 juveniles and 4 adults in a single Perth operation.',
