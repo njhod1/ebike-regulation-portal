@@ -118,10 +118,22 @@ export const sa = {
 
   notices: [
     {
+      date: '17 Mar 2026',
+      title: "'Easy to Modify, Hard to Police': SA Rider's Bike Hit 104 km/h",
+      text: "ABC News reported on high-powered e-bikes built from online conversion kits appearing on South Australian roads — including one rider whose bike reached 104 km/h at full throttle, over four times the legal limit. Retailers told the ABC it was impossible to stop buyers modifying a bike after purchase: \"once someone leaves the store … they can do whatever it is they want to it.\"",
+      url: 'https://www.abc.net.au/news/2026-03-17/e-bikes-easy-to-modify-but-hard-to-police/106450416',
+    },
+    {
       date: 'Jun 2026',
       title: 'MEDICAL COMMUNITY RAISES NATIONAL E-BIKE SAFETY CONCERNS',
       text: 'AMA Queensland formally criticised weakened state e-mobility laws as a "shocking disregard for safety," warning that insufficient age restrictions put children at risk nationally. Emergency department physicians across Australia report treating preventable injuries — head trauma, broken bones, missing teeth, and fatalities. The AMA has called on all state and federal governments to enact evidence-based safety legislation rather than yielding to industry and lobby pressure.',
       url: 'https://amaq.com.au/Web/Web/News/Media-releases/2026-Media-Releases/Shocking-disregard-for-safety-AMA-Queensland-disappointed-in-watered-down-e-mobility-laws.aspx',
+    },
+    {
+      date: '11 Feb 2026',
+      title: 'ONLINE SELLERS CAUGHT USING FAKE COMPLIANCE STICKERS',
+      text: "ABC News revealed online and overseas e-bike sellers were applying fake compliance stickers to high-powered, non-compliant bikes to help buyers evade police detection. The federal government reintroduced the EN 15194 national standard in late 2025 so certified bikes are verifiably safe and legal — but a genuine-looking sticker alone doesn't guarantee a bike is actually compliant. The government has flagged possible changes to national consumer law, including mandatory safety standards and bans on unsafe products.",
+      url: 'https://www.abc.net.au/news/2026-02-11/e-bike-sellers-fake-compliance-stickers-crackdown/106285924',
     },
     {
       date: 'Dec 2025 / May 2026',
