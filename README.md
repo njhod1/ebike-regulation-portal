@@ -1,6 +1,6 @@
 # Australian E-Bike Regulation Portal
 
-A Next.js reference site covering Australian e-bike, e-scooter and personal mobility device (PMD) regulations for every state and territory — power/speed limits, minimum ages, footpath rules, penalties, parental liability, enforcement notices and a compliance quiz — plus a downloadable national summary flyer.
+A Next.js reference site covering Australian e-bike, e-scooter and personal mobility device (PMD) regulations for every state and territory — power/speed limits, minimum ages, footpath rules, penalties, parental liability, real-world injury/death risk data, how to report unsafe riding, enforcement notices and a compliance quiz — plus a downloadable national summary flyer.
 
 Live site: https://e-bikelaws.au
 
@@ -19,11 +19,12 @@ app/
   about/page.jsx       # About page (publisher identity, sourcing, disclaimer)
   [state]/page.jsx     # Per-state page, statically generated for each slug in data/states
   layout.jsx, robots.js, sitemap.js
+  llms.txt/route.js    # AI agent/LLM summary (see SEO below)
 
 data/states/*.js       # One file per state/territory — the single source of truth for all
                         # law content (summary, key dates, penalties, quiz, enforcement
-                        # notices, reporting contacts, links, etc). Slugs: nsw, vic, qld,
-                        # wa, sa, tas, act, nt
+                        # notices, reporting contacts, real-risk stats, links, etc).
+                        # Slugs: nsw, vic, qld, wa, sa, tas, act, nt
 
 components/
   StatePage.jsx         # Assembles a state page from its data file
@@ -48,7 +49,7 @@ lib/site.js                  # SITE_URL — the single source of truth for the s
 
 Each state/territory is a single data object in `data/states/<slug>.js`, imported and rendered by `components/StatePage.jsx`. There is no schema validation on these files — a wrong field name is a silent `undefined` at best and a build-breaking crash at worst (see **Field shapes matter** below) — so match the shapes already used by an existing state exactly, and always build before merging (see **Before committing**).
 
-1. Edit the relevant fields in `data/states/<slug>.js` — `summary`, `alertBanner`, `stats`, `keyDates`, `compliance`, `seizure`, `penalties`, `footpathRule`, `minimumAge`, `parentalLiability`, `quiz`, `notices`, `links`.
+1. Edit the relevant fields in `data/states/<slug>.js` — `summary`, `alertBanner`, `stats`, `keyDates`, `compliance`, `seizure`, `reporting`, `realRisk`, `penalties`, `footpathRule`, `minimumAge`, `parentalLiability`, `quiz`, `notices`, `links`.
 2. `notices` is the enforcement/news feed rendered by `EnforcementNotices.jsx` — add a dated entry with `title`, `text` and a source `url` for any new government bulletin, enforcement operation, or safety notice.
 3. Run `npm run build` (not just `npm run dev`) and confirm all 8 state pages generate before committing — see **Before committing**.
 
@@ -80,6 +81,7 @@ State e-bike/e-scooter law changes fast and unpredictably — there's no fixed s
 - A law newly **in force** (not just proposed) → update `summary`, `alertBanner`, `stats`, `minimumAge`/`compliance`/`seizure` as relevant, and add a `keyDates` entry.
 - A **proposed** bill or inquiry recommendation → usually just a `keyDates` entry (color `amber`/`slate`), not a change to the "current rules" fields yet.
 - An **enforcement operation, penalty change, or notable incident/statement** (e.g. a police operation, a peak-body statement like AMA Queensland's) → a `notices` entry, always with a source `url`.
+- A story involving a **named private individual** (not an org/official spokesperson) → be careful. Only use it if the person (or their family) has already gone public specifically to advocate for a policy position — frame it around that advocacy, the same editorial pattern as the AMA/peak-body quotes, not as an injury statistic. It belongs in `notices`, never in `realRisk` (that section is for aggregate data only — see **Field shapes that matter** above). If it's just a private tragedy with no public advocacy angle, leave it out.
 - Pure **commentary/opinion** with no rule or operation attached → usually skip, unless it's significant enough to be genuinely newsworthy on its own (judgement call).
 
 **The update itself, every time:**
