@@ -144,6 +144,12 @@ export const qld = {
 
   notices: [
     {
+      date: '1 Jul 2026',
+      title: 'First Person Charged Under New Laws — 7 Minutes After They Took Effect',
+      text: 'A 28-year-old Teneriffe man became the first person charged under the new e-mobility laws, stopped on Queen Street, Brisbane, just after midnight for riding without a helmet. Breath-tested under the new random drink-riding power, he returned 0.067 against the 0.05 limit — a court matter carrying a maximum penalty around $7,000. Assistant Commissioner Rhys Wildman commented on the case, which confirmed the footpath speed limit as 12 km/h (not the earlier-proposed 10 km/h) as the laws took effect.',
+      url: 'https://www.abc.net.au/news/2026-07-01/queensland-ebike-escooter-law-change-explained/106762970',
+    },
+    {
       date: '2 Jun 2026',
       title: 'AMA QLD: "SHOCKING DISREGARD FOR SAFETY"',
       text: 'AMA Queensland President Assoc Prof Erica Gannon condemned the government\'s decision to walk back the under-16 ban: "This decision puts us right back where we started, with children being injured and killed." AMA QLD also strongly opposed the licensing framework that requires GPs to certify fitness to ride, warning it risks harming the doctor–patient relationship. Amy\'s Foundation noted 12 people died in Queensland in e-mobility incidents in 2025.',

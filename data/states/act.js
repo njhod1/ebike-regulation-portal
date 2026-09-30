@@ -105,6 +105,12 @@ export const act = {
 
   notices: [
     {
+      date: '12 Jun 2026',
+      title: 'ACT Policing Targets Trailbike and E-Rideable Compliance',
+      text: "ACT Policing launched an operation targeting anti-social and illegal use of e-bikes, e-scooters, off-road trailbikes and e-motorcycles, prompted by a rise in damage to Canberra sportsgrounds and ovals. Riding motorised bikes — electric or petrol — in suburban parks, reserves and ovals is banned ACT-wide; police can seize devices and lay charges, and are monitoring social media as part of the operation. One early seizure: an unregistered, unroadworthy motorbike ridden by a 16-year-old near Holt sports fields.",
+      url: 'https://police.act.gov.au/news/2026-media-releases/june/act-policing-to-target-trailbike-and-e-rideable-compliance',
+    },
+    {
       date: 'Jun 2026',
       title: 'MEDICAL COMMUNITY RAISES NATIONAL E-BIKE SAFETY CONCERNS',
       text: 'AMA Queensland formally criticised weakened state e-mobility laws as a "shocking disregard for safety," warning that insufficient age restrictions put children at risk nationally. Emergency department physicians across Australia report treating preventable injuries — head trauma, broken bones, missing teeth, and fatalities. The AMA has called on all state and federal governments to enact evidence-based safety legislation rather than yielding to industry and lobby pressure.',

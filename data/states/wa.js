@@ -28,7 +28,7 @@ export const wa = {
     {
       date: 'Dec 2025',
       color: 'amber',
-      text: 'WA Parliamentary Committee tabled the <strong>Ride Safe report</strong> — an inquiry into eRideable and e-bike safety. The Cook Government supported <strong>32 of 33 recommendations</strong>, including anti-tampering measures, speed-limiting technology, school education programmes, and improved infrastructure.',
+      text: 'WA Parliamentary Committee tabled the <strong>Ride Safe report</strong> — an inquiry into eRideable and e-bike safety, triggered by the death of Perth father <strong>Thanh Phan</strong> (killed by a drunk e-scooter rider, May 2025) and expanded in scope after a 59-year-old woman was killed by an electric off-road motorbike (Jul 2025). The Cook Government supported <strong>32 of 33 recommendations</strong>, including anti-tampering measures, speed-limiting technology, school education programmes, and improved infrastructure.',
     },
     {
       date: 'Mar 2026',

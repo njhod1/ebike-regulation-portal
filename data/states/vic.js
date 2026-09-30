@@ -24,7 +24,13 @@ export const vic = {
     { label: 'Standard', value: 'EN 15194' },
   ],
 
-  keyDates: [],
+  keyDates: [
+    {
+      date: 'Dec 2025',
+      color: 'amber',
+      text: '<strong>DIY-converted e-bikes banned from Metro trains and station ticketing areas</strong>, over fire risk from mismatched batteries and aftermarket conversions. Factory-built e-bikes and e-scooters are still permitted but must be switched off and can\'t be ridden or charged on board. Only foldable e-bikes/e-scooters are allowed on trams and PTV buses.',
+    },
+  ],
 
   compliance: {
     gracePeriod: {
