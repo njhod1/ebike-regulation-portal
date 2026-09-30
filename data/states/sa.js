@@ -31,9 +31,9 @@ export const sa = {
       text: 'Private <strong>e-scooters and personal mobility devices (PMDs)</strong> legalised for use on footpaths, shared paths, bike paths and many roads in South Australia. PMDs are capped at <strong>10 km/h on footpaths</strong> and 25 km/h on bike lanes. Riders must be 16 or over. No licence or registration required.',
     },
     {
-      date: 'Jun 2026',
+      date: '26 Jun 2026',
       color: 'slate',
-      text: '<strong>SA Department for Infrastructure and Transport review commenced</strong> to assess how the July 2025 PMD laws are working and identify areas for improvement. Further rule changes possible in 2026–27.',
+      text: '<strong>SA Department for Infrastructure and Transport review commenced</strong> to assess how the July 2025 PMD laws are working. Public consultation ran 26 June – 16 August 2026, covering licensing requirements, speed limits, road network access, minimum age requirements, and <strong>police powers to remove or destroy illegal or misused devices</strong>. Further rule changes possible in 2026–27.',
     },
   ],
 
@@ -117,6 +117,12 @@ export const sa = {
   ],
 
   notices: [
+    {
+      date: '26 Jun 2026',
+      title: 'SA E-Scooter/PMD Law Review Opens for Public Consultation',
+      text: "SA's Department for Infrastructure and Transport opened public consultation (26 June – 16 August 2026) on how the July 2025 PMD laws are working, explicitly covering licensing requirements, speed limits, road network access, minimum age requirements, and police powers to remove or destroy illegal or misused devices.",
+      url: 'https://dit.sa.gov.au/news/articles/2026/june/review-of-e-scooter-laws-commences',
+    },
     {
       date: '17 Mar 2026',
       title: "'Easy to Modify, Hard to Police': SA Rider's Bike Hit 104 km/h",
