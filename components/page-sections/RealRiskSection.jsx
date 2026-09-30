@@ -11,11 +11,11 @@ export default function RealRiskSection({ stateName, realRisk }) {
         </p>
 
         {realRisk && (
-          <div className="flex items-start gap-4 p-4 bg-white border-l-4 border-red-600 rounded-r-xl">
-            <div className="shrink-0 text-center">
+          <div className="flex flex-col sm:flex-row sm:items-start gap-4 p-4 bg-white border-l-4 border-red-600 rounded-r-xl">
+            <div className="shrink-0 text-center sm:text-left">
               <p className="text-2xl font-black text-red-700 leading-none">{realRisk.stat}</p>
             </div>
-            <div>
+            <div className="min-w-0">
               <p className="text-sm text-red-900 font-medium leading-snug">{realRisk.detail}</p>
               {realRisk.url && (
                 <a
