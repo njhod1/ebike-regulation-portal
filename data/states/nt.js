@@ -45,7 +45,7 @@ export const nt = {
   },
 
   reporting: {
-    policeNonEmergency: null,
+    policeNonEmergency: '131 444',
     policeOnlineForm: {
       label: 'NT Police online non-emergency report',
       url: 'https://pfes.nt.gov.au/form/report-online',
