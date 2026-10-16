@@ -144,6 +144,12 @@ export const qld = {
 
   notices: [
     {
+      date: '2 Oct 2026',
+      title: 'Operation Yankee Surety: 558 Devices Seized, 2,400+ Fines in First 3 Months',
+      text: 'Queensland Police released the first quarterly results of Operation Yankee Surety, its dedicated statewide e-mobility enforcement operation (1 Jul–30 Sep 2026): 558 non-compliant e-bikes/e-scooters seized and roughly 2,400 infringement notices issued, including about 1,500 for helmet non-compliance and 157 for speeding. Officers conducted 878 roadside breath tests, leading to 68 drink-riding charges. Separately, 64 infringements have been issued for breaching the new age/licensing rule since it commenced 31 Aug 2026 — the first enforcement data under that rule. The operation continues through 30 Jun 2027.',
+      url: 'https://www.abc.net.au/news/2026-10-02/qld-e-mobility-devices-seized-and-2-300-fines-issued-in-3-months/107222062',
+    },
+    {
       date: '1 Jul 2026',
       title: 'First Person Charged Under New Laws — 7 Minutes After They Took Effect',
       text: 'A 28-year-old Teneriffe man became the first person charged under the new e-mobility laws, stopped on Queen Street, Brisbane, just after midnight for riding without a helmet. Breath-tested under the new random drink-riding power, he returned 0.067 against the 0.05 limit — a court matter carrying a maximum penalty around $7,000. Assistant Commissioner Rhys Wildman commented on the case, which confirmed the footpath speed limit as 12 km/h (not the earlier-proposed 10 km/h) as the laws took effect.',

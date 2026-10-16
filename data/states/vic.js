@@ -119,6 +119,12 @@ export const vic = {
 
   notices: [
     {
+      date: '2 Oct 2026',
+      title: 'Royal Melbourne Hospital/RACV Study: 1 in 4 Injured Riders Under Legal Age',
+      text: 'A multicentre study led by Royal Melbourne Hospital and funded by RACV tracked 644 e-scooter and e-bike injuries across ambulance services and five Victorian emergency departments (Nov 2025–May 2026). Of 482 e-scooter riders treated, 133 (about 1 in 4) were under the legal riding age. Among hospitalised patients, 92% needed medical imaging, 58% underwent surgery, and 35 riders (5%) had life-threatening injuries — including one death. Researchers are calling for better injury monitoring and more study of how speed contributes to serious crashes.',
+      url: 'https://bicyclenetwork.com.au/newsroom/2026/10/04/hospital-concern-mounts-over-e-scooters/',
+    },
+    {
       date: 'Jul 2026',
       title: 'OPERATION TRACK — Vic Police Drones Follow Illegal Riders Home',
       text: 'Victoria Police\'s High Visibility Community Engagement Team (HiCET) deployed drones on the Mornington Peninsula to pursue illegal e-bike riders to their homes and make arrests. First two months: 4 unregistered motorcycles impounded, 9 arrests. The approach closes the loophole of riders abandoning bikes and fleeing on foot. Victoria\'s fine for riding an unregistered motor vehicle is $1,018.',
