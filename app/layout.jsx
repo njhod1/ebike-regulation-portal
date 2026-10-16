@@ -29,7 +29,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-AU">
+    <html lang="en-AU" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: "try{var s=localStorage.getItem('textSize');var p={lg:118,xl:136}[s];if(p)document.documentElement.style.fontSize=p+'%'}catch(e){}" }} />
+      </head>
       <body>
         <SiteNav />
         {children}
