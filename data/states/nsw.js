@@ -140,6 +140,12 @@ export const nsw = {
 
   notices: [
     {
+      date: '1 Oct 2026',
+      title: '23 of the Northern Beaches E-Bikes Crushed; St Vincent\'s Reports 22% Rise in Injuries',
+      text: 'NSW Police and Transport for NSW followed through on Operation E-Voltage, destroying 23 of the 36 high-powered e-bikes seized on the Northern Beaches in September — among them a bike capable of exceeding 90 km/h and others with overridden speed limiters. In the same report, St Vincent\'s Hospital Sydney said e-bike-related injury presentations rose 22% from January–July 2026 versus the same period in 2025, with 42% of those cases serious enough to require a trauma response.',
+      url: 'https://www.abc.net.au/news/2026-10-01/nsw-illegal-ebikes-seized-and-destroyed-northern-beaches/107216370',
+    },
+    {
       date: '29 Sep 2026',
       title: 'Broadcaster Margaret Throsby Injured, Calls for Stricter Under-Age E-Bike Laws',
       text: 'Former ABC Classic presenter Margaret Throsby, 84, suffered a broken hip, broken thumb and head injuries after being struck by a large "fat bike" e-bike ridden by two teenage boys in the Illawarra. The riders apologised and stayed with her until emergency services arrived. Throsby has since called for stricter legislation on e-bike use by children, describing it as "civically irresponsible" to allow unlicensed minors to ride heavy, fast e-bikes.',
@@ -166,7 +172,7 @@ export const nsw = {
     {
       date: 'Feb 2026',
       title: 'Roadside Dyno Units Deployed',
-      text: '3 portable dynamometer units — funded at $100,000 from the Community Road Safety Fund — are trialling roadside testing at known illegal e-bike hotspots. Units verify whether the motor cuts out at 25 km/h. The NRMA has noted 3 units is insufficient for the scale of the problem. The approach is modelled on WA\'s Operation Moorhead (Jan 2026), which seized 36 e-rideables and charged 25 juveniles and 4 adults in a single Perth operation.',
+      text: '3 portable dynamometer units — funded at $100,000 from the Community Road Safety Fund — are trialling roadside testing at known illegal e-bike hotspots. Units verify whether the motor cuts out at 25 km/h. The NRMA has noted 3 units is insufficient for the scale of the problem. The approach is modelled on WA\'s Operation Moorhead (Jan 2026), which ultimately seized 76 e-rideables and charged 76 offenders — 61 juveniles and 15 adults — across 183 offences in Perth.',
       url: 'https://www.mynrma.com.au/open-road/news/2026/tighter-laws-for-e-bikes',
     },
     {

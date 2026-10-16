@@ -125,10 +125,10 @@ export const wa = {
 
   notices: [
     {
-      date: 'Jan 2026',
+      date: 'Jan–Feb 2026',
       title: 'Operation Moorhead — Perth Enforcement Action',
-      text: 'WA Police seized 36 e-rideables, charged 25 juveniles (aged 11–16) and 4 adults with traffic offences including "no authority to drive" and "use of unlicensed vehicle on a road." This targeted operation in Perth became the model explicitly adopted by NSW for its 2026 crackdown. It demonstrates how a dedicated, hotspot-focused enforcement operation produces rapid results.',
-      url: 'https://bicyclenetwork.com.au/newsroom/2026/02/12/nsw-police-to-seize-and-crush-illegal-e-bikes/',
+      text: 'WA Police\'s Joondalup District eRideable operation, launched Jan 2026, ultimately seized 76 e-rideables and charged 76 offenders — 61 juveniles (aged 12–16) and 15 adults — across 183 offences, including "no authority to drive" and "use of unlicensed vehicle on a road." All seized devices were destroyed. This targeted operation in Perth became the model explicitly adopted by NSW for its 2026 crackdown, and was rolled out statewide.',
+      url: 'https://www.wa.gov.au/government/announcements/joondalup-district-electric-rideable-device-operation',
     },
     {
       date: 'Jun 2026',
