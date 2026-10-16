@@ -11,7 +11,7 @@ export default function ParentalLiabilitySection({ config }) {
         {config.items.map((item) => (
           <div key={item.number} className="border-l-2 border-white pl-4">
             <h4 className="font-black text-white uppercase text-xl tracking-tight mb-1 leading-none">{item.number}. {item.title}</h4>
-            <p className="text-xs text-red-100 leading-snug">{item.desc}</p>
+            <p className="text-sm text-red-100 leading-snug">{item.desc}</p>
           </div>
         ))}
       </div>

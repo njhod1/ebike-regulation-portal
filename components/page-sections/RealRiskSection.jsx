@@ -31,7 +31,7 @@ export default function RealRiskSection({ stateName, realRisk }) {
           </div>
         )}
 
-        <p className="text-xs text-red-800 mt-4">
+        <p className="text-sm text-red-800 mt-4">
           These are the outcomes this page exists to help {stateName} riders and parents avoid — not just fines.
         </p>
       </div>

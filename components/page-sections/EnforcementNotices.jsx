@@ -24,7 +24,7 @@ export default function EnforcementNotices({ notices }) {
               )}
             </div>
             <h3 className="font-black text-slate-900 text-sm uppercase tracking-tight mb-1">{notice.title}</h3>
-            <p className="text-xs text-slate-500 leading-relaxed">{notice.text}</p>
+            <p className="text-sm text-slate-500 leading-relaxed">{notice.text}</p>
           </div>
         ))}
       </div>
