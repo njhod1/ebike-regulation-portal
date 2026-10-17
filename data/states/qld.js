@@ -150,6 +150,12 @@ export const qld = {
       url: 'https://www.abc.net.au/news/2026-10-02/qld-e-mobility-devices-seized-and-2-300-fines-issued-in-3-months/107222062',
     },
     {
+      date: '1 Oct 2026',
+      title: 'E-Bike Assurance Scheme Still Not Live Ahead of Compliance Deadline',
+      text: "Queensland's EPAC Assurance Scheme — which lets owners of pre-1 Jul 2026 e-bikes that meet the 250W/25 km/h limits but lack an EN 15194 label get a verified \"Legacy EPAC\" label from an authorised bicycle retailer, for up to $70 — is not yet operating, according to the Transport and Main Roads scheme page, with no authorised verifiers yet listed. The scheme is expected to go live 2 Nov 2026. A compliance label will be required to ride an e-bike in public from 1 Mar 2027, shortly after the 28 Feb 2027 transition deadline for all e-bikes to meet EN 15194 or be scheme-verified. High-powered, high-speed or post-manufacture modified devices are not eligible for the scheme and can still be seized and destroyed by police.",
+      url: 'https://www.qld.gov.au/transport/safety/rules/wheeled-devices/e-bike-assurance-scheme',
+    },
+    {
       date: '1 Jul 2026',
       title: 'First Person Charged Under New Laws — 7 Minutes After They Took Effect',
       text: 'A 28-year-old Teneriffe man became the first person charged under the new e-mobility laws, stopped on Queen Street, Brisbane, just after midnight for riding without a helmet. Breath-tested under the new random drink-riding power, he returned 0.067 against the 0.05 limit — a court matter carrying a maximum penalty around $7,000. Assistant Commissioner Rhys Wildman commented on the case, which confirmed the footpath speed limit as 12 km/h (not the earlier-proposed 10 km/h) as the laws took effect.',
@@ -174,10 +180,10 @@ export const qld = {
       url: 'https://www.abc.net.au/news/2026-02-11/e-bike-sellers-fake-compliance-stickers-crackdown/106285924',
     },
     {
-      date: 'Dec 2025 / May 2026',
-      title: 'FEDERAL: EN 15194 IMPORT STANDARD & $6.6M ACCC SAFETY PROGRAM',
-      text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. In May 2026, the Federal Government allocated $6.6 million over three years for the ACCC to develop a mandatory national safety standard covering speed limits, power caps, battery fire safety and consumer labelling. Public consultation is expected in late 2026. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
-      url: 'https://bicyclenetwork.com.au/newsroom/2025/12/03/feds-return-to-euro-e-bike-standard/',
+      date: 'Dec 2025 – Aug 2026',
+      title: 'FEDERAL: EN 15194 IMPORT STANDARD, ACCC FUNDING & NATIONAL STANDARD DIRECTION',
+      text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. In May 2026, the Federal Government allocated $6.6 million over three years for the ACCC to develop a mandatory national safety standard covering speed limits, power caps, battery fire safety and consumer labelling. Following the 30 July 2026 Consumer Affairs Ministers\' Meeting, the Government formally directed the ACCC to build that standard under the Australian Consumer Law — the same sale rules in every state and territory, drawing "a firm line against high-powered, high-speed devices." No completion date has been announced. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
+      url: 'https://ministers.treasury.gov.au/ministers/andrew-leigh-2025/media-releases/stronger-product-safety-standards-e-bikes',
     },
   ],
 
