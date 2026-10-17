@@ -25,7 +25,7 @@ export default function FlyerTab({ flyer, stateName }) {
             </div>
 
             <div className="bg-[#C0392B] text-white text-center font-bold py-3 mb-6 text-lg uppercase leading-tight">
-              CRACKDOWN ACTIVE (MAR 2026): NON-COMPLIANT BIKES SUBJECT TO SEIZURE AND DESTRUCTION.
+              CRACKDOWN ACTIVE (AUG 2026): NON-COMPLIANT BIKES SUBJECT TO SEIZURE AND DESTRUCTION.
             </div>
 
             <div className="space-y-6 text-slate-800">

@@ -117,10 +117,10 @@ export const nt = {
       url: 'https://www.abc.net.au/news/2026-02-11/e-bike-sellers-fake-compliance-stickers-crackdown/106285924',
     },
     {
-      date: 'Dec 2025 / May 2026',
-      title: 'FEDERAL: EN 15194 IMPORT STANDARD & $6.6M ACCC SAFETY PROGRAM',
-      text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. In May 2026, the Federal Government allocated $6.6 million over three years for the ACCC to develop a mandatory national safety standard covering speed limits, power caps, battery fire safety and consumer labelling. Public consultation is expected in late 2026. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
-      url: 'https://bicyclenetwork.com.au/newsroom/2025/12/03/feds-return-to-euro-e-bike-standard/',
+      date: 'Dec 2025 – Aug 2026',
+      title: 'FEDERAL: EN 15194 IMPORT STANDARD, ACCC FUNDING & NATIONAL STANDARD DIRECTION',
+      text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. In May 2026, the Federal Government allocated $6.6 million over three years for the ACCC to develop a mandatory national safety standard covering speed limits, power caps, battery fire safety and consumer labelling. Following the 30 July 2026 Consumer Affairs Ministers\' Meeting, the Government formally directed the ACCC to build that standard under the Australian Consumer Law — the same sale rules in every state and territory, drawing "a firm line against high-powered, high-speed devices." No completion date has been announced. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
+      url: 'https://ministers.treasury.gov.au/ministers/andrew-leigh-2025/media-releases/stronger-product-safety-standards-e-bikes',
     },
   ],
 

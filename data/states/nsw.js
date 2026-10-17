@@ -2,7 +2,7 @@ export const nsw = {
   name: 'New South Wales',
   slug: 'nsw',
   abbreviation: 'NSW',
-  summary: '250W limit in force from 1 Mar 2026. Seizure & crush powers active from 24 Mar 2026.',
+  summary: '250W limit in force from 1 Mar 2026. Seizure & crush powers in force from 21 Aug 2026.',
 
   seo: {
     title: 'NSW E-Bike Laws 2026: 250W Limit & Seizure Powers',
@@ -14,7 +14,7 @@ export const nsw = {
   alertBanner: {
     show: true,
     color: 'red',
-    text: '2026 CRACKDOWN ACTIVE: 250W ROAD LIMIT FROM 1 MAR 2026 · SEIZURE & CRUSH POWERS FROM 24 MAR 2026',
+    text: '2026 CRACKDOWN ACTIVE: 250W ROAD LIMIT FROM 1 MAR 2026 · SEIZURE & CRUSH POWERS FROM 21 AUG 2026',
   },
 
   stats: [
@@ -42,13 +42,18 @@ export const nsw = {
     },
     {
       date: '24 Mar 2026',
-      color: 'red',
-      text: '<strong>Road Transport Amendment (Non-registrable Motor Vehicles) Bill 2026</strong> introduced — NSW Police and Transport Officers can now seize and crush illegal e-bikes.',
+      color: 'amber',
+      text: '<strong>Road Transport Amendment (Non-registrable Motor Vehicles) Bill 2026</strong> introduced to NSW Parliament, giving police and Transport Authorised Officers power to seize and crush illegal e-bikes.',
     },
     {
       date: '14 Aug 2026',
       color: 'amber',
       text: '<strong>Australian-first shared e-bike scheme laws.</strong> Shared/dockless e-bike operators must now get approval from Transport for NSW and authorisation from councils before deploying, meeting state-wide minimum standards for insurance, helmets, device standards, device ID, and trip/incident/complaint data. Penalties up to $55,000 plus $5,500/day for ongoing non-compliance, including failing to remove e-bikes from inappropriate locations.',
+    },
+    {
+      date: '21 Aug 2026',
+      color: 'red',
+      text: '<strong>Seize-and-crush powers commence.</strong> NSW Police and Transport Authorised Officers can now seize any non-registrable e-bike used on a road or road-related area in the past 28 days that fails the 250 W / 25 km/h test. An owner who wasn\'t riding and didn\'t know or agree to the illegal use can appeal within 14 days of seizure; otherwise the bike is forfeited to the Crown after 15 days.',
     },
     {
       date: '1 Mar 2029',
@@ -194,10 +199,10 @@ export const nsw = {
       url: 'https://www.abc.net.au/news/2026-02-11/e-bike-sellers-fake-compliance-stickers-crackdown/106285924',
     },
     {
-      date: 'Dec 2025 / May 2026',
-      title: 'FEDERAL: EN 15194 IMPORT STANDARD & $6.6M ACCC SAFETY PROGRAM',
-      text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. In May 2026, the Federal Government allocated $6.6 million over three years for the ACCC to develop a mandatory national safety standard covering speed limits, power caps, battery fire safety and consumer labelling. Public consultation is expected in late 2026. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
-      url: 'https://bicyclenetwork.com.au/newsroom/2025/12/03/feds-return-to-euro-e-bike-standard/',
+      date: 'Dec 2025 – Aug 2026',
+      title: 'FEDERAL: EN 15194 IMPORT STANDARD, ACCC FUNDING & NATIONAL STANDARD DIRECTION',
+      text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. In May 2026, the Federal Government allocated $6.6 million over three years for the ACCC to develop a mandatory national safety standard covering speed limits, power caps, battery fire safety and consumer labelling. Following the 30 July 2026 Consumer Affairs Ministers\' Meeting, the Government formally directed the ACCC to build that standard under the Australian Consumer Law — the same sale rules in every state and territory, drawing "a firm line against high-powered, high-speed devices." No completion date has been announced. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
+      url: 'https://ministers.treasury.gov.au/ministers/andrew-leigh-2025/media-releases/stronger-product-safety-standards-e-bikes',
     },
   ],
 

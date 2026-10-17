@@ -76,7 +76,7 @@
 \toprule
 \textbf{State} & \textbf{Footpaths} & \textbf{Age} & \textbf{Key Note} \\
 \midrule
-NSW & Adults: 10 km/h & — & Seizure \& crush powers (Mar 2026). 500W grace period until 1 Mar 2029. \\
+NSW & Adults: 10 km/h & — & Seizure \& crush powers in force from 21 Aug 2026. 500W grace period until 1 Mar 2029. \\
 VIC & Under 13 only & — & Strictest footpath rule. Drone \& blitz enforcement (52\% non-compliant, CBD). \\
 QLD & 12 km/h cap & 12+$^\ast$ & Seizure powers (1 Jul 2026); tiered ages from 31 Aug. AMA QLD called the law ``watered down.'' \\
 WA & Shared paths & 16+ & Ride Safe inquiry (Dec 2025): 32/33 recommendations backed; national push underway. \\
