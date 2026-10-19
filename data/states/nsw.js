@@ -145,6 +145,12 @@ export const nsw = {
 
   notices: [
     {
+      date: '16 Oct 2026',
+      title: '22 More Illegal E-Bikes Seized Across Southern Sydney and the Illawarra',
+      text: 'NSW Police and Transport for NSW ran a six-hour joint operation (2pm–8pm, Friday 16 Oct) across Cronulla, Wollongong and Shellharbour, seizing 22 non-compliant e-bikes, issuing 9 penalty notices and 4 cautions. One seized bike had been modified to travel at 50 km/h and several others to over 40 km/h. Police described it as the second operation since the new seizure laws took effect; Traffic and Highway Patrol Commander Assistant Commissioner David Driver warned that illegal or modified e-bikes may be seized, assessed and destroyed. During the operation a senior constable suffered a serious leg injury when allegedly struck by a rider who fled on an e-bike at Shell Cove; the officer was in a stable condition in hospital.',
+      url: 'https://www.police.nsw.gov.au/news/news_article?sq_content_src=%2BdXJsPWh0dHBzJTNBJTJGJTJGZWJpenByZC5wb2xpY2UubnN3Lmdvdi5hdSUyRm1lZGlhJTJGMTI5MjM2Lmh0bWwmYWxsPTE%3D',
+    },
+    {
       date: '1 Oct 2026',
       title: '23 of the Northern Beaches E-Bikes Crushed; St Vincent\'s Reports 22% Rise in Injuries',
       text: 'NSW Police and Transport for NSW followed through on Operation E-Voltage, destroying 23 of the 36 high-powered e-bikes seized on the Northern Beaches in September — among them a bike capable of exceeding 90 km/h and others with overridden speed limiters. In the same report, St Vincent\'s Hospital Sydney said e-bike-related injury presentations rose 22% from January–July 2026 versus the same period in 2025, with 42% of those cases serious enough to require a trauma response.',
