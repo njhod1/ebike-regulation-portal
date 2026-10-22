@@ -38,6 +38,12 @@ export const tas = {
     show: false,
   },
 
+  realRisk: {
+    stat: '8.5 hospitalisations per 100,000',
+    detail: "The AIHW's first national hospital-data report found Tasmania's 2024–25 hospitalisation rate for riders of motor-scooters, mopeds and motorised bicycles (the group that includes e-bikes) was 8.5 per 100,000 — third-highest in Australia, and double its 2020–21 rate. Current hospital coding can't yet separate e-bikes from petrol-powered mopeds, so this is an upper bound for e-bikes alone.",
+    url: 'https://www.aihw.gov.au/reports/injury/e-scooter-e-bike-injuries-deaths-in-australia',
+  },
+
   reporting: {
     policeNonEmergency: '131 444',
     policeOnlineForm: {
