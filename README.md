@@ -84,6 +84,8 @@ State e-bike/e-scooter law changes fast and unpredictably — there's no fixed s
 - A story involving a **named private individual** (not an org/official spokesperson) → be careful. Only use it if the person (or their family) has already gone public specifically to advocate for a policy position — frame it around that advocacy, the same editorial pattern as the AMA/peak-body quotes, not as an injury statistic. It belongs in `notices`, never in `realRisk` (that section is for aggregate data only — see **Field shapes that matter** above). If it's just a private tragedy with no public advocacy angle, leave it out.
 - Pure **commentary/opinion** with no rule or operation attached → usually skip, unless it's significant enough to be genuinely newsworthy on its own (judgement call).
 
+For source ranking, verification rules and how to brief research agents, see **RESEARCH_RULES.md**.
+
 **The update itself, every time:**
 1. Identify which state(s) it affects and which category above it falls into.
 2. Edit the relevant fields in `data/states/<slug>.js` — see **Field shapes that matter** above for the exact keys each component expects.
