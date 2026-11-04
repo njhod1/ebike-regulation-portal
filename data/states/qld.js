@@ -144,16 +144,16 @@ export const qld = {
 
   notices: [
     {
+      date: '2 Nov 2026',
+      title: 'E-Bike Assurance Scheme Opens: Verification Capped at $50 Plus $20 Label',
+      text: "Queensland's EPAC Assurance Scheme was reported to have started on 2 Nov 2026. Owners of e-bikes made before 1 Jul 2026 that meet the 250W / 25 km/h limits but lack an EN 15194 certification can have the bike verified by an authorised verifier and receive a compliance label. Under the Queensland regulation, a verifier may charge at most $50 for the assessment and $20 for the label ($70 in total), and it is an offence to charge more. Verifiers were reported in Brisbane, the Gold Coast, Sunshine Coast, Rockhampton, Moreton Bay and Ipswich, with alternative arrangements promised for rural and remote owners. EN 15194-certified bikes don't need verifying. Owners have until 28 Feb 2027, and a compliance label will be required to ride an e-bike in public from 1 Mar 2027. High-powered, high-speed or modified devices aren't eligible and can still be seized and destroyed. Bicycle Queensland has said riders shouldn't be charged and that verification must not create financial or administrative barriers for people riding legal e-bikes.",
+      url: 'https://www.qld.gov.au/transport/safety/rules/wheeled-devices/e-bike-assurance-scheme',
+    },
+    {
       date: '2 Oct 2026',
       title: 'Operation Yankee Surety: 558 Devices Seized, 2,400+ Fines in First 3 Months',
       text: 'Queensland Police released the first quarterly results of Operation Yankee Surety, its dedicated statewide e-mobility enforcement operation (1 Jul–30 Sep 2026): 558 non-compliant e-bikes/e-scooters seized and roughly 2,400 infringement notices issued, including about 1,500 for helmet non-compliance and 157 for speeding. Officers conducted 878 roadside breath tests, leading to 68 drink-riding charges. Separately, 64 infringements have been issued for breaching the new age/licensing rule since it commenced 31 Aug 2026 — the first enforcement data under that rule. The operation continues through 30 Jun 2027.',
       url: 'https://www.abc.net.au/news/2026-10-02/qld-e-mobility-devices-seized-and-2-300-fines-issued-in-3-months/107222062',
-    },
-    {
-      date: '1 Oct 2026',
-      title: 'E-Bike Assurance Scheme Still Not Live Ahead of Compliance Deadline',
-      text: "Queensland's EPAC Assurance Scheme — which lets owners of pre-1 Jul 2026 e-bikes that meet the 250W/25 km/h limits but lack an EN 15194 label get a verified \"Legacy EPAC\" label from an authorised bicycle retailer, for up to $70 — is not yet operating, according to the Transport and Main Roads scheme page, with no authorised verifiers yet listed. The scheme is expected to go live 2 Nov 2026. A compliance label will be required to ride an e-bike in public from 1 Mar 2027, shortly after the 28 Feb 2027 transition deadline for all e-bikes to meet EN 15194 or be scheme-verified. High-powered, high-speed or post-manufacture modified devices are not eligible for the scheme and can still be seized and destroyed by police.",
-      url: 'https://www.qld.gov.au/transport/safety/rules/wheeled-devices/e-bike-assurance-scheme',
     },
     {
       date: '1 Jul 2026',
