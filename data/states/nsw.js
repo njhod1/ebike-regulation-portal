@@ -145,6 +145,12 @@ export const nsw = {
 
   notices: [
     {
+      date: '5 Nov 2026',
+      title: 'Hunter Region Blitz Seizes 15 Illegal E-Bikes and Vehicles; Three-Month Total Reaches 68',
+      text: 'NSW Police and Transport for NSW ran a joint compliance blitz across Maitland, East Maitland, Rutherford and Metford, seizing 10 modified/illegal e-bikes, 2 petrol-motor-fitted bicycles, 2 e-scooters and 1 trail bike, and issuing 26 penalty notices for speeding and unregistered-vehicle offences. Police described it as the third joint e-bike blitz since September, taking the three-month cumulative total — with the Northern Beaches and Southern Sydney/Illawarra operations — to 68 e-bikes and vehicles seized. Acting Superintendent Martin Searle said the seized vehicles exceeded legal speed/power limits and posed "a significant safety risk"; Roads Minister Jenny Aitchison said they posed "serious safety risks to pedestrians, cyclists and other road users." This item is sourced to AAP wire coverage — no NSW Police or ministerial media release could be independently located to corroborate it directly.',
+      url: 'https://www.portnews.com.au/story/9387021/motorbikes-with-a-battery-e-bike-safety-crackdown/',
+    },
+    {
       date: '16 Oct 2026',
       title: '22 More Illegal E-Bikes Seized Across Southern Sydney and the Illawarra',
       text: 'NSW Police and Transport for NSW ran a six-hour joint operation (2pm–8pm, Friday 16 Oct) across Cronulla, Wollongong and Shellharbour, seizing 22 non-compliant e-bikes, issuing 9 penalty notices and 4 cautions. One seized bike had been modified to travel at 50 km/h and several others to over 40 km/h. Police described it as the second operation since the new seizure laws took effect; Traffic and Highway Patrol Commander Assistant Commissioner David Driver warned that illegal or modified e-bikes may be seized, assessed and destroyed. During the operation a senior constable suffered a serious leg injury when allegedly struck by a rider who fled on an e-bike at Shell Cove; the officer was in a stable condition in hospital.',
@@ -167,6 +173,12 @@ export const nsw = {
       title: 'Operation E-Voltage — 36 Illegal E-Bikes Seized on Northern Beaches',
       text: 'NSW Police, Transport for NSW and the Bike Coordination and Training Unit ran a joint operation across Manly, Curl Curl, Dee Why, Warriewood and Avalon Beach, using drones to track riders and set up checkpoints. Result: 36 non-compliant e-bikes seized for destruction, 16 penalty notices and 46 caution notices (helmet and mobile phone offences). One e-bike seized from a 14-year-old at Warriewood was allegedly capable of exceeding 90 km/h. Owners have two weeks to appeal before their bikes are crushed.',
       url: 'https://www.theguardian.com/world/2026/sep/12/nsw-police-seize-illegal-ebikes-northern-beaches-crushed',
+    },
+    {
+      date: '26 Aug 2026',
+      title: 'NSW Productivity Commission Recommends Against Mandatory E-Bike Insurance',
+      text: 'The NSW Productivity and Equality Commission published its "Review of e-micromobility insurance options," commissioned by the Minister for Transport in June 2026. It found mandatory third-party insurance for private e-bike/e-scooter riders would cost the state an estimated $470 million to $1 billion more than it would return, while education- and enforcement-focused measures would instead deliver an estimated $55 million net benefit. The Commission recommended against mandatory insurance for private owners, favouring expanded education campaigns, targeted enforcement of existing device standards, and more visible high-risk-area policing. Existing insurance requirements for shared e-bike schemes and delivery riders are unaffected. NSW e-bike household ownership rose from about 2% in 2019 to about 8% in 2025.',
+      url: 'https://www.nsw.gov.au/departments-and-agencies/nsw-productivity-and-equality-commission/document-library/review-of-insurance-settings-for-e-micromobility-devices-nsw',
     },
     {
       date: 'Mar 2026',
@@ -205,10 +217,10 @@ export const nsw = {
       url: 'https://www.abc.net.au/news/2026-02-11/e-bike-sellers-fake-compliance-stickers-crackdown/106285924',
     },
     {
-      date: 'Dec 2025 – Aug 2026',
-      title: 'FEDERAL: EN 15194 IMPORT STANDARD, ACCC FUNDING & NATIONAL STANDARD DIRECTION',
-      text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. In May 2026, the Federal Government allocated $6.6 million over three years for the ACCC to develop a mandatory national safety standard covering speed limits, power caps, battery fire safety and consumer labelling. Following the 30 July 2026 Consumer Affairs Ministers\' Meeting, the Government formally directed the ACCC to build that standard under the Australian Consumer Law — the same sale rules in every state and territory, drawing "a firm line against high-powered, high-speed devices." No completion date has been announced. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
-      url: 'https://ministers.treasury.gov.au/ministers/andrew-leigh-2025/media-releases/stronger-product-safety-standards-e-bikes',
+      date: 'Dec 2025 – Nov 2026',
+      title: 'FEDERAL: EN 15194 IMPORT STANDARD, ACCC FUNDING & NATIONAL STANDARD CONSULTATION',
+      text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. In May 2026, the Federal Government allocated $6.6 million over three years for the ACCC to develop a mandatory national safety standard covering speed limits, power caps, battery fire safety and consumer labelling. Following the 30 July 2026 Consumer Affairs Ministers\' Meeting, the Government formally directed the ACCC to build that standard under the Australian Consumer Law — the same sale rules in every state and territory, drawing "a firm line against high-powered, high-speed devices." On 6 November 2026, Assistant Minister Andrew Leigh announced the ACCC had opened public consultation (closing 30 November 2026) on proposed national e-bike safety standards — EN 15194 compliance, power/speed limits, battery and charger safety, conversion kits, second-hand and hire e-bikes, and anti-tampering measures — funded by $4.3 million in the Budget. Recommendations to government are expected in early 2027; the release cited e-bike injuries and fatalities costing the economy at least $28 million a year. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
+      url: 'https://ministers.treasury.gov.au/ministers/andrew-leigh-2025/media-releases/protecting-australians-unsafe-e-bikes',
     },
   ],
 
