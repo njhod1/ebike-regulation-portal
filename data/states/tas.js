@@ -111,16 +111,16 @@ export const tas = {
       url: 'https://www.hobartcity.com.au/Council/News-and-publications/Media-releases/City-of-Hobart-welcomes-Lime-as-new-shared-e-bike-operator',
     },
     {
-      date: '5 Mar 2026',
-      title: 'Devonport/Latrobe Police Target Illegal and Dangerous PMD Use',
-      text: 'Tasmania Police ran a seven-day targeted operation in Devonport and Latrobe on illegal and dangerous use of personal mobility devices (PMDs), including e-scooters and e-skateboards. Officers spoke with approximately 40 PMD riders, issuing 9 infringement notices (8 for riding without an approved helmet, 1 for using a PMD on a prohibited road) and 1 youth caution for riding without a helmet; most riders were educated on minor matters rather than fined. No devices were seized in this operation, though police noted they can seize a PMD for up to seven days if it is used dangerously or contrary to road rules.',
-      url: 'https://www.police.tas.gov.au/news-events/media-releases/devonport-and-latrobe-police-target-illegal-and-dangerous-personal-mobility-device-use/',
-    },
-    {
       date: 'Jun 2026',
       title: 'MEDICAL COMMUNITY RAISES NATIONAL E-BIKE SAFETY CONCERNS',
       text: 'AMA Queensland formally criticised weakened state e-mobility laws as a "shocking disregard for safety," warning that insufficient age restrictions put children at risk nationally. Emergency department physicians across Australia report treating preventable injuries — head trauma, broken bones, missing teeth, and fatalities. The AMA has called on all state and federal governments to enact evidence-based safety legislation rather than yielding to industry and lobby pressure.',
       url: 'https://amaq.com.au/Web/Web/News/Media-releases/2026-Media-Releases/Shocking-disregard-for-safety-AMA-Queensland-disappointed-in-watered-down-e-mobility-laws.aspx',
+    },
+    {
+      date: '5 Mar 2026',
+      title: 'Devonport/Latrobe Police Target Illegal and Dangerous PMD Use',
+      text: 'Tasmania Police ran a seven-day targeted operation in Devonport and Latrobe on illegal and dangerous use of personal mobility devices (PMDs), including e-scooters and e-skateboards. Officers spoke with approximately 40 PMD riders, issuing 9 infringement notices (8 for riding without an approved helmet, 1 for using a PMD on a prohibited road) and 1 youth caution for riding without a helmet; most riders were educated on minor matters rather than fined. No devices were seized in this operation, though police noted they can seize a PMD for up to seven days if it is used dangerously or contrary to road rules.',
+      url: 'https://www.police.tas.gov.au/news-events/media-releases/devonport-and-latrobe-police-target-illegal-and-dangerous-personal-mobility-device-use/',
     },
     {
       date: '11 Feb 2026',
@@ -131,7 +131,7 @@ export const tas = {
     {
       date: 'Dec 2025 – Nov 2026',
       title: 'FEDERAL: EN 15194 IMPORT STANDARD, ACCC FUNDING & NATIONAL STANDARD CONSULTATION',
-      text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. In May 2026, the Federal Government allocated $6.6 million over three years for the ACCC to develop a mandatory national safety standard covering speed limits, power caps, battery fire safety and consumer labelling. Following the 30 July 2026 Consumer Affairs Ministers\' Meeting, the Government formally directed the ACCC to build that standard under the Australian Consumer Law — the same sale rules in every state and territory, drawing "a firm line against high-powered, high-speed devices." On 6 November 2026, Assistant Minister Andrew Leigh announced the ACCC had opened public consultation (closing 30 November 2026) on proposed national e-bike safety standards — EN 15194 compliance, power/speed limits, battery and charger safety, conversion kits, second-hand and hire e-bikes, and anti-tampering measures — funded by $4.3 million in the Budget. Recommendations to government are expected in early 2027; the release cited e-bike injuries and fatalities costing the economy at least $28 million a year. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
+      text: 'From 24 December 2025, the Commonwealth requires EN 15194:2017 (or later) for all e-bikes imported as bicycles — agreed at the Infrastructure and Transport Ministers\' Meeting. Following the 30 July 2026 Consumer Affairs Ministers\' Meeting, the Government directed the ACCC to build a mandatory national e-bike safety standard under the Australian Consumer Law — the same sale rules in every state and territory, drawing "a firm line against high-powered, high-speed devices." That meeting also noted a separate $6.6 million Federal investment to strengthen Australia\'s broader product safety framework (reporting requirements, recalls, penalties and online-marketplace obligations) — not funding specific to the e-bike standard. On 6 November 2026, Assistant Minister Andrew Leigh announced the ACCC had opened a dedicated public consultation (closing 30 November 2026) on the proposed e-bike standard — covering EN 15194 compliance, power/speed limits, battery and charger safety, conversion kits, second-hand and hire e-bikes, and anti-tampering measures — backed by a separate $4.3 million in the most recent Budget specifically to develop it. Recommendations to government are expected in early 2027; the ACCC estimates e-bike injuries and fatalities cost the economy at least $28 million a year. NRMA reported at least 15 Australians died in e-mobility incidents in 2025.',
       url: 'https://ministers.treasury.gov.au/ministers/andrew-leigh-2025/media-releases/protecting-australians-unsafe-e-bikes',
     },
   ],
