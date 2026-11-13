@@ -89,12 +89,12 @@ export const vic = {
       {
         number: '01',
         title: 'NO INSURANCE',
-        desc: 'Home & Contents policies exclude "unregistered motor vehicles." Illegal e-bikes are motorbikes.',
+        desc: 'Home insurance may not cover injuries caused by an illegal or modified e-bike.',
       },
       {
         number: '02',
         title: 'ASSET SEIZURE',
-        desc: 'Your family home and personal assets can be seized to pay legal judgments.',
+        desc: "If a court orders you to pay and you can't, your home and savings can be at risk.",
       },
     ],
   },
