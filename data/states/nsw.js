@@ -43,7 +43,7 @@ export const nsw = {
     {
       date: '24 Mar 2026',
       color: 'amber',
-      text: '<strong>Road Transport Amendment (Non-registrable Motor Vehicles) Bill 2026</strong> introduced to NSW Parliament, giving police and Transport Authorised Officers power to seize and crush illegal e-bikes.',
+      text: '<strong>Road Transport Amendment (Non-registrable Motor Vehicles) Bill 2026</strong> introduced to NSW Parliament, giving police and Transport Authorised Officers power to seize and crush illegal e-bikes. Passed and assented 1 June 2026.',
     },
     {
       date: '14 Aug 2026',
@@ -144,6 +144,18 @@ export const nsw = {
   ],
 
   notices: [
+    {
+      date: '12 Nov 2026',
+      title: 'Minimum Age for E-Bikes Delayed',
+      text: 'Bicycle Network reports that details of NSW\'s proposed e-bike minimum age "have been further delayed until the state election in March 2027", with Transport Minister John Graham saying the immediate priority is seizing and crushing illegal and modified e-bikes. No minimum age has been set yet.',
+      url: 'https://bicyclenetwork.com.au/newsroom/2026/11/12/nsw-delays-e-bike-age-laws-until-2027-election/',
+    },
+    {
+      date: '5 Nov 2026',
+      title: '10 Illegal E-Bikes Seized in Hunter Operation',
+      text: 'A NSW Police and Transport for NSW joint operation around Maitland on 5 November seized 10 illegal e-bikes, plus two petrol-powered bicycles, two e-scooters and a trail bike, and issued 26 penalty notices. Police urged parents to check an e-bike complies before buying it.',
+      url: 'https://www.police.nsw.gov.au/news/news_article?sq_content_src=%2BdXJsPWh0dHBzJTNBJTJGJTJGZWJpenByZC5wb2xpY2UubnN3Lmdvdi5hdSUyRm1lZGlhJTJGMTI5NTc2Lmh0bWwmYWxsPTE%3D',
+    },
     {
       date: '16 Oct 2026',
       title: '22 More Illegal E-Bikes Seized Across Southern Sydney and the Illawarra',
