@@ -102,9 +102,9 @@ NT  & All ages & — & Mirrors national standard. \\
   \small \textbf{If an underage rider causes an accident on an illegal e-bike:}
   \hyphenpenalty=10000 \exhyphenpenalty=10000
   \begin{enumerate}[nosep, topsep=2pt, itemsep=1pt]
-    \item \textbf{NO INSURANCE:} Home policies exclude ``unregistered motor vehicles.'' Illegal e-bikes fall under this category.
-    \item \textbf{PERSONAL LIABILITY:} Parents can be sued for millions in medical costs and damages.
-    \item \textbf{ASSET LIQUIDATION:} Your house, savings and assets can be seized to pay legal debts.
+    \item \textbf{NO INSURANCE:} Home insurance may not cover injuries caused by an illegal or modified e-bike.
+    \item \textbf{PERSONAL LIABILITY:} Care costs can run into millions, and parents can be sued.
+    \item \textbf{ASSET LIQUIDATION:} If a court orders you to pay and you can't, your house and savings can be at risk.
   \end{enumerate}
 \end{tcolorbox}
 

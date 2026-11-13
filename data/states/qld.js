@@ -109,17 +109,17 @@ export const qld = {
       {
         number: '01',
         title: 'PARENTAL FINES',
-        desc: 'From 1 Jul 2026, parents can be fined if a child under 16 rides an e-bike or PMD illegally in Queensland.',
+        desc: 'Parents can be fined if a child under 16 rides an illegal e-bike or PMD in Queensland (from 1 Jul 2026), or rides one underage or unlicensed (from 31 Aug 2026).',
       },
       {
         number: '02',
         title: 'NO INSURANCE',
-        desc: 'Home & Contents policies exclude "unregistered motor vehicles." Illegal e-bikes are classified as motorbikes.',
+        desc: 'Home insurance may not cover injuries caused by an illegal or modified e-bike.',
       },
       {
         number: '03',
         title: 'ASSET SEIZURE',
-        desc: 'Your family home and personal assets can be seized to pay legal judgments if your child injures someone.',
+        desc: "If a court orders you to pay and you can't, your home and savings can be at risk.",
       },
     ],
   },
