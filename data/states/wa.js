@@ -33,7 +33,7 @@ export const wa = {
     {
       date: 'Mar 2026',
       color: 'amber',
-      text: 'WA Transport Minister announced Western Australia is <strong>leading a national push</strong> for stronger eRideable device standards in partnership with other states and the National Transport Commission. No legislative changes have been enacted yet — further reforms expected as the national framework develops.',
+      text: 'WA Transport Minister announced Western Australia is <strong>leading a national push</strong> for stronger eRideable device standards in partnership with other states and the National Transport Commission. No device-standard legislation has been enacted yet — further reforms expected as the national framework develops.',
     },
     {
       date: '14 May 2026',
