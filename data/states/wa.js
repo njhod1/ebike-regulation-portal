@@ -35,6 +35,11 @@ export const wa = {
       color: 'amber',
       text: 'WA Transport Minister announced Western Australia is <strong>leading a national push</strong> for stronger eRideable device standards in partnership with other states and the National Transport Commission. No legislative changes have been enacted yet — further reforms expected as the national framework develops.',
     },
+    {
+      date: '14 May 2026',
+      color: 'amber',
+      text: 'New road rule: eRideables (such as e-scooters) can be ridden on roads with a speed limit up to <strong>50 km/h</strong>, but not on faster roads (Road Traffic Code Amendment Regulations (No. 2) 2026, SL 2026/66).',
+    },
   ],
 
   compliance: {
