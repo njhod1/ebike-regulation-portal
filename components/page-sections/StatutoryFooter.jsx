@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import { ExternalLink, Download } from 'lucide-react'
+import { GUIDES } from '@/lib/guides'
+import { formatReviewed } from '@/lib/site'
 
 export default function StatutoryFooter({ links, flyer }) {
   return (
@@ -46,6 +48,12 @@ export default function StatutoryFooter({ links, flyer }) {
         </div>
       </div>
       <div className="mt-10 text-center">
+        <p className="text-slate-600 mb-3">Information last reviewed {formatReviewed()}.</p>
+        <ul className="flex flex-wrap justify-center gap-x-4 gap-y-2 mb-4">
+          {GUIDES.map((g) => (
+            <li key={g.path}><Link href={g.path} className="text-blue-700 hover:underline font-bold">{g.label}</Link></li>
+          ))}
+        </ul>
         <Link href="/about" className="text-slate-500 hover:text-slate-800 text-xs font-bold uppercase tracking-wider">About this site</Link>
       </div>
     </footer>

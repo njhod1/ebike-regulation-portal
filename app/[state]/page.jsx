@@ -1,7 +1,7 @@
 import { ALL_STATES, STATE_SLUGS } from '@/data/index.js'
 import { notFound } from 'next/navigation'
 import StatePage from '@/components/StatePage'
-import { SITE_URL } from '@/lib/site'
+import { SITE_URL, LAST_REVIEWED } from '@/lib/site'
 
 const BASE_URL = SITE_URL
 
@@ -41,6 +41,7 @@ function StateJsonLd({ stateData }) {
     description: seo.description,
     url: `${BASE_URL}${seo.canonicalPath}`,
     inLanguage: 'en-AU',
+    dateModified: LAST_REVIEWED,
     breadcrumb: {
       '@type': 'BreadcrumbList',
       itemListElement: [

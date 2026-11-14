@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ALL_STATES } from '@/data/index.js'
 import { SITE_URL } from '@/lib/site'
+import { GUIDES } from '@/lib/guides'
 
 const websiteJsonLd = {
   '@context': 'https://schema.org',
@@ -99,6 +100,20 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </section>
+
+        <section className="mb-12" aria-labelledby="guides">
+          <h2 id="guides" className="text-xl font-black uppercase tracking-tighter text-slate-900 mb-4">Guides</h2>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {GUIDES.map((g) => (
+              <li key={g.path}>
+                <Link href={g.path} className="block h-full bg-white border border-slate-200 rounded-xl p-4 hover:border-amber-500">
+                  <span className="font-black text-blue-700">{g.label}</span>
+                  <span className="block text-sm text-slate-700 mt-1">{g.blurb}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <div className="bg-slate-900 text-white rounded-2xl p-8 mb-12">
