@@ -4,9 +4,9 @@ import { SITE_URL } from '@/lib/site'
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: 'Australian E-Bike Laws 2026', template: '%s | AU E-Bike Laws' },
-  description: 'The complete guide to e-bike regulations across all Australian states and territories — power limits, penalties, compliance requirements, and parental liability explained.',
-  keywords: ['e-bike laws Australia', 'electric bike regulations', 'NSW e-bike', 'EPAC', '250W limit', 'e-bike compliance', 'e-bike penalties Australia'],
+  title: { default: 'Is My E-Bike Legal? Australian E-Bike Laws 2026', template: '%s | AU E-Bike Laws' },
+  description: 'Is your e-bike legal or illegal? The 2026 guide to e-bike (ebike) rules in every Australian state and territory: power limits, penalties, compliance, and what parents risk.',
+  keywords: ['is my e-bike legal', 'ebike legal Australia', 'illegal e-bike', 'e-bike laws Australia', 'ebike laws', 'electric bike regulations', 'EN 15194', '250W limit', 'e-bike penalties Australia'],
   verification: { google: 'google93cc7acf4c60246f' },
   openGraph: {
     type: 'website',

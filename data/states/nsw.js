@@ -5,8 +5,8 @@ export const nsw = {
   summary: '500W limit until 28 Feb 2029, then 250W + EN 15194. Seizure & crush powers in force from 21 Aug 2026.',
 
   seo: {
-    title: 'NSW E-Bike Laws 2026: 500W Now, 250W From 2029 & Seizure Powers',
-    description: 'The official 2026 guide to NSW e-bike laws. Check the 500W limit (250W from March 2029), compliance stickers, and new enforcement powers including seizure and crush.',
+    title: 'Is My E-Bike Legal in NSW? 2026 Rules, Limits & Penalties',
+    description: 'Is your e-bike legal in NSW? The 500W limit (250W + EN 15194 from March 2029), what makes one illegal, seizure powers, fines and what parents risk.',
     canonicalPath: '/nsw',
     ogImage: '/og-preview.png',
   },

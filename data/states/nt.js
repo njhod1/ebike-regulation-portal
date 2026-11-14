@@ -5,8 +5,8 @@ export const nt = {
   summary: '250W limit. No minimum age. Adults allowed on footpaths.',
 
   seo: {
-    title: 'Northern Territory E-Bike Laws 2026: 250W Limit Guide',
-    description: 'Complete guide to Northern Territory e-bike regulations 2026. 250W power limit, no minimum age, footpath rules.',
+    title: 'Is My E-Bike Legal in the NT? 2026 Rules & Limits',
+    description: 'Is your e-bike legal in the Northern Territory? 250W limit, no minimum age, footpath rules, illegal e-bike penalties and what parents risk.',
     canonicalPath: '/nt',
     ogImage: '/og-preview.png',
   },
