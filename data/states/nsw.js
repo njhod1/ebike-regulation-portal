@@ -131,12 +131,7 @@ export const nsw = {
     {
       id: 'sticker',
       question: "Is the motor rated at 500W or less (continuous, not peak) on the manufacturer's label?",
-      info: "Check the frame or near the motor. A motor that can produce more than 500W but is limited by software is still illegal.",
-    },
-    {
-      id: 'wattage',
-      question: "Does the bike carry an EN 15194 certification mark?",
-      info: "Not required until 1 March 2029, but only certified bikes stay legal after 28 Feb 2029.",
+      info: "Check the frame or near the motor. A motor that can produce more than 500W but is limited by software is still illegal. 500W bikes are legal in NSW only until 28 Feb 2029; EN 15194 certified bikes stay legal after.",
     },
     {
       id: 'speed',

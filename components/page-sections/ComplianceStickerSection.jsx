@@ -9,7 +9,7 @@ export default function ComplianceStickerSection({ compliance, stateName }) {
       <SectionHeader title="The Compliance Sticker Rule" icon={Zap} />
       <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
         <p className="mb-4 text-slate-700 leading-relaxed text-sm sm:text-base">
-          Every <em>new</em> e-bike sold for use on {stateName} roads or shared paths must be an <strong>EPAC</strong> (Electrically Power Assisted Cycle). Legality is determined by the manufacturer&apos;s label and certified power output.
+          To be ridden on {stateName} roads or shared paths, an e-bike must meet {stateName}&apos;s <strong>legal e-bike definition</strong>. Legality is determined by the manufacturer&apos;s label and certified power output.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-4">
           <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">

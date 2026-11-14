@@ -131,12 +131,13 @@ NT  & All ages & — & Mirrors national standard. \\
 
 \vspace{3mm}
 
-% ── NSW ALERT ─────────────────────────────────────────────────────────────
-\begin{tcolorbox}[colback=white, colframe=DangerRed, title=\textbf{NSW SPOTLIGHT}, coltitle=white, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
+% ── WHAT'S CHANGED IN 2026 ────────────────────────────────────────────────
+\begin{tcolorbox}[colback=white, colframe=DangerRed, title=\textbf{WHAT'S CHANGED IN 2026}, coltitle=white, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
   \scriptsize
-  \textbf{Operation E-Voltage} (Sep 2026): drone-led Northern Beaches operation — 36 non-compliant e-bikes seized for destruction, 16 penalty notices. \\[2pt]
-  Roadside \textbf{Dyno Units} verify the 25 km/h cut-off on the spot (NSW only). \\[2pt]
-  Broadcaster \textbf{Margaret Throsby}, 84, injured by an e-bike (Sep 2026) — renewed calls for stricter under-age e-bike laws.
+  \textbf{NSW:} seize-and-crush powers in force 21 Aug 2026. The 500W class ends 28 Feb 2029. \\[2pt]
+  \textbf{QLD:} police seizure powers and parental fines from 1 Jul 2026; under-16 and licence rules from 31 Aug; compliance label required from 1 Mar 2027. \\[2pt]
+  \textbf{WA:} eRideables allowed on roads up to 50 km/h from 14 May 2026. \\[2pt]
+  \textbf{Federal:} imported e-bikes must meet EN 15194 to count as bicycles, from 24 Dec 2025.
 \end{tcolorbox}
 
 \vspace{3mm}
