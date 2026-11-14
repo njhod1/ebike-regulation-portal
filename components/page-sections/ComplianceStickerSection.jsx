@@ -16,7 +16,7 @@ export default function ComplianceStickerSection({ compliance, stateName }) {
           </div>
           <div className="p-4 bg-red-50 rounded-xl border border-red-100">
             <h4 className="font-bold text-red-800 mb-2 uppercase text-xs tracking-wider">Sticker Rating &gt; 250W</h4>
-            <p className="text-sm text-red-700 font-bold tracking-tight uppercase underline leading-snug">Classified as a Motorcycle. Illegal for unlicensed riders.</p>
+            <p className="text-sm text-red-700 font-bold tracking-tight uppercase underline leading-snug">Classified as a Motorcycle. Illegal for unlicensed riders. (NSW: over 500W until 28 Feb 2029.)</p>
           </div>
         </div>
         {compliance?.gracePeriod?.exists && (
