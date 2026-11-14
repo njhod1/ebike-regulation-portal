@@ -5,8 +5,8 @@ export const qld = {
   summary: '250W limit. Staged laws from 1 Jul 2026: seizure powers, 12 km/h footpath limit, drink riding rules. From 31 Aug 2026: ages 12–15 may ride under parental supervision; age 16+ requires a learner\'s licence. AMA Queensland called the legislation a "shocking disregard for safety."',
 
   seo: {
-    title: 'Queensland E-Bike Laws 2026: Age Rules & Seizure Powers',
-    description: 'Queensland e-bike laws 2026: seizure powers from 1 Jul, tiered ages from 31 Aug. AMA QLD slammed the watered-down law as unsafe. Fines to $6,908.',
+    title: 'Is My E-Bike Legal in Queensland? 2026 Age & Licence Rules',
+    description: 'Is your e-bike legal in Queensland? 250W limit, age and licence rules from 31 Aug 2026, label required from 1 Mar 2027, seizure powers and parental fines.',
     canonicalPath: '/qld',
     ogImage: '/og-preview.png',
   },

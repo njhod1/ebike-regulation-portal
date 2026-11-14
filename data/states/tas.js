@@ -5,8 +5,8 @@ export const tas = {
   summary: '250W limit. No minimum age. Adults allowed on footpaths.',
 
   seo: {
-    title: 'Tasmania E-Bike Laws 2026: 250W Limit & Compliance Guide',
-    description: 'Complete guide to Tasmania e-bike regulations 2026. 250W power limit, no minimum age, footpath rules.',
+    title: 'Is My E-Bike Legal in Tasmania? 2026 Rules & Limits',
+    description: 'Is your e-bike legal in Tasmania? 250W limit, no minimum age, footpath rules, illegal e-bike penalties and what parents risk.',
     canonicalPath: '/tas',
     ogImage: '/og-preview.png',
   },

@@ -5,8 +5,8 @@ export const act = {
   summary: '250W limit. No minimum age. Extensive shared path network in Canberra.',
 
   seo: {
-    title: 'ACT E-Bike Laws 2026: 250W Limit & Shared Paths',
-    description: 'Complete guide to Australian Capital Territory e-bike regulations 2026. 250W power limit, no minimum age, extensive Canberra shared path network.',
+    title: 'Is My E-Bike Legal in the ACT? 2026 Rules & Shared Paths',
+    description: 'Is your e-bike legal in the ACT? 250W limit, no minimum age, Canberra shared path rules, illegal e-bike penalties and what parents risk.',
     canonicalPath: '/act',
     ogImage: '/og-preview.png',
   },

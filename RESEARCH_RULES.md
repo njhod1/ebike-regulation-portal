@@ -65,3 +65,11 @@ Research agents (subagents) are good for fanning out: one per state, region or t
 ## 7. Report format
 
 When reporting back, give the user: new items by area, corrections, and anything that could not be verified and why. Say what was actually opened for each area, not just the conclusion. Flag weak spots plainly so the user can decide.
+
+## 8. Lessons from running this in practice
+
+- Cloud or sandboxed sessions often can't open official sites. Run research in a local session with a real browser, and say plainly when a page couldn't be opened.
+- A fast "nothing new" from an agent is suspect. Ask what it actually opened.
+- One clear brief that runs to completion beats repeated "report, wait, approve" rounds. Keep "report first" for uncertain legal or safety claims, and set stop conditions up front.
+- Secondary summaries can be wrong. When a summary and a primary page disagree, the primary page wins.
+- Keep process caveats ("could not be corroborated") out of published text. Put them in the PR description.

@@ -7,17 +7,46 @@ const websiteJsonLd = {
   '@type': 'WebSite',
   name: 'AU E-Bike Laws',
   url: SITE_URL,
-  description: 'Complete guide to e-bike regulations across all Australian states and territories.',
+  description: 'Is your e-bike legal or illegal? E-bike (ebike) rules for every Australian state and territory.',
   inLanguage: 'en-AU',
 }
 
+const faqs = [
+  {
+    q: 'Is my e-bike legal in Australia?',
+    a: 'An e-bike (also written ebike) is legal on roads and paths when it has pedals, the motor only assists while you pedal (a throttle can only drive the bike up to walking pace, 6 km/h), the motor is rated at no more than 250W continuous power, and assistance cuts out at 25 km/h. NSW allows a 500W class until 28 Feb 2029. A bike with an EN 15194 certification label is built to meet these rules.',
+  },
+  {
+    q: 'What makes an e-bike illegal?',
+    a: 'An e-bike that exceeds the power or speed limits, has a throttle that drives it above walking pace, or has been modified or "unlocked" is not a legal e-bike. It is treated as an unregistered motor vehicle, so it cannot legally be ridden on public roads or paths and the rider can be fined. In NSW and Queensland, police can seize illegal e-bikes and they can be destroyed.',
+  },
+  {
+    q: 'Can my child ride an e-bike?',
+    a: 'It depends on your state. Western Australia sets a minimum age of 16. Queensland requires riders to be 16 and hold a learner licence to ride unsupervised, and 12 to 17-year-olds may ride under parental supervision. The other states have no general minimum age for a legal e-bike, and NSW has a minimum age under consideration. Check your state page for footpath and helmet rules.',
+  },
+  {
+    q: 'What if my child injures someone on an illegal e-bike?',
+    a: "If an underage rider seriously injures someone on an illegal e-bike, care costs can run into millions, and the injured person's lawyers can look to the parents, especially if they bought the bike or let the child ride it. Home insurance may not cover it. This is general information, not legal advice.",
+  },
+]
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+}
+
 export const metadata = {
-  title: { absolute: 'Australian E-Bike Laws 2026 — All States & Territories' },
-  description: 'Complete guide to e-bike regulations, power limits, penalties, and compliance requirements across all 8 Australian states and territories.',
+  title: { absolute: 'Is My E-Bike Legal? Australian E-Bike Laws by State (2026)' },
+  description: 'Is your e-bike legal or illegal? 2026 rules for every Australian state: power limits, EN 15194, penalties, seizure powers and what parents risk.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Australian E-Bike Laws 2026 — All States & Territories',
-    description: 'Complete guide to e-bike regulations across all 8 Australian states and territories.',
+    title: 'Is My E-Bike Legal? Australian E-Bike Laws by State (2026)',
+    description: 'Is your e-bike legal or illegal? 2026 rules for every Australian state: power limits, EN 15194, penalties and what parents risk.',
     url: '/',
   },
 }
@@ -26,6 +55,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="bg-red-700 text-white py-3 text-center font-bold px-4 text-xs sm:text-sm print:hidden">
         250W LIMIT NATIONAL STANDARD (NSW: 500W UNTIL 28 FEB 2029) · CHECK YOUR STATE FOR LOCAL ENFORCEMENT RULES
       </div>
@@ -33,10 +63,10 @@ export default function HomePage() {
       <main className="max-w-6xl mx-auto p-4 sm:p-6">
         <header className="mb-12 text-center py-10">
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-4 tracking-tight leading-none uppercase">
-            Australian <span className="text-amber-700">E-Bike</span> Laws 2026
+            Is your <span className="text-amber-700">e-bike</span> legal?
           </h1>
           <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto px-2">
-            Select your state or territory to see the current e-bike regulations, penalties, and compliance requirements.
+            Australian e-bike (ebike) laws for 2026: what is legal, what is illegal, and what happens if a child rides one. Select your state or territory.
           </p>
         </header>
 
@@ -58,6 +88,18 @@ export default function HomePage() {
             </Link>
           ))}
         </div>
+
+        <section className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 mb-12" aria-labelledby="quick-answers">
+          <h2 id="quick-answers" className="text-xl font-black uppercase tracking-tighter text-slate-900 mb-4">Quick answers: legal or illegal?</h2>
+          <div className="space-y-5">
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <h3 className="font-bold text-slate-900 mb-1">{f.q}</h3>
+                <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
 
         <div className="bg-slate-900 text-white rounded-2xl p-8 mb-12">
           <h2 className="text-xl font-black uppercase tracking-tighter text-amber-500 mb-4">National Standard</h2>
