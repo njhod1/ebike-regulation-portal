@@ -27,7 +27,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-slate-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
       <div className="bg-red-700 text-white py-3 text-center font-bold px-4 text-xs sm:text-sm print:hidden">
-        250W LIMIT NATIONAL STANDARD · CHECK YOUR STATE FOR LOCAL ENFORCEMENT RULES
+        250W LIMIT NATIONAL STANDARD (NSW: 500W UNTIL 28 FEB 2029) · CHECK YOUR STATE FOR LOCAL ENFORCEMENT RULES
       </div>
 
       <main className="max-w-6xl mx-auto p-4 sm:p-6">
@@ -64,7 +64,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
             <div>
               <p className="font-black text-white uppercase text-base mb-1">250W Maximum</p>
-              <p className="text-slate-400">Motor power limit applies across all states and territories.</p>
+              <p className="text-slate-400">Motor power limit in every state and territory, except NSW, which allows 500W until 28 Feb 2029.</p>
             </div>
             <div>
               <p className="font-black text-white uppercase text-base mb-1">25 km/h Cut-off</p>

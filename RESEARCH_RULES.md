@@ -23,6 +23,7 @@ If only a tier-3 source supports a claim, don't publish it.
 - Don't build a URL from a guessed path. Use links you have actually seen, or links derived directly from a confirmed one, and say which.
 - Don't round, infer or "tidy" figures. If sources vary slightly (e.g. 2,400 vs 2,486), use the primary release's figure, or say "about".
 - Distinguish a bill being introduced, passed, assented and in force. Use the date it took effect for "in force" claims.
+- An announced or reported date is not the same as in force. For legal thresholds, check the current version of the legislation and its commencement.
 
 ## 4. What belongs on the site
 

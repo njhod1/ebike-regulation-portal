@@ -2,21 +2,24 @@ import SectionHeader from '@/components/ui/SectionHeader'
 import { Zap } from 'lucide-react'
 
 export default function ComplianceStickerSection({ compliance, stateName }) {
+  const limit = compliance?.powerLimitW ?? 250
+  const note = compliance?.powerLimitNote
   return (
     <section>
       <SectionHeader title="The Compliance Sticker Rule" icon={Zap} />
       <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-200">
         <p className="mb-4 text-slate-700 leading-relaxed text-sm sm:text-base">
-          Every <em>new</em> e-bike sold for use on {stateName} roads or shared paths must be an <strong>EPAC</strong> (Electrically Power Assisted Cycle). Legality is determined by the manufacturer&apos;s label and certified power output.
+          To be ridden on {stateName} roads or shared paths, an e-bike must meet {stateName}&apos;s <strong>legal e-bike definition</strong>. Legality is determined by the manufacturer&apos;s label and certified power output.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-4">
           <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
-            <h4 className="font-bold text-slate-800 mb-2 uppercase text-xs tracking-wider">Sticker Rating ≤ 250W</h4>
+            <h4 className="font-bold text-slate-800 mb-2 uppercase text-xs tracking-wider">Sticker Rating ≤ {limit}W</h4>
             <p className="text-sm text-slate-600 font-medium tracking-tight italic">Legal for road use. Motor assistance must cut out at 25 km/h.</p>
           </div>
           <div className="p-4 bg-red-50 rounded-xl border border-red-100">
-            <h4 className="font-bold text-red-800 mb-2 uppercase text-xs tracking-wider">Sticker Rating &gt; 250W</h4>
+            <h4 className="font-bold text-red-800 mb-2 uppercase text-xs tracking-wider">Sticker Rating &gt; {limit}W</h4>
             <p className="text-sm text-red-700 font-bold tracking-tight uppercase underline leading-snug">Classified as a Motorcycle. Illegal for unlicensed riders.</p>
+            {note && <p className="text-xs text-red-700 mt-2 leading-snug">{note}</p>}
           </div>
         </div>
         {compliance?.gracePeriod?.exists && (
