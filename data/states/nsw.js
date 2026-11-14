@@ -43,7 +43,7 @@ export const nsw = {
     {
       date: '27 Mar 2026',
       color: 'amber',
-      text: 'Road Rules amended: the NSW-only <strong>500 W</strong> class stays legal to ride until the <strong>end of 28 Feb 2029</strong>, whenever the bike was bought. Bikes certified to <strong>EN 15194</strong> (250 W) stay legal after that.',
+      text: 'Road Rules amended (rule 15–1, current version from 27 Mar 2026): the NSW-only <strong>500 W</strong> class stays legal to ride until the <strong>end of 28 Feb 2029</strong>, whenever the bike was bought. Bikes certified to <strong>EN 15194</strong> (250 W) stay legal after that.',
     },
     {
       date: '14 Aug 2026',
@@ -63,6 +63,8 @@ export const nsw = {
   ],
 
   compliance: {
+    powerLimitW: 500,
+    powerLimitNote: 'NSW: 500W allowed until 28 Feb 2029; from 1 Mar 2029 the limit is 250W and EN 15194 is required.',
     gracePeriod: {
       exists: true,
       text: 'Any e-bike meeting the NSW 500 W rules can be ridden on NSW roads until the <strong>end of 28 Feb 2029</strong>, whether bought before or after March 2026, new or second-hand. After that, only EN 15194 bikes (≤ 250 W) qualify.',
@@ -133,8 +135,8 @@ export const nsw = {
     },
     {
       id: 'wattage',
-      question: "Does the bike carry an EN 15194 certification mark, or is it being ridden before 1 March 2029?",
-      info: "500W bikes are legal to ride in NSW only until 28 Feb 2029; EN 15194 certified bikes stay legal after that.",
+      question: "Does the bike carry an EN 15194 certification mark?",
+      info: "Not required until 1 March 2029, but only certified bikes stay legal after 28 Feb 2029.",
     },
     {
       id: 'speed',
