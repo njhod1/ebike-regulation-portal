@@ -18,7 +18,7 @@ The real hazard behind the site is bikes sold as 250W that can be unlocked or mo
 3. Edit `data/states/*.js` (keyDates for laws in force, notices for enforcement/statements, each with a source URL you opened, newest first).
 4. `npm run build`. If anything changes the national picture, check `National Flyer Source.txt` and rebuild the PDF (xelatex twice, render to PNG, confirm exactly 1 page).
 5. Bump `LAST_REVIEWED` in `lib/site.js` to the run date. It drives the "last reviewed" line, the structured-data `dateModified` and the sitemap `lastModified`.
-6. New branch, PR to main. Put what you opened per item in the PR description. Don't merge unless the owner says so.
+6. New branch, PR to main (see CLAUDE.md for the git rules). Put what you opened per item in the PR description. Don't merge unless the owner says so.
 
 ## Guide pages
 The five guide pages (`/is-my-ebike-legal`, `/ebike-age-limits`, `/illegal-ebike-penalties`, `/report-illegal-ebike`, `/ebike-law-changes`) are generated from `data/states/*.js` (stats, minimumAge, footpathRule, penalties, seizure, reporting, keyDates), so updating the state data updates them. The only fixed prose is on `/is-my-ebike-legal` (the four checks) and `/ebike-age-limits` (the parent-risk box); re-check those if the national rules change. The checker (`components/guides/LegalityChecker.jsx`, on `/is-my-ebike-legal`) hard-codes the national criteria (25 km/h, 6 km/h throttle, modified bikes) and reads each state's power limit from the `Max Power` stat; re-check it if those change. The printable poster (`Poster Source.html` to `public/ebike_poster.pdf` and its preview PNG) and the messages on `/share` repeat the national rules too; if the national rules change, update both. They deliberately carry no dates.
