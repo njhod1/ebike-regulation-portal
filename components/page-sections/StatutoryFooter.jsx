@@ -57,6 +57,8 @@ export default function StatutoryFooter({ links, flyer }) {
         </ul>
         <p className="mb-3 text-sm"><SupportLink /></p>
         <Link href="/about" className="text-slate-500 hover:text-slate-800 text-xs font-bold uppercase tracking-wider">About this site</Link>
+        <span className="text-slate-400" aria-hidden="true"> · </span>
+        <Link href="/privacy" className="text-slate-500 hover:text-slate-800 text-xs font-bold uppercase tracking-wider">Privacy</Link>
       </div>
     </footer>
   )
