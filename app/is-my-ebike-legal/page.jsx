@@ -19,7 +19,7 @@ const stat = (s, label) => s.stats?.find((x) => x.label === label)?.value
 const checkerStates = ALL_STATES.map((s) => ({
   slug: s.slug,
   name: s.name,
-  limitW: parseInt(stat(s, 'Max Power'), 10) || 250,
+  limitW: s.compliance?.powerLimitW || parseInt(stat(s, 'Max Power'), 10) || 250,
   powerNote: s.compliance?.powerLimitNote || null,
   enText: s.compliance?.enStandard?.text || null,
   ageNote: s.minimumAge?.specified ? s.minimumAge.notes : null,
@@ -40,7 +40,7 @@ export default function Page() {
         <h2 className="text-xl font-black uppercase tracking-tighter text-slate-900 mb-4">The four checks</h2>
         <ol className="list-decimal pl-5 space-y-3 text-slate-800 leading-relaxed">
           <li><strong>Pedals.</strong> It has working pedals, and the motor assists while you pedal.</li>
-          <li><strong>Power.</strong> The motor is rated at no more than 250W continuous power. NSW also allows a 500W class until 28 Feb 2029.</li>
+          <li><strong>Power.</strong> The motor is rated at no more than 250W continuous power. (NSW tolerates a 500W class until 28 Feb 2029, but its standard is 250W and EN 15194.)</li>
           <li><strong>Speed.</strong> Motor assistance cuts out at 25 km/h.</li>
           <li><strong>Throttle.</strong> A throttle can only drive the bike up to walking pace (6 km/h). Above that, the motor may only assist while you pedal.</li>
         </ol>
@@ -68,7 +68,7 @@ export default function Page() {
           {ALL_STATES.map((s) => (
             <li key={s.slug} className="bg-white border border-slate-200 rounded-xl p-4">
               <Link href={`/${s.slug}`} className="font-black text-blue-700 hover:underline">{s.name}</Link>
-              <p className="text-sm text-slate-800 mt-1">Maximum power: <strong>{stat(s, 'Max Power')}</strong></p>
+              <p className="text-sm text-slate-800 mt-1">{stat(s, 'Max Power') ? 'Maximum power' : 'Standard'}: <strong>{stat(s, 'Max Power') || stat(s, 'Standard')}</strong></p>
               <p className="text-sm text-slate-800">Speed cut-off: <strong>{stat(s, 'Speed Cut')}</strong></p>
             </li>
           ))}
@@ -80,7 +80,8 @@ export default function Page() {
         <ul className="list-disc pl-5 space-y-2 text-slate-800 leading-relaxed">
           <li>Ask for the EN 15194 certification label and the continuous rated power in writing.</li>
           <li>Avoid bikes sold as &quot;unlockable&quot; or &quot;off-road mode&quot;.</li>
-          <li>In NSW, a 500W bike is legal to ride only until 28 Feb 2029; an EN 15194 certified bike stays legal after that.</li>
+          <li>In NSW, choose an EN 15194 bike: from 1 Mar 2029 only those are allowed. The 500W class is tolerated until the end of 28 Feb 2029, and over 500W is illegal.</li>
+          <li>In NSW, retailers must show a green (EN 15194) or red (not EN 15194) tag on each e-bike. Look for it in store and on the online listing.</li>
           <li>Buying for a child? Check the <Link href="/ebike-age-limits" className="text-blue-700 hover:underline font-bold">age limits</Link> in your state.</li>
         </ul>
       </section>

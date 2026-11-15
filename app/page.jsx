@@ -16,7 +16,7 @@ const websiteJsonLd = {
 const faqs = [
   {
     q: 'Is my e-bike legal in Australia?',
-    a: 'An e-bike (also written ebike) is legal on roads and paths when it has pedals, the motor only assists while you pedal (a throttle can only drive the bike up to walking pace, 6 km/h), the motor is rated at no more than 250W continuous power, and assistance cuts out at 25 km/h. NSW allows a 500W class until 28 Feb 2029. A bike with an EN 15194 certification label is built to meet these rules.',
+    a: 'An e-bike (also written ebike) is legal on roads and paths when it has pedals, the motor only assists while you pedal (a throttle can only drive the bike up to walking pace, 6 km/h), the motor is rated at no more than 250W continuous power, and assistance cuts out at 25 km/h. A bike with an EN 15194 certification label is built to meet these rules.',
   },
   {
     q: 'What makes an e-bike illegal?',
@@ -59,7 +59,7 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <div className="bg-red-700 text-white py-3 text-center font-bold px-4 text-xs sm:text-sm print:hidden">
-        250W LIMIT NATIONAL STANDARD (NSW: 500W UNTIL 28 FEB 2029) · CHECK YOUR STATE FOR LOCAL ENFORCEMENT RULES
+        250W LIMIT AND EN 15194 · CHECK YOUR STATE FOR LOCAL ENFORCEMENT RULES
       </div>
 
       <main className="max-w-6xl mx-auto p-4 sm:p-6">
@@ -125,7 +125,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
             <div>
               <p className="font-black text-white uppercase text-base mb-1">250W Maximum</p>
-              <p className="text-slate-400">Motor power limit in every state and territory, except NSW, which allows 500W until 28 Feb 2029.</p>
+              <p className="text-slate-400">Motor power limit in every state and territory. EN 15194 is the matching standard.</p>
             </div>
             <div>
               <p className="font-black text-white uppercase text-base mb-1">25 km/h Cut-off</p>
