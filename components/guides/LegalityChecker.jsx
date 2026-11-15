@@ -66,8 +66,9 @@ export default function LegalityChecker({ states }) {
     if (modified === 'yes') reasons.push('Modified, converted or unlocked bikes are not legal e-bikes, even if the motor was originally rated within the limits.')
     if (modified === 'unknown') unknowns.push('whether the bike has been modified or unlocked')
 
+    const tolerated = !overPower && power === 'mid' && st.limitW > 250
     const verdict = reasons.length ? 'illegal' : unknowns.length ? 'unsure' : 'legal'
-    setResult({ verdict, reasons, unknowns, st })
+    setResult({ verdict, reasons, unknowns, st, tolerated })
   }
 
   const style = {
@@ -126,6 +127,9 @@ export default function LegalityChecker({ states }) {
             )}
             {result.verdict === 'legal' && (
               <p className="mb-3">Nothing you described breaks the rules we check for {result.st.name}. Keep the EN 15194 label and receipt.</p>
+            )}
+            {result.tolerated && result.reasons.length === 0 && (
+              <p className="mb-3 font-bold">A 251W to 500W motor is tolerated in {result.st.name} for now, but it is not the standard. See the note below.</p>
             )}
             <p className="font-bold mb-1">Also check in {result.st.name}:</p>
             <ul className="list-disc pl-5 space-y-1 mb-3">

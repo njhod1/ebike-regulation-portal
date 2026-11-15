@@ -2,11 +2,11 @@ export const nsw = {
   name: 'New South Wales',
   slug: 'nsw',
   abbreviation: 'NSW',
-  summary: '500W limit until 28 Feb 2029, then 250W + EN 15194. Seizure & crush powers in force from 21 Aug 2026.',
+  summary: '250W + EN 15194 is the NSW standard. Illegal e-bikes can be seized and crushed (from 21 Aug 2026).',
 
   seo: {
-    title: 'Is My E-Bike Legal in NSW? 2026 Rules, Limits & Penalties',
-    description: 'Is your e-bike legal in NSW? The 500W limit (250W + EN 15194 from March 2029), what makes one illegal, seizure powers, fines and what parents risk.',
+    title: 'Is My E-Bike Legal in NSW? 250W + EN 15194, Seizure & Penalties',
+    description: 'Is your e-bike legal in NSW? 250W and EN 15194 is the standard. What makes an e-bike illegal, seizure powers, fines and what parents risk.',
     canonicalPath: '/nsw',
     ogImage: '/og-preview.png',
   },
@@ -14,13 +14,13 @@ export const nsw = {
   alertBanner: {
     show: true,
     color: 'red',
-    text: '500W ROAD LIMIT (250W + EN 15194 FROM 1 MAR 2029) · SEIZURE & CRUSH POWERS FROM 21 AUG 2026',
+    text: '250W + EN 15194 IS THE NSW STANDARD · ILLEGAL E-BIKES CAN BE SEIZED AND CRUSHED (FROM 21 AUG 2026)',
   },
 
   stats: [
-    { label: 'Max Power', value: '500W (250W from 2029)' },
+    { label: 'Standard', value: '250W + EN 15194' },
     { label: 'Speed Cut', value: '25 km/h' },
-    { label: 'Standard', value: 'EN 15194' },
+    { label: 'Min Age', value: 'None' },
     { label: 'Penalty', value: 'Seizure' },
   ],
 
@@ -43,7 +43,7 @@ export const nsw = {
     {
       date: '27 Mar 2026',
       color: 'amber',
-      text: 'Road Rules amended (rule 15–1, current version from 27 Mar 2026): the NSW-only <strong>500 W</strong> class stays legal to ride until the <strong>end of 28 Feb 2029</strong>, whenever the bike was bought. Bikes certified to <strong>EN 15194</strong> (250 W) stay legal after that.',
+      text: 'Road Rules amended (rule 15–1, current version from 27 Mar 2026): the NSW-only <strong>500 W</strong> class is tolerated until the <strong>end of 28 Feb 2029</strong>, a transition for people who already own one. <strong>EN 15194</strong> (250 W) bikes stay legal after that.',
     },
     {
       date: '14 Aug 2026',
@@ -53,25 +53,25 @@ export const nsw = {
     {
       date: '21 Aug 2026',
       color: 'red',
-      text: '<strong>Seize-and-crush powers commence.</strong> NSW Police and Transport Authorised Officers can now seize any non-registrable e-bike used on a road or road-related area in the past 28 days that doesn\'t meet the legal e-bike limits (currently 500 W continuous, assistance cut-off at 25 km/h). An owner who wasn\'t riding and didn\'t know or agree to the illegal use can appeal within 14 days of seizure; otherwise the bike is forfeited to the Crown after 15 days.',
+      text: '<strong>Seize-and-crush powers commence.</strong> NSW Police and Transport Authorised Officers can now seize any non-registrable e-bike used on a road or road-related area in the past 28 days that doesn\'t meet the legal e-bike limits (over 500 W continuous, or assistance that continues above 25 km/h). An owner who wasn\'t riding and didn\'t know or agree to the illegal use can appeal within 14 days of seizure; otherwise the bike is forfeited to the Crown after 15 days.',
     },
     {
       date: '1 Mar 2029',
       color: 'slate',
-      text: 'NSW 500 W class ends. <strong>All</strong> e-bikes on public roads must meet the EN 15194 standard. No exceptions.',
+      text: 'Tolerance for the 500 W class ends. From this date only <strong>EN 15194</strong> e-bikes are allowed on NSW roads.',
     },
   ],
 
   compliance: {
     powerLimitW: 500,
-    powerLimitNote: 'NSW: 500W allowed until 28 Feb 2029; from 1 Mar 2029 the limit is 250W and EN 15194 is required.',
+    powerLimitNote: "NSW's standard is 250W and EN 15194. The 500W class is tolerated until the end of 28 Feb 2029. From 1 Mar 2029 only EN 15194 bikes are allowed.",
     gracePeriod: {
       exists: true,
-      text: 'Any e-bike meeting the NSW 500 W rules can be ridden on NSW roads until the <strong>end of 28 Feb 2029</strong>, whether bought before or after March 2026, new or second-hand. After that, only EN 15194 bikes (≤ 250 W) qualify.',
+      text: 'NSW&apos;s standard is 250 W and EN 15194. The government tolerates the 500 W class until the <strong>end of 28 Feb 2029</strong>, as a transition for people who already own one. Over 500 W, or capable of more than 500 W but software-limited, is illegal. If buying new, choose an EN 15194 bike: from 1 Mar 2029 only those are allowed.',
     },
     enStandard: {
       mandatoryFromDate: '1 Mar 2029',
-      text: 'New bikes sold from 1 Feb 2026 need a Fair Trading Certificate of Approval. EN 15194 is mandatory for all road use from 1 March 2029.',
+      text: 'Sellers need a Fair Trading Certificate of Approval and safety marking, and must show a green (EN 15194) or red (not EN 15194) tag on each e-bike. EN 15194 is required for all road use from 1 March 2029.',
     },
   },
 
@@ -136,7 +136,7 @@ export const nsw = {
     {
       id: 'sticker',
       question: "Is the motor rated at 500W or less (continuous, not peak) on the manufacturer's label?",
-      info: "Check the frame or near the motor. A motor that can produce more than 500W but is limited by software is still illegal. 500W bikes are legal in NSW only until 28 Feb 2029; EN 15194 certified bikes stay legal after.",
+      info: "Check the frame or near the motor. A motor that can produce more than 500W but is limited by software is still illegal, and so is a bike that has been unlocked or modified. NSW's standard is 250W and EN 15194; a 251–500W bike is tolerated until 28 Feb 2029 only.",
     },
     {
       id: 'speed',

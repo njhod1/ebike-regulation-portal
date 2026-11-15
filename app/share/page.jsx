@@ -16,9 +16,9 @@ export const metadata = {
 
 const CHECK_URL = `${SITE_URL}/is-my-ebike-legal`
 
-const groupPost = `Thinking of buying an e-bike for your child? A legal e-bike has pedals, a motor of 250W or less (NSW allows 500W until 28 Feb 2029) and assistance that cuts out at 25 km/h. Illegal e-bikes can be seized and destroyed, and if an underage rider seriously injures someone on one, the injured person's lawyers can look to the parents. Check yours in 30 seconds: ${CHECK_URL}`
+const groupPost = `Thinking of buying an e-bike for your child? A legal e-bike has pedals, a motor of 250W or less and assistance that cuts out at 25 km/h. Illegal e-bikes can be seized and destroyed, and if an underage rider seriously injures someone on one, the injured person's lawyers can look to the parents. Check yours in 30 seconds: ${CHECK_URL}`
 
-const newsletter = `E-bike safety for families. Before you buy an e-bike for your child, check it is legal. A legal e-bike has pedals, a motor of 250W or less (NSW allows 500W until 28 Feb 2029) and assistance that cuts out at 25 km/h. Illegal or modified e-bikes can be seized and destroyed in NSW and Queensland, and age rules differ by state. If a child seriously injures someone on an illegal e-bike, care costs can run into millions, and the injured person's lawyers can look to the parents. A free guide with the rules for every state is at ${SITE_URL}`
+const newsletter = `E-bike safety for families. Before you buy an e-bike for your child, check it is legal. A legal e-bike has pedals, a motor of 250W or less and assistance that cuts out at 25 km/h. Illegal or modified e-bikes can be seized and destroyed in NSW and Queensland, and age rules differ by state. If a child seriously injures someone on an illegal e-bike, care costs can run into millions, and the injured person's lawyers can look to the parents. A free guide with the rules for every state is at ${SITE_URL}`
 
 const short = `Is your child's e-bike legal? Check in 30 seconds: ${CHECK_URL}`
 
