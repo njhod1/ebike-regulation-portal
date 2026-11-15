@@ -57,7 +57,7 @@ export default function AboutPage() {
               <h2 className="font-black text-slate-900 text-lg uppercase tracking-tight">What this is</h2>
             </div>
             <p className="text-slate-700 leading-relaxed">
-              An independent reference project. It is not affiliated with, endorsed by, or produced by any Australian government, transport authority, or police service — nothing on this site should be read as an official statement of the law.
+              AU E-Bike Laws is an independent project of What The Dev (<a href="https://whatthedev.dev" className="text-blue-700 hover:underline font-bold">whatthedev.dev</a>), an Australian app development business. It is not affiliated with, endorsed by, or produced by any Australian government, transport authority, or police service — nothing on this site should be read as an official statement of the law.
             </p>
           </section>
 
@@ -72,7 +72,7 @@ export default function AboutPage() {
             {SUPPORT_URL && (
               <>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  Keeping the site accurate takes time and some running costs. If it has helped you, you can support it. Support payments are not charitable donations.
+                  Keeping the site accurate takes time and some running costs. If it has helped you, you can support it. Support payments go to What The Dev, the studio behind this site, and are processed by Stripe. They are not charitable donations.
                 </p>
                 <SupportLink variant="button" />
               </>
