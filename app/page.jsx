@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: 'What makes an e-bike illegal?',
-    a: 'An e-bike that exceeds the power or speed limits, has a throttle that drives it above walking pace, or has been modified or "unlocked" is not a legal e-bike. It is treated as an unregistered motor vehicle, so it cannot legally be ridden on public roads or paths and the rider can be fined. In NSW and Queensland, police can seize illegal e-bikes and they can be destroyed.',
+    a: 'An e-bike that exceeds the power or speed limits, has a throttle that drives it above walking pace, or has been modified or "unlocked" is not a legal e-bike. Many e-bikes sold as 250W can be unlocked, and an unlocked bike is illegal in public. It is treated as an unregistered motor vehicle, so it cannot legally be ridden on public roads or paths and the rider can be fined. In NSW and Queensland, police can seize illegal e-bikes and they can be destroyed.',
   },
   {
     q: 'Can my child ride an e-bike?',
@@ -74,6 +74,10 @@ export default function HomePage() {
             Check my e-bike in 30 seconds
           </Link>
         </header>
+
+        <p className="max-w-3xl mx-auto -mt-6 mb-12 bg-amber-50 border-l-4 border-amber-700 rounded-r-xl p-4 text-amber-950 text-sm sm:text-base leading-relaxed">
+          <strong>Many e-bikes sold as 250W can be unlocked.</strong> An unlocked bike is illegal in public, and since 24 Dec 2025 imported e-bikes must meet EN 15194 to be treated as bicycles.
+        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
           {ALL_STATES.map((state) => (
