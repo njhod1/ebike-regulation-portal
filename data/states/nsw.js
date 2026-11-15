@@ -105,6 +105,11 @@ export const nsw = {
     { label: 'No Helmet', cost: '$410', desc: 'Approved helmet mandatory. Flat on-the-spot fine' },
   ],
 
+  minimumAge: {
+    specified: false,
+    notes: 'No minimum age is in force for e-bike riders in NSW. A minimum age is under consideration.',
+  },
+
   footpathRule: {
     adultsAllowed: true,
     speedLimit: '10 km/h',

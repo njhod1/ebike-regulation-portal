@@ -1,5 +1,6 @@
 import { ALL_STATES } from '@/data/index.js'
 import { SITE_URL } from '@/lib/site'
+import { GUIDES } from '@/lib/guides'
 
 export const dynamic = 'force-static'
 
@@ -8,6 +9,8 @@ export async function GET() {
     .map(s => `- [${s.name}](${SITE_URL}${s.seo.canonicalPath}): ${s.summary}`)
     .join('\n')
 
+  const guideLines = GUIDES.map(g => `- [${g.label}](${SITE_URL}${g.path}): ${g.blurb}`).join('\n')
+
   const content = `# AU E-Bike Laws
 
 > Independent, plain-English reference tracking e-bike, e-scooter and personal mobility device (PMD) regulations across every Australian state and territory — power/speed limits, minimum ages, footpath rules, penalties, parental liability, and enforcement notices. Not affiliated with any Australian government, transport authority, or police service. Not legal advice — always verify against the official sources linked from each state page before relying on this content.
@@ -15,6 +18,10 @@ export async function GET() {
 ## State & Territory Guides
 
 ${stateLines}
+
+## Guides
+
+${guideLines}
 
 ## Resources
 
