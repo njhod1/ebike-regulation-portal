@@ -54,11 +54,11 @@ export default function Page() {
         <ul className="list-disc pl-5 space-y-2 text-slate-800 leading-relaxed">
           <li>A motor above the power limit, or assistance that continues above 25 km/h.</li>
           <li>A throttle that drives the bike above walking pace.</li>
-          <li>Modifications, conversion kits or &quot;unlock&quot; modes that remove the limits.</li>
+          <li>Modifications, conversion kits or &quot;unlock&quot; modes that remove the limits. Many e-bikes sold as 250W can be unlocked, and an unlocked bike is illegal in public.</li>
           <li>No working pedals, or a petrol motor.</li>
         </ul>
         <p className="mt-4 text-slate-700 leading-relaxed">
-          An illegal e-bike is treated as an unregistered motor vehicle, so it cannot legally be ridden on public roads or paths and the rider can be fined. In NSW and Queensland, police can seize illegal e-bikes and they can be destroyed. See <Link href="/illegal-ebike-penalties" className="text-blue-700 hover:underline font-bold">illegal e-bike penalties</Link>.
+          Since 24 Dec 2025, imported e-bikes must meet EN 15194 to be treated as bicycles. An illegal e-bike is treated as an unregistered motor vehicle, so it cannot legally be ridden on public roads or paths and the rider can be fined. In NSW and Queensland, police can seize illegal e-bikes and they can be destroyed. See <Link href="/illegal-ebike-penalties" className="text-blue-700 hover:underline font-bold">illegal e-bike penalties</Link>.
         </p>
       </section>
 
