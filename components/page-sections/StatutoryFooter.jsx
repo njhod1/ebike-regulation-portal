@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ExternalLink, Download } from 'lucide-react'
 import { GUIDES } from '@/lib/guides'
+import SupportLink from '@/components/SupportLink'
 import { formatReviewed } from '@/lib/site'
 
 export default function StatutoryFooter({ links, flyer }) {
@@ -54,6 +55,7 @@ export default function StatutoryFooter({ links, flyer }) {
             <li key={g.path}><Link href={g.path} className="text-blue-700 hover:underline font-bold">{g.label}</Link></li>
           ))}
         </ul>
+        <p className="mb-3 text-sm"><SupportLink /></p>
         <Link href="/about" className="text-slate-500 hover:text-slate-800 text-xs font-bold uppercase tracking-wider">About this site</Link>
       </div>
     </footer>
