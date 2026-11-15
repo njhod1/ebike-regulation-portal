@@ -7,6 +7,8 @@ Read `RESEARCH_RULES.md` first (sources, verification, agents). This file is the
 ## Scope
 The site answers four questions: is the bike I'm buying my child legal; what laws have changed; what makes a bike legal or illegal; what happens if my child has an accident on an illegal bike. Only laws, enforcement, official statistics and official statements that serve those questions. No new sections, pages or explainers. Keep notices short and plain. Skip single incidents with no policy angle, minors' cases and individuals' pending charges.
 
+The real hazard behind the site is bikes sold as 250W that can be unlocked or modified. Keep headline messages simple (250W + EN 15194 is the standard; unlocked or modified is illegal; since 24 Dec 2025 imports must meet EN 15194) and put transitional detail, such as NSW's tolerated 500W class until 28 Feb 2029, in body text only. Don't publish a legal claim without a source.
+
 ## Setup
 `git checkout main && git pull`, `npm install`. Use the real browser for sites that block fetches. A cloud sandbox cannot open official sites, so don't run this there.
 
