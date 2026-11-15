@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ALL_STATES } from '@/data/index.js'
 import { SITE_URL } from '@/lib/site'
 import { GUIDES } from '@/lib/guides'
+import SupportLink from '@/components/SupportLink'
 
 const websiteJsonLd = {
   '@context': 'https://schema.org',
@@ -151,6 +152,7 @@ export default function HomePage() {
 
         <footer className="text-center text-slate-600 text-sm pb-10">
           <p>This site provides general information only. Always check official government sources for the latest regulations.</p>
+          <p className="mt-2"><SupportLink /></p>
           <Link href="/about" className="inline-block mt-2 text-slate-500 hover:text-slate-800 font-bold uppercase tracking-wider">About this site</Link>
         </footer>
       </main>

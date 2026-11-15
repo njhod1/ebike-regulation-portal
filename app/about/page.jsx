@@ -1,5 +1,7 @@
 import Link from 'next/link'
-import { ShieldCheck, BookOpen, RefreshCcw, AlertTriangle } from 'lucide-react'
+import { ShieldCheck, BookOpen, RefreshCcw, AlertTriangle, HeartHandshake, Mail } from 'lucide-react'
+import SupportLink from '@/components/SupportLink'
+import { SUPPORT_URL, CONTACT_EMAIL } from '@/lib/site'
 
 export const metadata = {
   title: 'About',
@@ -59,6 +61,24 @@ export default function AboutPage() {
             </p>
           </section>
 
+          <section className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+            <div className="flex items-center gap-3 mb-3">
+              <HeartHandshake className="text-amber-700 shrink-0" size={22} />
+              <h2 className="font-black text-slate-900 text-lg uppercase tracking-tight">Funding and independence</h2>
+            </div>
+            <p className="text-slate-700 leading-relaxed mb-3">
+              This site is free to use. It has no advertising, no sponsored content and no affiliate links, and nobody can pay to change what it says. If that ever changes, anything paid or sponsored will be clearly labelled and kept away from the state pages, the rules and the legality checker.
+            </p>
+            {SUPPORT_URL && (
+              <>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  Keeping the site accurate takes time and some running costs. If it has helped you, you can support it. Support payments are not charitable donations.
+                </p>
+                <SupportLink variant="button" />
+              </>
+            )}
+          </section>
+
           <section className="bg-amber-50 border border-amber-200 rounded-2xl p-6 sm:p-8">
             <div className="flex items-center gap-3 mb-3">
               <AlertTriangle className="text-amber-700 shrink-0" size={22} />
@@ -69,6 +89,19 @@ export default function AboutPage() {
             </p>
           </section>
         </div>
+
+
+        {CONTACT_EMAIL && (
+          <section className="mt-8 bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+            <div className="flex items-center gap-3 mb-3">
+              <Mail className="text-amber-700 shrink-0" size={22} />
+              <h2 className="font-black text-slate-900 text-lg uppercase tracking-tight">Contact and corrections</h2>
+            </div>
+            <p className="text-slate-700 leading-relaxed">
+              Spotted a mistake or an out-of-date rule? Email <a href={`mailto:${CONTACT_EMAIL}`} className="text-blue-700 hover:underline font-bold">{CONTACT_EMAIL}</a>. Corrections are checked against official sources before the site is changed.
+            </p>
+          </section>
+        )}
 
         <div className="text-center mt-12 mb-10">
           <Link

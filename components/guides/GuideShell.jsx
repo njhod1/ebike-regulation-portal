@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { ALL_STATES } from '@/data/index.js'
 import { SITE_URL, LAST_REVIEWED, formatReviewed } from '@/lib/site'
 import { GUIDES } from '@/lib/guides'
+import SupportLink from '@/components/SupportLink'
 
 export default function GuideShell({ path, title, name, description, intro, children }) {
   const url = `${SITE_URL}${path}`
@@ -68,6 +69,7 @@ export default function GuideShell({ path, title, name, description, intro, chil
         <p className="mt-10 text-sm text-slate-600">
           This is general information only, not legal advice. Always check your state&apos;s official transport authority and legislation. <Link href="/about" className="text-blue-700 hover:underline font-bold">About this site</Link>
         </p>
+        <p className="mt-3 text-sm text-slate-600"><SupportLink /></p>
       </main>
     </div>
   )
