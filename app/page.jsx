@@ -69,6 +69,9 @@ export default function HomePage() {
           <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto px-2">
             Australian e-bike (ebike) laws for 2026: what is legal, what is illegal, and what happens if a child rides one. Select your state or territory.
           </p>
+          <Link href="/is-my-ebike-legal#checker" className="inline-block mt-6 bg-amber-700 text-white font-black uppercase tracking-wide rounded-full px-8 py-3 hover:bg-amber-800">
+            Check my e-bike in 30 seconds
+          </Link>
         </header>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
