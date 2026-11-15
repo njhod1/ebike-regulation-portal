@@ -154,6 +154,8 @@ export default function HomePage() {
           <p>This site provides general information only. Always check official government sources for the latest regulations.</p>
           <p className="mt-2"><SupportLink /></p>
           <Link href="/about" className="inline-block mt-2 text-slate-500 hover:text-slate-800 font-bold uppercase tracking-wider">About this site</Link>
+          <span className="text-slate-400" aria-hidden="true"> · </span>
+          <Link href="/privacy" className="inline-block mt-2 text-slate-500 hover:text-slate-800 font-bold uppercase tracking-wider">Privacy</Link>
         </footer>
       </main>
     </div>

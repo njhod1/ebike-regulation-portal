@@ -19,5 +19,6 @@ export default function sitemap() {
       priority: 0.8,
     })),
     { url: `${BASE_URL}/about`, lastModified, changeFrequency: 'yearly', priority: 0.5 },
+    { url: `${BASE_URL}/privacy`, lastModified, changeFrequency: 'yearly', priority: 0.3 },
   ]
 }
