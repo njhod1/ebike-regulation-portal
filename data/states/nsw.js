@@ -20,7 +20,7 @@ export const nsw = {
   stats: [
     { label: 'Standard', value: '250W + EN 15194' },
     { label: 'Speed Cut', value: '25 km/h' },
-    { label: 'Retail tag', value: 'Green or red' },
+    { label: 'Min Age', value: 'None' },
     { label: 'Penalty', value: 'Seizure' },
   ],
 
@@ -135,8 +135,8 @@ export const nsw = {
   quiz: [
     {
       id: 'sticker',
-      question: "Is the motor rated at 250W or less (continuous, not peak) and EN 15194 certified on the manufacturer's label?",
-      info: "Check the frame or near the motor. A motor that can produce more than 500W but is limited by software is still illegal. A 251–500W bike is tolerated until 28 Feb 2029 only; from 1 Mar 2029 only EN 15194 bikes are allowed.",
+      question: "Is the motor rated at 500W or less (continuous, not peak) on the manufacturer's label?",
+      info: "Check the frame or near the motor. A motor that can produce more than 500W but is limited by software is still illegal, and so is a bike that has been unlocked or modified. NSW's standard is 250W and EN 15194; a 251–500W bike is tolerated until 28 Feb 2029 only.",
     },
     {
       id: 'speed',

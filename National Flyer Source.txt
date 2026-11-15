@@ -62,7 +62,7 @@
   \item \textbf{25 km/h Cut-off:} Motor assistance must stop at 25 km/h in all jurisdictions.
   \item \textbf{No Throttle Cruising:} Throttle-only riding above 6 km/h is illegal nationwide.
   \item \textbf{EN 15194 Standard:} In NSW, only EN 15194 bikes are allowed from 1 Mar 2029 (the 500W class is tolerated until 28 Feb 2029); a national import standard applies from Dec 2025. Road-use compliance deadlines vary by state — see table below.
-  \item \textbf{Over 250W = Motorcycle}\textbf{:} Requires registration, insurance and a licence. Riding without these is a criminal offence.
+  \item \textbf{Over the limit, or modified = Motorcycle}\textbf{:} Requires registration, insurance and a licence. Riding without these is a criminal offence.
   \item \textbf{Helmet Required:} An approved bicycle helmet is mandatory in all states.
 \end{itemize}
 
