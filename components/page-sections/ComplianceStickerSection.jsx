@@ -14,7 +14,7 @@ export default function ComplianceStickerSection({ compliance, stateName }) {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mt-4">
           <div className="p-4 bg-slate-50 rounded-xl border border-slate-100">
             <h4 className="font-bold text-slate-800 mb-2 uppercase text-xs tracking-wider">Sticker Rating ≤ {limit}W</h4>
-            <p className="text-sm text-slate-600 font-medium tracking-tight italic">Legal for road use. Motor assistance must cut out at 25 km/h.</p>
+            <p className="text-sm text-slate-600 font-medium tracking-tight italic">{limit > 250 ? 'Tolerated for road use for now (see the note below). Motor assistance must cut out at 25 km/h.' : 'Legal for road use. Motor assistance must cut out at 25 km/h.'}</p>
           </div>
           <div className="p-4 bg-red-50 rounded-xl border border-red-100">
             <h4 className="font-bold text-red-800 mb-2 uppercase text-xs tracking-wider">Sticker Rating &gt; {limit}W</h4>

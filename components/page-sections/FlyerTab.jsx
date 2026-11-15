@@ -33,9 +33,9 @@ export default function FlyerTab({ flyer, stateName }) {
                 <h3 className="text-xl font-black text-[#1A2A3A] uppercase tracking-tighter leading-none pb-1">1. The Compliance Sticker Rule</h3>
               </section>
               <div className="grid grid-cols-1 gap-2 text-sm font-medium">
-                <p>• <strong>The 250W Cap:</strong> Motor power must not exceed 250W (from 1 March 2026).</p>
+                <p>• <strong>The 250W Cap:</strong> Motor power must not exceed 250W.</p>
                 <p>• <strong>EN 15194 Standard:</strong> Required on all new bikes sold from Feb 2026. Mandatory for ALL road use from 1 March 2029.</p>
-                <p>• <strong>Grace Period:</strong> 500W bikes owned before 1 Mar 2026 remain legal until 1 Mar 2029 in NSW only.</p>
+                <p>• <strong>NSW:</strong> the 500W class is tolerated until 28 Feb 2029. 250W and EN 15194 is the standard.</p>
                 <p>• <strong>Rating &gt; 250W (new purchase):</strong> Legally a <strong>Motorcycle</strong>. Illegal for unlicensed riders.</p>
               </div>
 

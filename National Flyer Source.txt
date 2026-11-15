@@ -58,11 +58,11 @@
 \vspace*{-7pt}
 \section*{1. UNIVERSAL RULES (ALL STATES)}
 \begin{itemize}[label=--, nosep, topsep=3pt, itemsep=1pt]
-  \item \textbf{250W Maximum:} Motor power must not exceed 250W on any public road or path (NSW: 500W until 28 Feb 2029).
+  \item \textbf{250W Maximum:} Motor power must not exceed 250W on any public road or path.
   \item \textbf{25 km/h Cut-off:} Motor assistance must stop at 25 km/h in all jurisdictions.
   \item \textbf{No Throttle Cruising:} Throttle-only riding above 6 km/h is illegal nationwide.
-  \item \textbf{EN 15194 Standard:} Mandatory for all road use in NSW from 1 Mar 2029; a national import standard applies from Dec 2025. Road-use compliance deadlines vary by state — see table below.
-  \item \textbf{Over 250W = Motorcycle} (NSW: over 500W until 28 Feb 2029)\textbf{:} Requires registration, insurance and a licence. Riding without these is a criminal offence.
+  \item \textbf{EN 15194 Standard:} In NSW, only EN 15194 bikes are allowed from 1 Mar 2029 (the 500W class is tolerated until 28 Feb 2029); a national import standard applies from Dec 2025. Road-use compliance deadlines vary by state — see table below.
+  \item \textbf{Over 250W = Motorcycle}\textbf{:} Requires registration, insurance and a licence. Riding without these is a criminal offence.
   \item \textbf{Helmet Required:} An approved bicycle helmet is mandatory in all states.
 \end{itemize}
 
@@ -76,7 +76,7 @@
 \toprule
 \textbf{State} & \textbf{Footpaths} & \textbf{Age} & \textbf{Key Note} \\
 \midrule
-NSW & Adults: 10 km/h & — & Seizure \& crush powers in force from 21 Aug 2026. 500W bikes legal until 28 Feb 2029 (any purchase date). \\
+NSW & Adults: 10 km/h & — & Seizure \& crush powers in force from 21 Aug 2026. 250W + EN 15194 is the standard. \\
 VIC & Under 13 only & — & Strictest footpath rule. Drone \& blitz enforcement (52\% non-compliant, CBD). \\
 QLD & 12 km/h cap & 12+$^\ast$ & Seizure powers (1 Jul 2026); tiered ages from 31 Aug. AMA QLD called the law ``watered down.'' \\
 WA & Shared paths & 16+ & Ride Safe inquiry (Dec 2025): 32/33 recommendations backed; national push underway. \\
@@ -134,7 +134,7 @@ NT  & All ages & — & Mirrors national standard. \\
 % ── WHAT'S CHANGED IN 2026 ────────────────────────────────────────────────
 \begin{tcolorbox}[colback=white, colframe=DangerRed, title=\textbf{WHAT'S CHANGED IN 2026}, coltitle=white, fonttitle=\bfseries\small, top=3pt, bottom=3pt]
   \scriptsize
-  \textbf{NSW:} seize-and-crush powers in force 21 Aug 2026. The 500W class ends 28 Feb 2029. \\[2pt]
+  \textbf{NSW:} seize-and-crush powers in force 21 Aug 2026. \\[2pt]
   \textbf{QLD:} police seizure powers and parental fines from 1 Jul 2026; under-16 and licence rules from 31 Aug; compliance label required from 1 Mar 2027. \\[2pt]
   \textbf{WA:} eRideables allowed on roads up to 50 km/h from 14 May 2026. \\[2pt]
   \textbf{Federal:} imported e-bikes must meet EN 15194 to count as bicycles, from 24 Dec 2025.
