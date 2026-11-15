@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import GuideShell from '@/components/guides/GuideShell'
+import LegalityChecker from '@/components/guides/LegalityChecker'
 import { ALL_STATES } from '@/data/index.js'
 
 const PATH = '/is-my-ebike-legal'
@@ -15,6 +16,15 @@ export const metadata = {
 
 const stat = (s, label) => s.stats?.find((x) => x.label === label)?.value
 
+const checkerStates = ALL_STATES.map((s) => ({
+  slug: s.slug,
+  name: s.name,
+  limitW: parseInt(stat(s, 'Max Power'), 10) || 250,
+  powerNote: s.compliance?.powerLimitNote || null,
+  enText: s.compliance?.enStandard?.text || null,
+  ageNote: s.minimumAge?.specified ? s.minimumAge.notes : null,
+}))
+
 export default function Page() {
   return (
     <GuideShell
@@ -24,6 +34,8 @@ export default function Page() {
       description={DESCRIPTION}
       intro="A legal e-bike (also written ebike, or electric bike) is treated like a bicycle. An illegal one is treated as an unregistered motor vehicle. Here is how to tell which one you have."
     >
+      <LegalityChecker states={checkerStates} />
+
       <section className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 mb-8">
         <h2 className="text-xl font-black uppercase tracking-tighter text-slate-900 mb-4">The four checks</h2>
         <ol className="list-decimal pl-5 space-y-3 text-slate-800 leading-relaxed">
