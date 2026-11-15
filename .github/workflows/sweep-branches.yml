@@ -1,0 +1,21 @@
+name: Sweep stale branches
+# Manual: deletes every branch except main and claude/* that has no open PR.
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: read
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          open=$(gh pr list -R "$GITHUB_REPOSITORY" --state open --json headRefName -q '.[].headRefName')
+          for b in $(gh api "repos/$GITHUB_REPOSITORY/branches" --paginate -q '.[].name'); do
+            case "$b" in main|claude/*) continue;; esac
+            echo "$open" | grep -qx "$b" && continue
+            echo "deleting $b"
+            gh api -X DELETE "repos/$GITHUB_REPOSITORY/git/refs/heads/$b"
+          done
