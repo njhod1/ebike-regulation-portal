@@ -15,34 +15,53 @@ Live site: https://e-bikelaws.au
 
 ```
 app/
-  page.jsx            # Homepage
-  about/page.jsx       # About page (publisher identity, sourcing, disclaimer)
-  [state]/page.jsx     # Per-state page, statically generated for each slug in data/states
+  page.jsx              # Homepage (hero, checker button, state cards, quick answers/FAQ, guides)
+  about/page.jsx         # About (publisher, funding and independence, contact, disclaimer)
+  privacy/page.jsx       # Privacy policy
+  [state]/page.jsx       # Per-state page, statically generated for each slug in data/states
+  is-my-ebike-legal/     # Guide pages (each its own folder with a page.jsx):
+  ebike-age-limits/      #   is-my-ebike-legal (includes the legality checker),
+  illegal-ebike-penalties/ #  ebike-age-limits, illegal-ebike-penalties,
+  report-illegal-ebike/  #   report-illegal-ebike, ebike-law-changes.
+  ebike-law-changes/     #   All built from data/states/*.js, so state updates flow through.
+  share/page.jsx         # Share page: printable poster, copy-paste messages, link snippet
   layout.jsx, robots.js, sitemap.js
-  llms.txt/route.js    # AI agent/LLM summary (see SEO below)
+  llms.txt/route.js      # AI agent/LLM summary (see SEO below)
 
-data/states/*.js       # One file per state/territory — the single source of truth for all
-                        # law content (summary, key dates, penalties, quiz, enforcement
-                        # notices, reporting contacts, real-risk stats, links, etc).
-                        # Slugs: nsw, vic, qld, wa, sa, tas, act, nt
+data/states/*.js         # One file per state/territory: the single source of truth for all
+                          # law content (summary, key dates, penalties, quiz, enforcement
+                          # notices, reporting contacts, real-risk stats, links, etc).
+                          # Slugs: nsw, vic, qld, wa, sa, tas, act, nt
 
 components/
-  StatePage.jsx         # Assembles a state page from its data file
-  page-sections/         # Individual sections (penalties grid, key-dates timeline,
-                          # compliance quiz, enforcement notices, seizure powers,
-                          # how-to-report, real-risk stats, parental liability,
-                          # statutory footer, flyer tab)
-  nav/                   # Site nav + state selector
-  ui/                    # Shared small components (stat box, section header)
+  StatePage.jsx          # Assembles a state page from its data file
+  page-sections/          # Sections of a state page (penalties, key dates, quiz, notices,
+                           # seizure, reporting, real risk, parental liability, footer)
+                           # FlyerTab.jsx is an inactive in-browser flyer preview (no state
+                           # has flyer.available set); the PDF is linked from the footer.
+  guides/                 # GuideShell, LegalityChecker, CopyBox (guide and share pages)
+  nav/                    # Site nav, state selector, text-size control
+  ui/                     # Shared small components (stat box, section header)
+  SupportLink.jsx         # "Support this site" link (hidden while SUPPORT_URL is blank)
+
+lib/
+  site.js                 # SITE_URL, LAST_REVIEWED, SUPPORT_URL, CONTACT_EMAIL (see below)
+  guides.js               # List of guide pages (home Guides section, footers, sitemap, llms.txt)
+  dates.js                # Sorts key-date labels for the law-changes timeline
 
 public/
-  ebike_national_flyer.pdf   # Compiled national summary flyer, linked from FlyerTab.jsx
+  ebike_national_flyer.pdf     # One-page national flyer (source: National Flyer Source.txt)
+  ebike_poster.pdf             # A4 community poster (source: Poster Source.html)
+  ebike_poster_preview.png     # Preview image used on /share
+  og-preview.png, Favicon.svg, favicon.ico, apple-touch-icon.png
 
-National Flyer Source.txt    # LaTeX source for the national flyer PDF (see below)
+National Flyer Source.txt      # LaTeX source for the national flyer (see below)
+Poster Source.html             # HTML source for the poster (open in Chrome, print to PDF)
 
-lib/site.js                  # SITE_URL — the single source of truth for the site's
-                              # origin, used everywhere a full URL is needed (see
-                              # Custom domain below)
+README.md                      # This file
+RESEARCH_RULES.md              # Source tiers, verification, research-agent rules (shareable)
+UPDATE_RUN.md                  # Reusable brief for a full content update run
+MONETISATION.md                # Monetisation playbook (shareable)
 ```
 
 ## Updating state law content
@@ -95,7 +114,7 @@ For source ranking, verification rules and how to brief research agents, see **R
 5. Commit → PR → merge, so there's a reviewable history and an easy rollback if something's wrong.
 6. Spot-check the live page once deployed.
 
-## National flyer (PDF)
+## National flyer (PDF) and poster
 
 `public/ebike_national_flyer.pdf` is a one-page, two-column A4 summary compiled from `National Flyer Source.txt` (LaTeX). To regenerate it after a law change:
 
@@ -107,6 +126,8 @@ rm -f "National Flyer Source.tex" "National Flyer Source.aux" "National Flyer So
 ```
 
 Requires a TeX distribution with `xelatex` and the packages used in the source (`tcolorbox`, `titlesec`, `qrcode`, `amssymb`, etc.) and the Noto Sans font. Keep the flyer to a single page — check the compiled output visually (e.g. render to PNG) after any edit, since the two-column layout is sensitive to content length changes.
+
+The A4 community poster is built the same way from `Poster Source.html` (open in Chrome, Print, A4, margins None, Background graphics on, Save as PDF to `public/ebike_poster.pdf`; refresh the preview with `pdftoppm -png -r 100 -singlefile public/ebike_poster.pdf public/ebike_poster_preview`). Its QR code points to `/is-my-ebike-legal`. It carries no dates, so it doesn't go stale; update it when the national rules change.
 
 Note: the domain is hardcoded in the flyer's QR code and URL text (it's a static PDF, not part of the Next.js build, so `NEXT_PUBLIC_SITE_URL` doesn't reach it) — update and recompile it manually after a domain change, see **Custom domain** below.
 
@@ -129,7 +150,9 @@ To move to a different custom domain again in future:
 - Every page has a unique `<title>` (kept under 60 characters so Google doesn't truncate it) and meta description (under 160 characters) — see each state's `seo.title`/`seo.description` in `data/states/<slug>.js`. State page titles use `title: { absolute: seo.title }` in `generateMetadata` specifically to bypass the root layout's `%s | AU E-Bike Laws` template, which was silently appending 17 characters to every state title before this was caught.
 - `metadataBase` (root layout) plus relative `alternates.canonical`/`openGraph.url` values mean every page's canonical and OG URLs resolve correctly without hardcoding the domain per-page.
 - JSON-LD: `WebSite` schema on the homepage, `WebPage` + `BreadcrumbList` + `FAQPage` (from each state's `quiz`) on every state page.
-- `sitemap.xml` and `robots.txt` are generated from `ALL_STATES`, so a new state added to `data/index.js` is picked up automatically. Static pages outside `data/states` (e.g. `/about`) are **not** automatic — add them to `app/sitemap.js` by hand.
+- Home page and state pages are titled around the question people search ("Is My E-Bike Legal in <state>?"), the home page has a Quick answers section with matching `FAQPage` JSON-LD, and five guide pages (see `lib/guides.js`) each target one question with their own title, description, canonical and `WebPage` + `BreadcrumbList` JSON-LD with `dateModified`.
+- `LAST_REVIEWED` in `lib/site.js` is the date content was last reviewed. It drives the visible "Information last reviewed" line, structured-data `dateModified` and the sitemap `lastModified`. Bump it at the end of every update run (see `UPDATE_RUN.md`).
+- `sitemap.xml` and `robots.txt` are generated from `ALL_STATES`, so a new state added to `data/index.js` is picked up automatically. The guide pages are automatic via `lib/guides.js`; other static pages (`/about`, `/privacy`) are **not** — add them to `app/sitemap.js` by hand.
 - Open Graph/Twitter card image (`public/og-preview.png`, 1200×630) and icons (`public/Favicon.svg`, `favicon.ico`, `apple-touch-icon.png`) are set site-wide via `app/layout.jsx`'s `metadata.icons`, with a per-state `ogImage` override available in `seo`.
 - `app/llms.txt/route.js` serves an [llms.txt](https://llmstxt.org/) summary for AI agents/LLMs — a Next.js route handler (not a static file in `public/`) so it can use `SITE_URL` and pull each state's `summary` live from `data/states/*.js`, the same auto-sync pattern as `sitemap.xml`. `dynamic = 'force-static'` is set explicitly since Next.js 15 no longer statically optimizes route handlers by default. This is an emerging, non-standard convention (not a search ranking factor) — low priority, but cheap to keep accurate since it's generated, not hand-written.
 
